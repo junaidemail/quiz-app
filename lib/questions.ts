@@ -11,8 +11,29 @@ export async function loadQuestions(): Promise<Question[]> {
 
 
 export const SUBJECT_LABELS: Record<string, string> = {
-  'Power Systems and Machines': 'Power Systems and Machines (16-Elec-A6)',
-  'Power Electronics':          'Power Electronics (16-Elec-A1)',
+  '16-Elec-A1 Circuits':                  'Circuits (16-Elec-A1)',
+  '16-Elec-A6 Power Systems and Machines':'Power Systems and Machines (16-Elec-A6)',
+  '16-Elec-B8 Power Electronics and Drives': 'Power Electronics and Drives (16-Elec-B8)',
+}
+
+export interface CourseInfo {
+  id: string
+  code: string
+  name: string
+  textbook: string
+  available: boolean
+}
+
+export interface GroupInfo {
+  id: string
+  name: string
+  courses: CourseInfo[]
+}
+
+export async function loadCourses(): Promise<GroupInfo[]> {
+  const res = await fetch('/data/courses.json')
+  const data = await res.json()
+  return data.groups as GroupInfo[]
 }
 
 export interface ChapterInfo {

@@ -19,7 +19,7 @@ export interface SelectedChapter {
 }
 
 export interface QuizConfig {
-  subject: string          // 'all' | 'Power Systems and Machines' | 'Power Electronics'
+  subject: string          // 'all' | course id e.g. '16-Elec-A1 Circuits'
   chapters: SelectedChapter[]
   questionCount: number
   mode: QuizMode

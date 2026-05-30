@@ -1,0 +1,50 @@
+{
+  "groups": [
+    {
+      "id": "group_a",
+      "name": "Group A",
+      "courses": [
+        {
+          "id": "16-Elec-A1 Circuits",
+          "code": "16-Elec-A1",
+          "name": "Circuits",
+          "textbook": "Nilsson & Riedel — Electric Circuits",
+          "available": true
+        },
+        {
+          "id": "16-Elec-A6 Power Systems and Machines",
+          "code": "16-Elec-A6",
+          "name": "Power Systems and Machines",
+          "textbook": "Theodore Wildi — Electrical Machines, Drives, and Power Systems",
+          "available": false
+        }
+      ]
+    },
+    {
+      "id": "group_b",
+      "name": "Group B",
+      "courses": [
+        {
+          "id": "16-Elec-B8 Power Electronics and Drives",
+          "code": "16-Elec-B8",
+          "name": "Power Electronics and Drives",
+          "textbook": "Power Electronics",
+          "available": false
+        }
+      ]
+    },
+    {
+      "id": "complementary",
+      "name": "Complementary Studies",
+      "courses": [
+        {
+          "id": "Health and Safety",
+          "code": "HLTH",
+          "name": "Health and Safety",
+          "textbook": "",
+          "available": false
+        }
+      ]
+    }
+  ]
+}

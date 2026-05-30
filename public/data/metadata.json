@@ -1,17 +1,23 @@
-{
-  "subjects": {
-    "16-Elec-A1 Circuits": {
-      "Basic Concepts / Circuit Variables Multiple": 69,
-      "Chapter 14": 10,
-      "Chapter 15": 10,
-      "Chapter 16": 10,
-      "Chapter 17": 10,
-      "Questions (Q2.1": 70,
-      "Simple Resistive Circuits Multiple": 70,
-      "Inductance, Capacitance, and Mutual Inductance (No answers or explanations appear here; they will follow in the next message.) Multiple": 70,
-      "Natural and Step Responses of RLC Circuits (No answers or explanations appear here; they will follow in the next message.) Multiple": 69,
-      "Sinusoidal Steady": 70
-    }
-  },
-  "totalQuestions": 458
+﻿{
+    "totalQuestions":  1050,
+    "subjects":  {
+                     "16-Elec-A1 Circuits":  {
+                                                 "Chapter 1: Basic Concepts and Circuit Variables":  69,
+                                                 "Chapter 2: Circuit Elements":  70,
+                                                 "Chapter 3: Simple Resistive Circuits":  65,
+                                                 "Chapter 6: Inductance, Capacitance, and Mutual Inductance":  69,
+                                                 "Chapter 8: Natural and Step Responses of RLC Circuits":  67,
+                                                 "Chapter 9: Sinusoidal Steady-State Analysis":  67,
+                                                 "Chapter 10: Sinusoidal Steady-State Power Calculations":  70,
+                                                 "Chapter 11: Balanced Three-Phase Circuits":  64,
+                                                 "Chapter 12: Introduction to the Laplace Transform":  66,
+                                                 "Chapter 13: The Laplace Transform in Circuit Analysis":  70,
+                                                 "Chapter 14: Introduction to Frequency Selective Circuits":  62,
+                                                 "Chapter 15: Active Filter Circuits":  67,
+                                                 "Chapter 16: Fourier Series":  59,
+                                                 "Chapter 17: The Fourier Transform":  66,
+                                                 "Chapter 18: Two-Port Circuits":  69,
+                                                 "Chapter 19: Magnetically Coupled Coils and Ideal Transformers":  50
+                                             }
+                 }
 }
