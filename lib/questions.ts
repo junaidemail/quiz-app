@@ -4,7 +4,7 @@ let _questions: Question[] | null = null
 
 export async function loadQuestions(): Promise<Question[]> {
   if (_questions) return _questions
-  const res = await fetch('/data/questions.json')
+  const res = await fetch('/data/questions.json', { cache: 'no-store' })
   _questions = await res.json()
   return _questions!
 }
