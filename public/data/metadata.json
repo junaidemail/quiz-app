@@ -1,0 +1,125 @@
+﻿{
+    "totalQuestions":  1061,
+    "withAnswers":  767,
+    "chapters":  [
+                     {
+                         "subject":  "PENG",
+                         "chapter":  null,
+                         "chapterTitle":  null,
+                         "total":  610,
+                         "withAnswers":  456
+                     },
+                     {
+                         "subject":  "PENG",
+                         "chapter":  16,
+                         "chapterTitle":  "SYNCHRONOUS GENERATORS CHAPTER 17: SYNCHRONOUS MOTORS CHAPTER 18: INTRODUCTION TO THE FINITE ELEMENT METHOD CHAPTER 19: DESIGN OF SYNCHRONOUS MACHINES CHAPTER 20: DESIGN OF AC INDUCTION MACHINES CHAPTER 21: SOLID STATE DRIVES CHAPTER 22: DC DRIVES CHAPTER 23: AC DRIVES CHAPTER 24: CONCLUSION CHAPTER 25: APPENDICES CHAPTER 26: ADVANCED TOPICS CHAPTER 27: CASE STUDIES CHAPTER 28: PROBLEM SOLUTIONS CHAPTER 29: STANDARDS AND REGULATIONS CHAPTER 30: INDEX AND REFERENCES CHAPTER 16: SYNCHRONOUS GENERATORS",
+                         "total":  38,
+                         "withAnswers":  0
+                     },
+                     {
+                         "subject":  "PENG",
+                         "chapter":  17,
+                         "chapterTitle":  "SYNCHRONOUS MOTORS",
+                         "total":  20,
+                         "withAnswers":  0
+                     },
+                     {
+                         "subject":  "PENG",
+                         "chapter":  18,
+                         "chapterTitle":  "INTRODUCTION TO THE FINITE ELEMENT METHOD",
+                         "total":  10,
+                         "withAnswers":  0
+                     },
+                     {
+                         "subject":  "PENG",
+                         "chapter":  19,
+                         "chapterTitle":  "DESIGN OF SYNCHRONOUS MACHINES",
+                         "total":  6,
+                         "withAnswers":  0
+                     },
+                     {
+                         "subject":  "PENG",
+                         "chapter":  20,
+                         "chapterTitle":  "DESIGN OF AC INDUCTION MACHINES",
+                         "total":  6,
+                         "withAnswers":  0
+                     },
+                     {
+                         "subject":  "PENG",
+                         "chapter":  21,
+                         "chapterTitle":  "SOLID STATE DRIVES",
+                         "total":  6,
+                         "withAnswers":  0
+                     },
+                     {
+                         "subject":  "PENG",
+                         "chapter":  22,
+                         "chapterTitle":  "DC DRIVES",
+                         "total":  6,
+                         "withAnswers":  0
+                     },
+                     {
+                         "subject":  "PENG",
+                         "chapter":  23,
+                         "chapterTitle":  "AC DRIVES",
+                         "total":  6,
+                         "withAnswers":  0
+                     },
+                     {
+                         "subject":  "PENG",
+                         "chapter":  24,
+                         "chapterTitle":  "CONCLUSION",
+                         "total":  6,
+                         "withAnswers":  0
+                     },
+                     {
+                         "subject":  "PENG",
+                         "chapter":  25,
+                         "chapterTitle":  "APPENDICES",
+                         "total":  6,
+                         "withAnswers":  0
+                     },
+                     {
+                         "subject":  "PENG",
+                         "chapter":  26,
+                         "chapterTitle":  "ADVANCED TOPICS",
+                         "total":  6,
+                         "withAnswers":  0
+                     },
+                     {
+                         "subject":  "PENG",
+                         "chapter":  27,
+                         "chapterTitle":  "CASE STUDIES",
+                         "total":  6,
+                         "withAnswers":  0
+                     },
+                     {
+                         "subject":  "PENG",
+                         "chapter":  28,
+                         "chapterTitle":  "PROBLEM SOLUTIONS",
+                         "total":  6,
+                         "withAnswers":  0
+                     },
+                     {
+                         "subject":  "PENG",
+                         "chapter":  29,
+                         "chapterTitle":  "STANDARDS AND REGULATIONS",
+                         "total":  6,
+                         "withAnswers":  0
+                     },
+                     {
+                         "subject":  "PENG",
+                         "chapter":  30,
+                         "chapterTitle":  "INDEX AND REFERENCES",
+                         "total":  6,
+                         "withAnswers":  0
+                     },
+                     {
+                         "subject":  "Power Electronics",
+                         "chapter":  null,
+                         "chapterTitle":  null,
+                         "total":  311,
+                         "withAnswers":  311
+                     }
+                 ]
+}
