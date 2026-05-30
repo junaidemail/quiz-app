@@ -1,4 +1,4 @@
-import type { Question, Subject } from './types'
+import type { Question } from './types'
 
 let _questions: Question[] | null = null
 
@@ -9,45 +9,72 @@ export async function loadQuestions(): Promise<Question[]> {
   return _questions!
 }
 
-export function getSubjects(questions: Question[]): Subject[] {
-  return [...new Set(questions.map(q => q.subject))] as Subject[]
+
+export const SUBJECT_LABELS: Record<string, string> = {
+  'Power Systems and Machines': 'Power Systems and Machines (16-Elec-A6)',
+  'Power Electronics':          'Power Electronics (16-Elec-A1)',
 }
 
-export function getSources(questions: Question[], subject?: string): string[] {
+export interface ChapterInfo {
+  subject: string
+  chapter: number | null
+  chapterTitle: string
+  count: number
+  withAnswers: number
+}
+
+export function getSubjects(questions: Question[]): string[] {
+  return [...new Set(questions.map(q => q.subject))]
+}
+
+export function getChapters(questions: Question[], subject?: string): ChapterInfo[] {
   const filtered = subject && subject !== 'all'
     ? questions.filter(q => q.subject === subject)
     : questions
-  return [...new Set(filtered.map(q => q.source))]
-}
 
-export function getSourceLabel(source: string): string {
-  const map: Record<string, string> = {
-    'PENG_MCQ_Chapters_1-3': 'Chapters 1–3 (Units, Electricity, Mechanics)',
-    'PENG_MCQ_Chapters_4-6': 'Chapters 4–6 (DC Generators, Motors, Efficiency)',
-    'PENG_MCQ_Chapters_7-15': 'Chapters 7–15 (Induction Motors, Transformers)',
-    'PENG_MCQ_Chapters_16-30': 'Chapters 16–30 (Synchronous Machines, Drives)',
-    'Power_Electronics_MCQ_With_Answers': 'Ch 1–3 (Semiconductors, Converters, Inverters)',
-    'Power_Electronics_MCQ_Extended_Ch4-10': 'Ch 4–10 (Advanced Power Electronics)',
+  const map = new Map<string, ChapterInfo>()
+
+  for (const q of filtered) {
+    const key = `${q.subject}||${q.chapter}||${q.chapterTitle}`
+    if (!map.has(key)) {
+      map.set(key, {
+        subject: q.subject,
+        chapter: q.chapter,
+        chapterTitle: q.chapterTitle ?? (q.chapter ? `Chapter ${q.chapter}` : 'General'),
+        count: 0,
+        withAnswers: 0,
+      })
+    }
+    const entry = map.get(key)!
+    entry.count++
+    if (q.answer) entry.withAnswers++
   }
-  return map[source] ?? source.replace(/_/g, ' ')
+
+  return [...map.values()].sort((a, b) => {
+    if (a.subject !== b.subject) return a.subject.localeCompare(b.subject)
+    return (a.chapter ?? 0) - (b.chapter ?? 0)
+  })
 }
 
 export function filterQuestions(
   questions: Question[],
   opts: {
     subject?: string
-    sources?: string[]
+    chapters?: Array<{ chapter: number | null; chapterTitle: string | null }>
     onlyWithAnswers?: boolean
     bookmarkedIds?: Set<string>
-    wrongIds?: Set<string>
   }
 ): Question[] {
   return questions.filter(q => {
     if (opts.subject && opts.subject !== 'all' && q.subject !== opts.subject) return false
-    if (opts.sources?.length && !opts.sources.includes(q.source)) return false
+    if (opts.chapters?.length) {
+      const match = opts.chapters.some(c =>
+        c.chapter === q.chapter && c.chapterTitle === q.chapterTitle
+      )
+      if (!match) return false
+    }
     if (opts.onlyWithAnswers && !q.answer) return false
     if (opts.bookmarkedIds && !opts.bookmarkedIds.has(q.id)) return false
-    if (opts.wrongIds && !opts.wrongIds.has(q.id)) return false
     return true
   })
 }
@@ -61,13 +88,8 @@ export function shuffleArray<T>(arr: T[]): T[] {
   return a
 }
 
-export function sampleQuestions(questions: Question[], count: number, shuffle = true): Question[] {
-  const pool = shuffle ? shuffleArray(questions) : questions
-  return pool.slice(0, Math.min(count, pool.length))
-}
-
 export function getChapterLabel(q: Question): string {
-  if (q.chapterTitle && q.chapterTitle.length < 60) return q.chapterTitle
+  if (q.chapterTitle && q.chapterTitle.length < 80) return q.chapterTitle
   if (q.chapter) return `Chapter ${q.chapter}`
-  return getSourceLabel(q.source)
+  return q.subject
 }

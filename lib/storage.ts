@@ -1,5 +1,5 @@
 'use client'
-import type { QuizSession, QuizStats, AppState } from './types'
+import type { QuizSession, QuizStats } from './types'
 
 const KEYS = {
   sessions: 'quiz_sessions',
@@ -35,7 +35,6 @@ export const defaultStats: QuizStats = {
   streak: 0,
   lastStudied: null,
   subjectAccuracy: {},
-  chapterAccuracy: {},
 }
 
 export function getSessions(): QuizSession[] {

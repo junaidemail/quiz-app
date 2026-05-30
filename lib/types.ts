@@ -1,6 +1,5 @@
-export type Subject = 'PENG' | 'Power Electronics'
 export type QuizMode = 'practice' | 'exam' | 'flashcard'
-export type Difficulty = 'all' | 'unanswered' | 'wrong' | 'bookmarked'
+export type Difficulty = 'all' | 'bookmarked'
 
 export interface Question {
   id: string
@@ -8,15 +7,20 @@ export interface Question {
   options: { A: string; B: string; C: string; D: string }
   answer: string | null
   explanation: string | null
-  subject: Subject
+  subject: string
   chapter: number | null
   chapterTitle: string | null
   source: string
 }
 
+export interface SelectedChapter {
+  chapter: number | null
+  chapterTitle: string | null
+}
+
 export interface QuizConfig {
-  subject: Subject | 'all'
-  sources: string[]
+  subject: string          // 'all' | 'Power Systems and Machines' | 'Power Electronics'
+  chapters: SelectedChapter[]
   questionCount: number
   mode: QuizMode
   timePerQuestion: number  // seconds, 0 = unlimited
@@ -53,13 +57,4 @@ export interface QuizStats {
   streak: number
   lastStudied: number | null
   subjectAccuracy: Record<string, { correct: number; total: number }>
-  chapterAccuracy: Record<string, { correct: number; total: number }>
-}
-
-export interface AppState {
-  bookmarks: Set<string>
-  history: QuizSession[]
-  stats: QuizStats
-  darkMode: boolean
-  soundEnabled: boolean
 }

@@ -41,7 +41,7 @@ export default function BookmarksPage() {
     if (bookmarkedQs.length === 0) return
     const session = createSession(bookmarkedQs, {
       subject: 'all',
-      sources: [],
+      chapters: [],
       questionCount: bookmarkedQs.length,
       mode: 'practice',
       timePerQuestion: 0,

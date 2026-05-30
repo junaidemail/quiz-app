@@ -29,7 +29,7 @@ export default function Home() {
             Master Power Engineering & Power Electronics
           </p>
           <p className="text-sm mb-8" style={{ color: 'var(--fg-muted)' }}>
-            1,061 MCQs from Theodore Wildi & Power Electronics textbooks
+            1,061 MCQs · Power Systems & Machines (16-Elec-A6) · Power Electronics (16-Elec-A1)
           </p>
           <div className="flex flex-wrap gap-3 justify-center">
             <Link href="/quiz" className="btn-primary text-base px-8 py-3 rounded-xl inline-block">
@@ -64,12 +64,12 @@ export default function Home() {
           <h2 className="text-xl font-bold mb-4" style={{ color: 'var(--fg)' }}>Quick Start</h2>
           <div className="grid md:grid-cols-2 gap-4">
             <QuickCard
-              icon="📚" title="PENG Prep" subtitle="Electrical Machines & Power Systems"
-              desc="714 questions across 15+ chapters from Theodore Wildi's textbook"
-              href="/quiz?subject=PENG" color="#6366f1" />
+              icon="📚" title="Power Systems & Machines" subtitle="16-Elec-A6 · Theodore Wildi"
+              desc="750 questions across 30 chapters from Electrical Machines, Drives, and Power Systems"
+              href="/quiz?subject=Power+Systems+and+Machines" color="#6366f1" />
             <QuickCard
-              icon="⚡" title="Power Electronics" subtitle="Semiconductors, Converters & Drives"
-              desc="347 questions on power semiconductor devices, converters, and control"
+              icon="⚡" title="Power Electronics" subtitle="16-Elec-A1"
+              desc="311 questions on power semiconductor devices, converters, inverters, and control"
               href="/quiz?subject=Power+Electronics" color="#10b981" />
           </div>
         </section>
