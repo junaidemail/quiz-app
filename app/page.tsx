@@ -5,14 +5,17 @@ import { Navbar } from '@/components/Navbar'
 import { getStats, getSessions } from '@/lib/storage'
 import type { QuizStats, QuizSession } from '@/lib/types'
 import { formatTime } from '@/lib/quiz-engine'
+import { loadQuestions } from '@/lib/questions'
 
 export default function Home() {
   const [stats, setStats] = useState<QuizStats | null>(null)
   const [recent, setRecent] = useState<QuizSession[]>([])
+  const [questionCount, setQuestionCount] = useState<number>(0)
 
   useEffect(() => {
     setStats(getStats())
     setRecent(getSessions().slice(0, 3))
+    loadQuestions().then(qs => setQuestionCount(qs.length)).catch(() => {})
   }, [])
 
   return (
@@ -29,7 +32,7 @@ export default function Home() {
             Master Power Engineering & Power Electronics
           </p>
           <p className="text-sm mb-8" style={{ color: 'var(--fg-muted)' }}>
-            1,061 MCQs · Power Systems & Machines (16-Elec-A6) · Power Electronics (16-Elec-A1)
+            {questionCount} {questionCount === 1 ? 'MCQ' : 'MCQs'} · Practice Questions
           </p>
           <div className="flex flex-wrap gap-3 justify-center">
             <Link href="/quiz" className="btn-primary text-base px-8 py-3 rounded-xl inline-block">

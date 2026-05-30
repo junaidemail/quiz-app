@@ -12,6 +12,7 @@ export function Navbar() {
     { href: '/quiz', label: 'Start Quiz' },
     { href: '/stats', label: 'Stats' },
     { href: '/bookmarks', label: 'Bookmarks' },
+    { href: '/manage', label: 'Manage' },
   ]
 
   return (
