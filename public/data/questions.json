@@ -9169,7 +9169,7 @@
   },
   {
     "id": "a1_q574",
-    "question": "cosh 3t Laplace? Assess.12.1",
+    "question": "Find the Laplace transform of f(t) = cosh(3t)·u(t), where cosh(3t) = (e³ᵗ + e⁻³ᵗ)/2.",
     "options": {
       "A": "s/(s^2 - 9)",
       "B": "3/(s^2 - 9)",
@@ -9329,7 +9329,7 @@
   },
   {
     "id": "a1_q584",
-    "question": "Assess.12.2: t cos ωt ?",
+    "question": "Find the Laplace transform of f(t) = t·cos(ωt)·u(t). (Use the s-differentiation property: L{t·f(t)} = −dF(s)/ds.)",
     "options": {
       "A": "\\((s^2 - ω ^2)/(s^2 + ω ^2)^2\\)",
       "B": "\\(s/(s^2 + ω ^2)\\)",
@@ -9905,7 +9905,7 @@
   },
   {
     "id": "a1_q620",
-    "question": "Assess.13.1 parallel Y(s)=?",
+    "question": "A parallel RLC circuit (R = 500 Ω, L = 40 mH, C = 25 nF) is analysed in the s-domain with zero initial conditions. What is the total s-domain admittance Y(s)?",
     "options": {
       "A": "\\(1/500 + s/40 + 80k s\\)",
       "B": "R only",
@@ -9985,7 +9985,7 @@
   },
   {
     "id": "a1_q625",
-    "question": "Assess.13.3 step: vx (0)=?",
+    "question": "A circuit with a step voltage source applied at t = 0 has all initial stored energy equal to zero. What is the voltage vx(0⁺) across a capacitive branch immediately after switching?",
     "options": {
       "A": "0",
       "B": "80V",
@@ -10065,7 +10065,7 @@
   },
   {
     "id": "a1_q630",
-    "question": "Assess.13.4 initials?",
+    "question": "A two-capacitor Laplace-domain circuit has zero initial charge on C₁. The DC steady-state condition before switching fixes v₂(0⁻) = 2.5 V on C₂. State the initial-condition pair (v₁(0), v₂(0)).",
     "options": {
       "A": "\\(v1(0)=0 v2(0)=2.5V\\)",
       "B": "∞",
@@ -10161,7 +10161,7 @@
   },
   {
     "id": "a1_q636",
-    "question": "Assess.13.5 Thev Zth ?",
+    "question": "The s-domain Thévenin equivalent of a circuit seen from two terminals is Z_th(s) = 5 + 2.8s Ω. Which series combination of components does this represent?",
     "options": {
       "A": "\\(5 + 2.8s\\)",
       "B": "1/s",
@@ -10241,7 +10241,7 @@
   },
   {
     "id": "a1_q641",
-    "question": "Assess.13.9 Hs=?",
+    "question": "A circuit has transfer function H(s) = 100,000 / (2s² + 2s + 10). Which expression equals H(s)?",
     "options": {
       "A": "\\(1e5 / (2s^2 +2s +10)\\)",
       "B": "Sin",
@@ -10385,7 +10385,7 @@
   },
   {
     "id": "a1_q650",
-    "question": "Assess.13.10 step/impulse?",
+    "question": "Given a circuit's transfer function H(s), how are both the step response and the impulse response obtained?",
     "options": {
       "A": "From Hs",
       "B": "Calc time",
@@ -10497,7 +10497,7 @@
   },
   {
     "id": "a1_q657",
-    "question": "Assess.13.11 sin steady?",
+    "question": "A linear time-invariant system has transfer function H(s). For sinusoidal steady-state with input x(t) = A·cos(ωt), what is the steady-state output y_ss(t)?",
     "options": {
       "A": "\\(|H( j ω )| A cos( ω t + φ )\\)",
       "B": "Transient",
@@ -10609,7 +10609,7 @@
   },
   {
     "id": "a1_q664",
-    "question": "Assess.13.7 mutual peak?",
+    "question": "In a magnetically coupled (mutual inductance) switched circuit, at which mathematical condition does the secondary current i₂(t) reach its peak value?",
     "options": {
       "A": "\\(Calc di/dt=0\\)",
       "B": "Steady",
@@ -11105,7 +11105,7 @@
   },
   {
     "id": "a1_q695",
-    "question": "Assess.14.1 RC ω_c =8kHz R=10k",
+    "question": "Design a first-order RC low-pass filter with R = 10 kΩ and cutoff frequency fc = 8 kHz. What capacitance C is required? (Hint: ωc = 1/(RC) and ωc = 2πfc.)",
     "options": {
       "A": "\\(C=1.99nF\\)",
       "B": "199pF",
@@ -11281,7 +11281,7 @@
   },
   {
     "id": "a1_q706",
-    "question": "Assess.14.2 RL high ω_c =2kHz R=5k",
+    "question": "Design a first-order RL high-pass filter with R = 5 kΩ and cutoff frequency fc = 2 kHz. What inductance L is required? (Hint: ωc = R/L and ωc = 2πfc.)",
     "options": {
       "A": "\\(L=0.4H\\)",
       "B": "40mH",
@@ -12081,7 +12081,7 @@
   },
   {
     "id": "a1_q756",
-    "question": "Assess.15.3 kf 10kHz proto high?",
+    "question": "A prototype high-pass active filter has cutoff ωc = 1 rad/s. Scale it to fc = 10 kHz. What frequency scaling factor kf is needed? (Recall: kf = ω_desired / ω_prototype.)",
     "options": {
       "A": "62,832",
       "B": "10,000",
@@ -12305,7 +12305,7 @@
   },
   {
     "id": "a1_q770",
-    "question": "Assess.15.1 proto high R2 C=? K=1 ωc =1",
+    "question": "For a first-order prototype active high-pass filter with unity gain (K = 1) and cutoff ωc = 1 rad/s, what are the standard element values R₂ and C?",
     "options": {
       "A": "\\(1 Ω 1F\\)",
       "B": "\\(1F 1 Ω\\)",
@@ -12513,7 +12513,7 @@
   },
   {
     "id": "a1_q783",
-    "question": "Assess.15.4 R1=0.707 R2=? 2nd high Butter",
+    "question": "In a 2nd-order Butterworth high-pass active filter (Sallen-Key topology, prototype normalised to ωc = 1 rad/s), the Butterworth polynomial s² + √2·s + 1 requires R₁ = 0.707 Ω. What must R₂ equal?",
     "options": {
       "A": "\\(1.41 Ω\\)",
       "B": "\\(1 Ω\\)",
@@ -12593,7 +12593,7 @@
   },
   {
     "id": "a1_q788",
-    "question": "6th Butter high from low? Prob15.48",
+    "question": "To convert a 6th-order Butterworth low-pass prototype H_LP(s) into a high-pass filter, which algebraic substitution is applied to H_LP?",
     "options": {
       "A": "\\(s → 1/s poly\\)",
       "B": "Add L",
@@ -12705,7 +12705,7 @@
   },
   {
     "id": "a1_q795",
-    "question": "Prototype narrow reject Hs? Prob15.59",
+    "question": "Write the normalised (ω₀ = 1 rad/s) transfer function H(s) for a narrowband band-reject (notch) filter with quality factor Q.",
     "options": {
       "A": "\\(s / (s^2 + (1/Q)s +1)\\)",
       "B": "\\((s^2 +1)/(s^2 + (1/Q)s +1)\\)",
@@ -12721,7 +12721,7 @@
   },
   {
     "id": "a1_q796",
-    "question": "Design narrow Q=20 1kHz C=15nF? Prob15.60",
+    "question": "Design a narrowband active band-reject filter with Q = 20, centre frequency f₀ = 1 kHz, and equal capacitors C = 15 nF. Which component values must be determined from the design equations?",
     "options": {
       "A": "Calc R1 R2 R3",
       "B": "Broadband",
@@ -12817,7 +12817,7 @@
   },
   {
     "id": "a1_q802",
-    "question": "Narrowband typ Q? Prob15.69",
+    "question": "In active filter design, what typical Q factor range characterises a narrowband filter (as opposed to a broadband filter where Q ≤ 0.5)?",
     "options": {
       "A": "10-100",
       "B": "1",
@@ -13153,7 +13153,7 @@
   },
   {
     "id": "a1_q823",
-    "question": "Verify integ =0? Prob16.5",
+    "question": "The Fourier series orthogonality relations require ∫₀ᵀ cos(nω₀t)·sin(mω₀t) dt = 0 for all integers m, n. What mathematical property of Fourier basis functions does this verify?",
     "options": {
       "A": "Orthogonal",
       "B": "Same freq",
@@ -13169,7 +13169,7 @@
   },
   {
     "id": "a1_q824",
-    "question": "Assess16.1 av=? Vm =9π",
+    "question": "A periodic voltage waveform has peak amplitude Vm = 9π V and the Fourier series average (DC) coefficient a₀ is to be found. Which value equals a₀?",
     "options": {
       "A": "21.99 V",
       "B": "0",
@@ -13393,7 +13393,7 @@
   },
   {
     "id": "a1_q838",
-    "question": "Prob16.4 verify?",
+    "question": "When verifying a Fourier series computation, which mathematical technique uses the time-shift or symmetry properties of the waveform to confirm that the coefficients are correct?",
     "options": {
       "A": "Symmetry shift",
       "B": "Direct integ",
@@ -13441,7 +13441,7 @@
   },
   {
     "id": "a1_q841",
-    "question": "Assess16.2 fund freq T=125.66ms?",
+    "question": "A periodic voltage has period T = 125.66 ms. Calculate its fundamental angular frequency ω₀. (Recall: ω₀ = 2π / T.)",
     "options": {
       "A": "50 rad/s",
       "B": "8 Hz",
@@ -13457,7 +13457,7 @@
   },
   {
     "id": "a1_q842",
-    "question": "Series up 5th harm? Assess16.2",
+    "question": "A periodic waveform has DC value ≈ 21.99 V and fundamental angular frequency ω₀ = 50 rad/s. Its Fourier series (up to the 5th harmonic) starts with which expression?",
     "options": {
       "A": "\\(21.99 -5.2cos50t+...\\)",
       "B": "Sin only",
@@ -13601,7 +13601,7 @@
   },
   {
     "id": "a1_q851",
-    "question": "Assess16.7 Pavg est trap 2Ω?",
+    "question": "A periodic trapezoidal voltage waveform is applied across a 2 Ω resistor. Using the first several Fourier harmonics to estimate Vrms, what is the approximate average power P_avg delivered to the resistor?",
     "options": {
       "A": "60.75 W",
       "B": "0",
@@ -13665,7 +13665,7 @@
   },
   {
     "id": "a1_q855",
-    "question": "Prob16.39 sq vs tri rms est?",
+    "question": "A square wave and a triangular wave each have the same amplitude and period. When only the first 5 nonzero Fourier terms are used to estimate the RMS value, how is the accuracy of each estimate best characterised?",
     "options": {
       "A": "5 terms err %",
       "B": "Exact",
@@ -13777,7 +13777,7 @@
   },
   {
     "id": "a1_q862",
-    "question": "Assess16.8 Cn=?",
+    "question": "The exponential Fourier series coefficient Cₙ for a specific periodic current waveform (Assessment 16.8) equals −(1/3)cos(nπ/4). For which values of n is this expression valid?",
     "options": {
       "A": "\\(-1/3 cos(n π /4), n odd\\)",
       "B": "0",
