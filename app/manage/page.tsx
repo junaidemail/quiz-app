@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { Navbar } from '@/components/Navbar'
+import { MathText } from '@/components/MathText'
 import type { Question } from '@/lib/types'
 
 export default function ManageQuestionsPage() {
@@ -467,7 +468,7 @@ export default function ManageQuestionsPage() {
                   <span className="text-xs font-bold mr-1.5 px-1.5 py-0.5 rounded bg-gray-100 text-gray-600 dark:bg-gray-800 dark:text-gray-400">
                     #{idx + 1}
                   </span>
-                  {q.question}
+                  <MathText text={q.question} />
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-2 mb-3">
@@ -489,7 +490,7 @@ export default function ManageQuestionsPage() {
                       >
                         {opt}
                       </span>
-                      <span>{q.options[opt]}</span>
+                      <span><MathText text={q.options[opt]} /></span>
                       {q.answer === opt && <span className="ml-auto text-emerald-600">✔ Correct</span>}
                     </div>
                   ))}
@@ -501,7 +502,7 @@ export default function ManageQuestionsPage() {
                     style={{ background: 'var(--accent-light)', color: 'var(--fg)' }}
                   >
                     <span className="font-semibold">💡 Explanation: </span>
-                    {q.explanation}
+                    <MathText text={q.explanation} />
                   </div>
                 )}
               </div>

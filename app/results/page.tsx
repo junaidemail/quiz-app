@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { Navbar } from '@/components/Navbar'
 import { getSessions } from '@/lib/storage'
 import { getGrade, formatTime } from '@/lib/quiz-engine'
+import { MathText } from '@/components/MathText'
 import type { QuizSession } from '@/lib/types'
 
 function ResultsPage() {
@@ -152,19 +153,19 @@ function ResultsPage() {
                   <div key={q.id} className="card p-4 animate-fade"
                     style={{ borderLeft: '3px solid var(--danger)' }}>
                     <p className="text-sm font-medium mb-2" style={{ color: 'var(--fg)' }}>
-                      Q{i + 1}. {q.question}
+                      Q{i + 1}. <MathText text={q.question} />
                     </p>
                     <div className="flex gap-4 text-xs">
                       <span style={{ color: 'var(--danger)' }}>
-                        Your answer: ({a.selected}) {a.selected ? q.options[a.selected as keyof typeof q.options] : '—'}
+                        Your answer: ({a.selected}) {a.selected ? <MathText text={q.options[a.selected as keyof typeof q.options]} /> : '—'}
                       </span>
                       <span style={{ color: 'var(--success)' }}>
-                        Correct: ({q.answer}) {q.answer ? q.options[q.answer as keyof typeof q.options] : '—'}
+                        Correct: ({q.answer}) {q.answer ? <MathText text={q.options[q.answer as keyof typeof q.options]} /> : '—'}
                       </span>
                     </div>
                     {q.explanation && (
                       <p className="text-xs mt-2" style={{ color: 'var(--fg-muted)' }}>
-                        💡 {q.explanation.substring(0, 200)}{q.explanation.length > 200 ? '...' : ''}
+                        💡 <MathText text={q.explanation.substring(0, 200)} />{q.explanation.length > 200 ? '...' : ''}
                       </p>
                     )}
                   </div>

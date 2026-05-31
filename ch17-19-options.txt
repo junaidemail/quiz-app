@@ -1,0 +1,1480 @@
+﻿--- a1_q866 ---
+Q: From what mathematical limit is the Fourier transform derived?
+A: Series T ΓåÆΓê₧
+B: Laplace s= j ╧ë
+C: Z only
+D: Discrete
+Ans: A
+
+--- a1_q867 ---
+Q: What is the defining integral equation for the Fourier transform F(╧ë)?
+A: Γê½ f
+B: ╬ú Cn
+C: 1/s
+D: Laplace
+Ans: A
+
+--- a1_q868 ---
+Q: What is the inverse Fourier transform equation that recovers f(t) from F(╧ë)?
+A: 
+B: Laplace inv
+C: Series
+D: RMS
+Ans: A
+
+--- a1_q869 ---
+Q: What is the Fourier transform of a rectangular pulse of amplitude Vm and duration ╧ä?
+A: Vm ╧ä sinc
+B: Rect
+C: Const
+D: Exp
+Ans: A
+
+--- a1_q870 ---
+Q: As the period T approaches infinity, what happens to the line spectrum of a periodic signal?
+A: Continuous
+B: Discrete dense
+C: Zero
+D: Impulse
+Ans: A
+
+--- a1_q871 ---
+Q: In Example 17.1, what is the Fourier transform of a rectangular pulse?
+A: Vm
+B: Rect
+C: Tri
+D: Gauss
+Ans: A
+
+--- a1_q872 ---
+Q: In the limit as TΓåÆΓê₧, what does the product CnT approach?
+A: F
+B: 0
+C: Γê₧
+D: T
+Ans: A
+
+--- a1_q873 ---
+Q: What physical interpretation does the Fourier transform F(╧ë) provide?
+A: Freq content
+B: Time amp
+C: Phase only
+D: Power
+Ans: A
+
+--- a1_q874 ---
+Q: Why is the Fourier transform used instead of the Fourier series?
+A: Aperiodic
+B: Periodic only
+C: DC
+D: Digital
+Ans: A
+
+--- a1_q875 ---
+Q: What condition must a function satisfy for its Fourier transform to exist in the usual sense?
+A: Finite dur single- val
+B: Infinite const
+C: Disc inf
+D: All
+Ans: A
+
+--- a1_q876 ---
+Q: For a decaying exponential Ke^{-at}u(t), when does the Fourier transform converge?
+A: Converge a>0
+B: No
+C: Sin only
+D: Step
+Ans: A
+
+--- a1_q877 ---
+Q: What approximation technique is used to find the Fourier transform of a constant signal?
+A: Ae^{- ╬╡ t } ╬╡ΓåÆ 0
+B: Direct
+C: Sin
+D: Rect
+Ans: A
+
+--- a1_q878 ---
+Q: What is the Fourier transform of a constant signal A?
+A: 2 ╧Ç A ╬┤
+B: 0
+C: 1/ j ╧ë
+D: Const
+Ans: A
+
+--- a1_q879 ---
+Q: What technique is used to find the Fourier transforms of the step function and sine wave?
+A: Limit approx
+B: Direct integ
+C: Laplace
+D: No FT
+Ans: A
+
+--- a1_q880 ---
+Q: Can a function with finite discontinuities have a valid Fourier transform?
+A: OK converge
+B: No
+C: Infinite
+D: Ramp
+Ans: A
+
+--- a1_q881 ---
+Q: Does the Fourier transform of a rectangular pulse converge?
+A: Yes finite
+B: No inf
+C: Partial
+D: Osc
+Ans: A
+
+--- a1_q882 ---
+Q: Why is the limiting approximation technique needed for certain functions?
+A: Const/sin/step
+B: Pulse only
+C: All aper
+D: None
+Ans: A
+
+--- a1_q883 ---
+Q: How is the Fourier transform related to the Laplace transform?
+A: F
+B: s= ╧â
+C: Bilateral
+D: Unilat
+Ans: A
+
+--- a1_q884 ---
+Q: What is the Laplace transform of a rectangular pulse and how does it relate to the sinc function?
+A: 
+B: 1/s
+C: e^{-as}/s
+D: Ramp
+Ans: A
+
+--- a1_q885 ---
+Q: What is the Fourier transform of the unit step function u(t)?
+A: ╧Ç ╬┤
+B: 1/s
+C: 0
+D: Γê₧
+Ans: A
+
+--- a1_q886 ---
+Q: What is the Fourier transform of the signum function sgn(t)?
+A: 2/ j ╧ë
+B: 1/s
+C: Rect
+D: Tri
+Ans: A
+
+--- a1_q887 ---
+Q: In Example 17.2, what is the Fourier transform of e^{-at}u(t)?
+A: 1/
+B: Laplace a ΓåÆ j ╧ë
+C: Bilateral
+D: Neg
+Ans: A
+
+--- a1_q888 ---
+Q: What is the Fourier transform of cos(╧ë0t) from Table 17.1?
+A: ╧Ç [ ╬┤
+B: Sin
+C: Rect
+D: 1/ ╧ë
+Ans: A
+
+--- a1_q889 ---
+Q: What is the region of convergence (ROC) when evaluating the Fourier transform from the Laplace transform?
+A: Re s=0
+B: Right plane
+C: Left
+D: All
+Ans: A
+
+--- a1_q890 ---
+Q: What type of signal does the unilateral Laplace transform apply to?
+A: Causal u
+B: Anticausal
+C: Bilateral
+D: Periodic
+Ans: A
+
+--- a1_q891 ---
+Q: In Assessment 17.2, what is the Fourier transform of a ramp function?
+A: 1/
+B: 1/ j ╧ë
+C: ╧Ç ╬┤
+D: 0
+Ans: A
+
+--- a1_q892 ---
+Q: Why is it convenient to use Laplace transform tables for finding Fourier transforms?
+A: Tables easy
+B: Direct integ
+C: Series
+D: Num
+Ans: A
+
+--- a1_q893 ---
+Q: In the limit as the period approaches infinity for a periodic signal, what form does the spectrum take?
+A: Lines ╬┤ func
+B: Continuous
+C: Zero
+D: Impulse
+Ans: A
+
+--- a1_q894 ---
+Q: How is the Fourier transform of a train of pulses expressed?
+A: Sum shifted
+B: Single
+C: Infinite
+D: Decay
+Ans: A
+
+--- a1_q895 ---
+Q: As TΓåÆΓê₧, what happens to the envelope of the Fourier coefficients Cn?
+A: Envelope same
+B: Change shape
+C: Zero all
+D: Dense only
+Ans: A
+
+--- a1_q896 ---
+Q: In Example 17.3, what is the Fourier transform of a pulse train?
+A: Sum rect F
+B: Sinc
+C: Const
+D: Sin
+Ans: A
+
+--- a1_q897 ---
+Q: What is the Shah (comb) function in the context of Fourier transforms?
+A: Impulses sum
+B: Smooth
+C: Tri
+D: No
+Ans: A
+
+--- a1_q898 ---
+Q: What is the linearity property of the Fourier transform?
+A: F{ af+bg }= aF+bG
+B: Nonlinear
+C: Time only
+D: Freq
+Ans: A
+
+--- a1_q899 ---
+Q: What is the time shift property of the Fourier transform?
+A: e^{-j ╧ë t0} F
+B: Scale
+C: Conj
+D: Diff
+Ans: A
+
+--- a1_q900 ---
+Q: What is the frequency shift property of the Fourier transform?
+A: F
+B: Time mult
+C: Deriv
+D: Int
+Ans: A
+
+--- a1_q901 ---
+Q: What is the time scaling property of the Fourier transform?
+A: | ╬▒ |^{-1} F
+B: Shift
+C: Diff
+D: Conj
+Ans: A
+
+--- a1_q902 ---
+Q: What is the time differentiation property of the Fourier transform?
+A: j ╧ë F
+B: Int
+C: Shift
+D: Scale
+Ans: A
+
+--- a1_q903 ---
+Q: What is the time integration property of the Fourier transform?
+A: F
+B: Deriv
+C: Mult
+D: 0
+Ans: A
+
+--- a1_q904 ---
+Q: What is the conjugate symmetry property of the Fourier transform for real signals?
+A: F
+B: Odd
+C: Real
+D: Imag
+Ans: A
+
+--- a1_q905 ---
+Q: What does Parseval's theorem state about the energy of a signal?
+A: Energy time= freq
+B: Power
+C: Phase
+D: No
+Ans: A
+
+--- a1_q906 ---
+Q: In Assessment 17.3, what does the time shift property imply about the phase spectrum?
+A: Phase lin ╧ë t0
+B: Amp change
+C: Time scale
+D: Freq inv
+Ans: A
+
+--- a1_q907 ---
+Q: What types of functions are listed in Table 17.1 for Fourier transform pairs?
+A: Elem func
+B: Custom
+C: All
+D: None
+Ans: A
+
+--- a1_q908 ---
+Q: What is the time differentiation property of the Fourier transform (operational form)?
+A: j ╧ë F
+B: Int -F
+C: Delay
+D: Scale
+Ans: A
+
+--- a1_q909 ---
+Q: What is the integration property of the Fourier transform?
+A: F
+B: Deriv
+C: Conv
+D: Mult
+Ans: A
+
+--- a1_q910 ---
+Q: What is the time delay property of the Fourier transform?
+A: e^{- j ╧ë t0} F
+B: Adv
+C: Scale
+D: Rev
+Ans: A
+
+--- a1_q911 ---
+Q: What is the convolution property of the Fourier transform in the frequency domain?
+A: F G /2 ╧Ç
+B: Mult
+C: Deriv
+D: No
+Ans: A
+
+--- a1_q912 ---
+Q: What is the time reversal property of the Fourier transform?
+A: F
+B: Conj
+C: Shift
+D: Scale
+Ans: A
+
+--- a1_q913 ---
+Q: In Example 17.4, what waveform results from convolving two rectangular pulses?
+A: Tri F1*F2
+B: Rect
+C: Sinc
+D: Gauss
+Ans: A
+
+--- a1_q914 ---
+Q: What is the multiplication property of the Fourier transform in the frequency domain?
+A: F*G /2 ╧Ç conv
+B: Prod
+C: Deriv
+D: Shift
+Ans: A
+
+--- a1_q915 ---
+Q: In Assessment 17.4, what is the Fourier transform of the derivative of a ramp function?
+A: j ╧ë /
+B: Ramp
+C: Const
+D: 0
+Ans: A
+
+--- a1_q916 ---
+Q: What types of operations are listed in Table 17.2 for the Fourier transform?
+A: Freq dom ops
+B: Time only
+C: Laplace
+D: Z
+Ans: A
+
+--- a1_q917 ---
+Q: Why are operational transforms useful in Fourier analysis?
+A: Simplify calc
+B: Direct
+C: Series
+D: Num
+Ans: A
+
+--- a1_q918 ---
+Q: What is the transfer function H(j╧ë) in the frequency domain?
+A: Vout /Vin freq resp
+B: Time
+C: Laplace
+D: s= j ╧ë
+Ans: A
+
+--- a1_q919 ---
+Q: How is the steady-state sinusoidal response of a circuit found using the Fourier transform?
+A: H
+B: Full trans
+C: Conv
+D: Impulse
+Ans: A
+
+--- a1_q920 ---
+Q: In Example 17.5, what is the transfer function Vout/Vin of an RC low-pass filter?
+A: 1/
+B: Highpass
+C: Band
+D: Reject
+Ans: A
+
+--- a1_q921 ---
+Q: How is the transient response of a circuit found using the Fourier transform?
+A: H
+B: Steady only
+C: Laplace
+D: No
+Ans: A
+
+--- a1_q922 ---
+Q: What is the practical application of filters mentioned in the Practical Perspective?
+A: Freq select aper
+B: Periodic
+C: DC
+D: Power
+Ans: A
+
+--- a1_q923 ---
+Q: In Assessment 17.5, what is the transfer function of an ideal low-pass filter?
+A: Rect 1 | ╧ë |< ╧ë c
+B: Tri
+C: Sinc
+D: Gauss
+Ans: A
+
+--- a1_q924 ---
+Q: Is the phasor equivalent of a circuit related to the Fourier transform by substituting s = j╧ë?
+A: Yes j ╧ë
+B: Time
+C: s
+D: No
+Ans: A
+
+--- a1_q925 ---
+Q: In Example 17.6, how is the steady-state sinusoidal output found?
+A: H
+B: Full sim
+C: Conv
+D: RMS
+Ans: A
+
+--- a1_q926 ---
+Q: How does a load connected to a circuit affect its transfer function H(j╧ë)?
+A: H
+B: No
+C: Time only
+D: Gain
+Ans: A
+
+--- a1_q927 ---
+Q: What type of signals are commonly processed by filters in the Practical Perspective?
+A: Digital sig
+B: Analog only
+C: Power
+D: Control
+Ans: A
+
+--- a1_q928 ---
+Q: According to the energy conservation principle, how is energy related in time and frequency domains?
+A: Time= freq dom
+B: Loss
+C: Gain
+D: RMS
+Ans: A
+
+--- a1_q929 ---
+Q: In Example 17.7, how is the energy in a specific frequency band calculated?
+A: Γê½ |H|^2 |Vi|^2 band
+B: Total
+C: DC
+D: 0
+Ans: A
+
+--- a1_q930 ---
+Q: For an ideal band-pass filter, what does Parseval's theorem indicate about energy?
+A: Pass energy
+B: Stop
+C: All
+D: No
+Ans: A
+
+--- a1_q931 ---
+Q: What does Parseval's theorem indicate about the energy of a signal passing through a low-pass filter?
+A: Band limited energy
+B: Infinite
+C: DC only
+D: Reject
+Ans: A
+
+--- a1_q932 ---
+Q: What configuration do the two ports of a two-port circuit share in their basic representation?
+A: Common ground
+B: Independent V/I
+C: 4 terminals
+D: 1 port
+Ans: A
+
+--- a1_q933 ---
+Q: What sign convention is used for the reference directions of port voltages and currents in a two-port circuit?
+A: Passive sign
+B: Active
+C: Arbitrary
+D: No
+Ans: A
+
+--- a1_q934 ---
+Q: What type of circuit analysis applies to linear two-port networks?
+A: Superpos V,I linear
+B: Nonlinear
+C: Power
+D: Freq
+Ans: A
+
+--- a1_q935 ---
+Q: What assumption about circuit dimensions is made in lumped-element two-port analysis?
+A: No transmission line
+B: Distributed
+C: Wave
+D: All
+Ans: A
+
+--- a1_q936 ---
+Q: What condition defines a reciprocal two-port network?
+A: z12=z21
+B: No
+C: Active
+D: Lossless
+Ans: A
+
+--- a1_q937 ---
+Q: What are the defining equations for the z-parameters (impedance parameters) of a two-port circuit?
+A: V1=z11 I1 + z12 I2
+B: y-admit
+C: h-hybrid
+D: a-trans
+Ans: A
+
+--- a1_q938 ---
+Q: What is the definition of the z-parameter z11?
+A: V1/I1 |I2=0
+B: I1/V1
+C: V2/I2
+D: Ratio
+Ans: A
+
+--- a1_q939 ---
+Q: When measuring z-parameters, what condition is applied to port 2?
+A: z11,z21 input/out
+B: Short
+C: Load
+D: No
+Ans: A
+
+--- a1_q940 ---
+Q: What are the defining equations for the y-parameters (admittance parameters) of a two-port circuit?
+A: I1=y11 V1 + y12 V2
+B: z-imped
+C: Short port
+D: Open
+Ans: A
+
+--- a1_q941 ---
+Q: What is the definition of the y-parameter y11?
+A: I1/V1 |V2=0
+B: V1/I1
+C: Admit
+D: Open
+Ans: A
+
+--- a1_q942 ---
+Q: What are the defining equations for the h-parameters (hybrid parameters) of a two-port circuit?
+A: V1=h11 I1 + h12 V2
+B: I2=h21 I1 + h22 V2
+C: Trans
+D: Admit
+Ans: A
+
+--- a1_q943 ---
+Q: What is the definition of the h-parameter h11?
+A: V1/I1 |V2=0 input Z
+B: Output
+C: Curr gain
+D: No
+Ans: A
+
+--- a1_q944 ---
+Q: What are the defining equations for the g-parameters (inverse hybrid parameters) of a two-port circuit?
+A: I1=g11 V2 + g12 I2
+B: Hybrid
+C: z
+D: y
+Ans: A
+
+--- a1_q945 ---
+Q: What are the defining equations for the a-parameters (chain parameters) of a two-port circuit?
+A: V1=a11 V2 - a21 I2
+B: I1=a12 V2 - a22 I2
+C: Chain
+D: Open
+Ans: A
+
+--- a1_q946 ---
+Q: What is the definition of the a-parameter a11?
+A: V1/V2 |I2=0
+B: I1/I2
+C: Ratio V
+D: Z
+Ans: A
+
+--- a1_q947 ---
+Q: What are the defining equations for the b-parameters (inverse chain parameters) of a two-port circuit?
+A: V2=b11 V1 - b21 I1
+B: I2=b12 V1 - b22 I1
+C: Reverse a
+D: Hybrid
+Ans: A
+
+--- a1_q948 ---
+Q: In Example 18.1, what is the value of z11 for the given circuit?
+A: 10 ╬⌐ open I2=0
+B: Short
+C: Load
+D: 5
+Ans: A
+
+--- a1_q949 ---
+Q: What type of circuit is the hybrid (h-parameter) model commonly used for?
+A: Transistor amp
+B: Filter
+C: T-line
+D: All
+Ans: A
+
+--- a1_q950 ---
+Q: What set of two-port parameters are collectively referred to as immittance parameters?
+A: z,y params
+B: a,b
+C: h,g
+D: All
+Ans: A
+
+--- a1_q951 ---
+Q: What conversions are provided in Table 18.1 for two-port parameters?
+A: z Γåö y,a,b,h,g
+B: No
+C: Freq only
+D: Time
+Ans: A
+
+--- a1_q952 ---
+Q: In Example 18.2, how are the a-parameters of a two-port circuit determined?
+A: From V,I open/short
+B: Calc only
+C: Sim
+D: No
+Ans: A
+
+--- a1_q953 ---
+Q: How are the z-parameters expressed in terms of the y-parameters?
+A: z11= ╬ö y/y22
+B: Direct
+C: Meas
+D: Approx
+Ans: A
+
+--- a1_q954 ---
+Q: For what type of network does the reciprocal condition z12 = z21 hold?
+A: Passive net
+B: Active
+C: Lossy
+D: No
+Ans: A
+
+--- a1_q955 ---
+Q: In Assessment 18.1, what condition is used when finding z-parameters?
+A: Open port2
+B: Short
+C: Load
+D: Term
+Ans: A
+
+--- a1_q956 ---
+Q: Why are two-port parameters used to characterize circuits?
+A: Char unknown circ
+B: Analysis
+C: Design
+D: All
+Ans: A
+
+--- a1_q957 ---
+Q: What is the input impedance Zin of a terminated two-port network in terms of z-parameters?
+A: z11 - z12 z21/
+B: z11
+C: ZL
+D: Open
+Ans: A
+
+--- a1_q958 ---
+Q: What is the short-circuit output current Isc for a terminated two-port network?
+A: Vg/
+B: Zero
+C: Inf
+D: ZL
+Ans: A
+
+--- a1_q959 ---
+Q: What is the Th├⌐venin voltage Vth at the output of a terminated two-port network?
+A: Vg z21/
+B: Short
+C: Load
+D: No
+Ans: A
+
+--- a1_q960 ---
+Q: What is the Th├⌐venin impedance Zth at the output of a terminated two-port network?
+A: z22 - z12 z21/z11 short input
+B: z22
+C: z11
+D: ╬ö z
+Ans: A
+
+--- a1_q961 ---
+Q: What is the current gain I2/I1 for a terminated two-port network?
+A: -z21/
+B: z11/z22
+C: 1
+D: 0
+Ans: A
+
+--- a1_q962 ---
+Q: What is the voltage gain V2/V1 for a terminated two-port network?
+A: z21 z22/
+B: z11/z21
+C: ZL/z22
+D: No
+Ans: A
+
+--- a1_q963 ---
+Q: In Example 18.3, what is used to convert between different two-port parameter sets?
+A: Use Table18.1
+B: Direct
+C: Meas
+D: Approx
+Ans: A
+
+--- a1_q964 ---
+Q: What terminated two-port equations are summarized in Table 18.2?
+A: Zin,Vth,Zth,Ai,Av
+B: Params only
+C: Meas
+D: No
+Ans: A
+
+--- a1_q965 ---
+Q: In Assessment 18.2, what is the formula for the input impedance Zin?
+A: z11-z12z21/
+B: Parallel
+C: Series
+D: Open
+Ans: A
+
+--- a1_q966 ---
+Q: What condition must be satisfied for maximum power transfer from a two-port network?
+A: Zth conj match
+B: ZL=z22
+C: Any
+D: No
+Ans: A
+
+--- a1_q967 ---
+Q: When finding the output Th├⌐venin impedance with Vg = 0, what is done to the input?
+A: Short input
+B: Open
+C: Load
+D: Term
+Ans: A
+
+--- a1_q968 ---
+Q: What is the current gain expression for a terminated two-port network?
+A: -z21/
+B: z12/z11
+C: 1
+D: ZL
+Ans: A
+
+--- a1_q969 ---
+Q: According to the Practical Perspective, how are two-port parameters used to characterize unknown circuits?
+A: Unknown circ meas
+B: Known
+C: Design
+D: Sim
+Ans: A
+
+--- a1_q970 ---
+Q: What is the maximum power delivered by a terminated two-port network?
+A: |Vth|^2 Re
+B: Avg
+C: RMS
+D: No
+Ans: A
+
+--- a1_q971 ---
+Q: In Assessment 18.3, what circuit is the h-parameter model typically used for?
+A: Transistor model
+B: Op amp
+C: Filter
+D: T-line
+Ans: A
+
+--- a1_q972 ---
+Q: How are the a-parameters of two cascaded two-port networks A and B combined?
+A: [A1 B1;C1 D1][A2 B2;C2 D2]
+B: z mult
+C: y add
+D: No
+Ans: A
+
+--- a1_q973 ---
+Q: What is the overall a-parameter A for two cascaded two-port networks?
+A: A1 A2 + B1 C2
+B: A1+A2
+C: Prod
+D: Sum
+Ans: A
+
+--- a1_q974 ---
+Q: In Example 18.4, how are cascaded two-port networks analyzed?
+A: Mult a-matrices
+B: Add
+C: Conv
+D: No
+Ans: A
+
+--- a1_q975 ---
+Q: How are the a-parameters of n identical cascaded two-port networks computed?
+A: A^n matrix pow
+B: Single
+C: z
+D: Meas
+Ans: A
+
+--- a1_q976 ---
+Q: What do the chain (a) parameters describe about a two-port network?
+A: Input ΓåÆ output
+B: Hybrid
+C: Admit
+D: Imped
+Ans: A
+
+--- a1_q977 ---
+Q: How are two-port networks connected in series (same input, same output) combined?
+A: y-params sum
+B: z sum
+C: a mult
+D: No
+Ans: A
+
+--- a1_q978 ---
+Q: How are two-port networks connected in parallel combined?
+A: y-sum parallel
+B: z-sum series
+C: h
+D: a
+Ans: A
+
+--- a1_q979 ---
+Q: What is the advantage of using a-parameters for cascaded two-port networks?
+A: Mult matrices easy
+B: Complex
+C: Meas only
+D: No
+Ans: A
+
+--- a1_q980 ---
+Q: In Example 18.5, how are two two-port networks in series combined?
+A: y1+y2
+B: z1+z2
+C: Mult
+D: No
+Ans: A
+
+--- a1_q981 ---
+Q: In Assessment 18.4, how are the y-parameters of two parallel-connected two-port networks combined?
+A: y11 total=y11a + y11b
+B: z
+C: a
+D: h
+Ans: A
+
+--- a1_q982 ---
+Q: How are the y-parameters of a T-network determined?
+A: From deltas
+B: Direct
+C: z
+D: No
+Ans: A
+
+--- a1_q983 ---
+Q: How are the z-parameters of a pi-network determined?
+A: From wye
+B: y
+C: h
+D: Meas
+Ans: A
+
+--- a1_q984 ---
+Q: Can lossy two-port networks still be cascaded using a-parameter multiplication?
+A: Still mult a-params
+B: No
+C: Active only
+D: Recip
+Ans: A
+
+--- a1_q985 ---
+Q: What interconnection methods exist for combining two-port networks?
+A: y/z series/paral
+B: a casc
+C: h hybrid
+D: All
+Ans: A
+
+--- a1_q986 ---
+Q: Why are two-port parameters useful in circuit analysis and design?
+A: Cascade/modular
+B: Single
+C: Meas
+D: Sim
+Ans: A
+
+--- a1_q987 ---
+Q: What condition defines the measurement of z-parameters?
+A: Port2 I2=0
+B: V2=0
+C: Load
+D: Short
+Ans: A
+
+--- a1_q988 ---
+Q: What condition defines the measurement of y-parameters?
+A: V=0 ports
+B: I=0
+C: Open
+D: Term
+Ans: A
+
+--- a1_q989 ---
+Q: What are the independent variables in the h-parameter representation?
+A: V1,I2 indep
+B: V2,I1
+C: All V
+D: All I
+Ans: A
+
+--- a1_q990 ---
+Q: In what direction do the a-parameters (chain parameters) relate the port voltages and currents?
+A: Port2 ΓåÆ port1
+B: Port1 ΓåÆ 2
+C: Bidirect
+D: No
+Ans: A
+
+--- a1_q991 ---
+Q: What is Table 18.1 used for in two-port network analysis?
+A: Convert sets
+B: Meas
+C: Calc
+D: All
+Ans: A
+
+--- a1_q992 ---
+Q: Does Eq. 18.49 give the input impedance Zin of a terminated two-port in terms of z-parameters?
+A: Yes z-params
+B: h
+C: y
+D: Direct
+Ans: A
+
+--- a1_q993 ---
+Q: What is the Th├⌐venin voltage Vth at the output in terms of z-parameters?
+A: z21/z11 Vg
+B: z22/z12
+C: ZL
+D: No
+Ans: A
+
+--- a1_q994 ---
+Q: What is the Th├⌐venin impedance Zth at the output with the input short-circuited?
+A: z22-z12z21/z11
+B: Open
+C: Load
+D: z11
+Ans: A
+
+--- a1_q995 ---
+Q: What is the voltage gain Av = V2/V1 in terms of z-parameters and load impedance?
+A: z21 z22 / [z11
+B: z11/z21
+C: 1
+D: ZL/z22
+Ans: A
+
+--- a1_q996 ---
+Q: How are cascaded two-port networks analyzed using a-parameters?
+A: Matrix mult
+B: Add
+C: y sum
+D: z sum
+Ans: A
+
+--- a1_q997 ---
+Q: How are the y-parameters of two series-connected two-port networks combined?
+A: y1+y2
+B: z1+z2
+C: Paral z
+D: No
+Ans: A
+
+--- a1_q998 ---
+Q: How are the z-parameters of two parallel-connected two-port networks combined?
+A: z1+z2
+B: y1+y2
+C: Series y
+D: Casc
+Ans: A
+
+--- a1_q999 ---
+Q: How are two-port parameters used in practice to characterize circuits?
+A: Meas params ID
+B: Known
+C: Design
+D: Sim
+Ans: A
+
+--- a1_q1000 ---
+Q: What practical applications use two-port parameter models in professional engineering (PEng) contexts?
+A: Amp/T-line model
+B: Filter only
+C: Power
+D: DC
+Ans: A
+
+--- a1_q1001 ---
+Q: What quantity characterizes the magnetic coupling between two coils?
+A: Mutual inductance M
+B: Self inductance only
+C: No coupling
+D: Capacitive
+Ans: A
+
+--- a1_q1002 ---
+Q: What does the dot convention define in magnetically coupled circuits?
+A: Reference polarity
+B: Arbitrary
+C: Current direction
+D: Voltage drop
+Ans: A
+
+--- a1_q1003 ---
+Q: What voltage is induced in coil 1 due to a changing current in coil 2?
+A: M di2/dt
+B: L di1/dt
+C: Ri
+D: C dv/dt
+Ans: A
+
+--- a1_q1004 ---
+Q: How is the coupling coefficient k defined for two magnetically coupled coils?
+A: k = M / sqrt
+B: k = L1 / L2
+C: k = M / L1
+D: k = 1 always
+Ans: A
+
+--- a1_q1005 ---
+Q: What is the allowable range of the coupling coefficient k?
+A: 0 Γëñ k Γëñ 1
+B: k > 1
+C: k < 0
+D: k infinite
+Ans: A
+
+--- a1_q1006 ---
+Q: What is the T-equivalent circuit representation of two magnetically coupled coils?
+A: L1-M, M, L2-M
+B: L1, L2, M
+C: Pi form
+D: No coupling
+Ans: A
+
+--- a1_q1007 ---
+Q: What is the pi-equivalent circuit representation of two magnetically coupled coils?
+A: L1 L2 - M ┬▓ /
+B: Series only
+C: Parallel
+D: Transformer
+Ans: A
+
+--- a1_q1008 ---
+Q: What is the total energy stored in two magnetically coupled coils?
+A: 
+B: 
+C: No mutual term
+D: Capacitive
+Ans: A
+
+--- a1_q1009 ---
+Q: What happens to the mutual inductance when the polarity (dot placement) is reversed?
+A: M ΓåÆ -M
+B: L1 ΓåÆ -L1
+C: k ΓåÆ -k
+D: No change
+Ans: A
+
+--- a1_q1010 ---
+Q: What is the voltage ratio V2/V1 for an open-circuited secondary in coupled coils?
+A: V2 / V1 = j ╧ë M / j ╧ë L1
+B: V2 = 0
+C: Infinite impedance
+D: Short
+Ans: A
+
+--- a1_q1011 ---
+Q: In Example C.1, how is the inductance L11 determined?
+A: From T-circuit
+B: Measure V
+C: k=1
+D: Ideal
+Ans: A
+
+--- a1_q1012 ---
+Q: What is the reflected impedance seen at the primary of coupled coils?
+A: ZL
+B: ZL direct
+C: Open
+D: Short
+Ans: A
+
+--- a1_q1013 ---
+Q: How is the coupling coefficient k measured experimentally?
+A: V2/V1 open
+B: Turns ratio
+C: DC test
+D: Resistance
+Ans: A
+
+--- a1_q1014 ---
+Q: What does a unity coupling coefficient (k = 1) indicate?
+A: Perfect coupling
+B: k=0
+C: Loose
+D: No M
+Ans: A
+
+--- a1_q1015 ---
+Q: Why are magnetically coupled coils important in electrical engineering?
+A: Transformers
+B: Isolation
+C: All
+D: Filters
+Ans: C
+
+--- a1_q1016 ---
+Q: What are the characteristics of an ideal transformer?
+A: V2 / V1 = n2 / n1 = a
+B: Lossless
+C: Infinite L
+D: All
+Ans: D
+
+--- a1_q1017 ---
+Q: How is the turns ratio a defined for an ideal transformer?
+A: a = n2 / n1
+B: n1 / n2
+C: M / L
+D: k
+Ans: A
+
+--- a1_q1018 ---
+Q: What is the relationship between the primary and secondary currents in an ideal transformer?
+A: I1 / I2 = n2 / n1
+B: I1 = I2
+C: Infinite
+D: Zero
+Ans: A
+
+--- a1_q1019 ---
+Q: How is load impedance reflected to the primary side of an ideal transformer?
+A: ZL / a ┬▓
+B: a ┬▓ ZL
+C: ZL
+D: 1/ZL
+Ans: A
+
+--- a1_q1020 ---
+Q: What do the dot markings on an ideal transformer indicate?
+A: Voltage rise same dir
+B: Opposite
+C: Current
+D: No effect
+Ans: A
+
+--- a1_q1021 ---
+Q: In an ideal transformer, what is the secondary voltage V2 in terms of the turns ratio?
+A: a V1
+B: V1 / a
+C: 0
+D: Infinite
+Ans: A
+
+--- a1_q1022 ---
+Q: What is the power relationship between the primary and secondary of an ideal transformer?
+A: P1 = P2
+B: Lossless
+C: Infinite
+D: Zero
+Ans: A
+
+--- a1_q1023 ---
+Q: What characterizes a step-up transformer in terms of turns ratio?
+A: a > 1
+B: a < 1
+C: a=1
+D: No
+Ans: A
+
+--- a1_q1024 ---
+Q: What electrical property does an ideal transformer provide between its primary and secondary circuits?
+A: No DC path
+B: Coupled
+C: Short
+D: Open
+Ans: A
+
+--- a1_q1025 ---
+Q: How is maximum power transfer achieved in a transformer-coupled circuit?
+A: Match reflected Z
+B: Any load
+C: Open
+D: Short
+Ans: A
+
+--- a1_q1026 ---
+Q: Which equivalent circuit models are valid for representing magnetically coupled coils?
+A: Both valid
+B: T only
+C: Pi only
+D: No equiv
+Ans: A
+
+--- a1_q1027 ---
+Q: What value of a simplifies the T-equivalent circuit to an ideal transformer form?
+A: Simplifies T
+B: Unity k
+C: Ideal
+D: No M
+Ans: A
+
+--- a1_q1028 ---
+Q: What impedances are used in the frequency-domain representation of coupled coils?
+A: j ╧ë L1, j ╧ë M
+B: R only
+C: DC
+D: s-domain
+Ans: A
+
+--- a1_q1029 ---
+Q: How is the coupling coefficient k expressed in terms of measured ratios?
+A: sqrt
+B: Direct
+C: Turns
+D: Measure
+Ans: A
+
+--- a1_q1030 ---
+Q: In Assessment 19.1, what equivalent circuit is used for the coupled coils?
+A: L1-M etc.
+B: Pi
+C: Ideal
+D: Uncoupled
+Ans: A
+
+--- a1_q1031 ---
+Q: What does a unity coupling coefficient (k = 1) reduce the coupled coils to?
+A: Ideal trans
+B: No M
+C: Short
+D: Open
+Ans: A
+
+--- a1_q1032 ---
+Q: What is the reflected impedance at frequency ╧ë for coupled coils?
+A: 
+B: ZL
+C: 1/ZL
+D: Infinite
+Ans: A
+
+--- a1_q1033 ---
+Q: What mutual contribution appears in the energy stored expression for coupled coils?
+A: i1 i2 M term
+B: Self only
+C: Zero
+D: Negative
+Ans: A
+
+--- a1_q1034 ---
+Q: How does reversing the polarity (dot placement) affect the mutual term?
+A: Sign M
+B: L change
+C: k abs
+D: No
+Ans: A
+
+--- a1_q1035 ---
+Q: Why are equivalent circuit models useful for analyzing magnetically coupled coils?
+A: Analysis simplify
+B: Measure
+C: Design
+D: All
+Ans: D
+
+--- a1_q1036 ---
+Q: What do the dot markings indicate about voltage and current polarity in coupled coils?
+A: + v with + i
+B: Opposite
+C: Current
+D: No
+Ans: A
+
+--- a1_q1037 ---
+Q: How is mutual inductance M physically defined?
+A: Mutual flux linkage
+B: Self
+C: Resistance
+D: Capacitance
+Ans: A
+
+--- a1_q1038 ---
+Q: What are the voltage and current constraints for an ideal transformer?
+A: V2 = a V1, I2 = -I1 / a
+B: V1=V2
+C: I1=I2
+D: No
+Ans: A
+
+--- a1_q1039 ---
+Q: What does a coupling coefficient of k = 0 indicate?
+A: No coupling
+B: Perfect
+C: Ideal
+D: Unity
+Ans: A
+
+--- a1_q1040 ---
+Q: What is the reflected impedance seen at the primary of an ideal transformer?
+A: ZL / a ┬▓ primary
+B: a ┬▓ ZL sec
+C: ZL
+D: Infinite
+Ans: A
+
+--- a1_q1041 ---
+Q: What are the three inductance values in the T-equivalent circuit of coupled coils?
+A: L1-M, L2-M, M
+B: L1, L2 only
+C: Pi
+D: Capacitors
+Ans: A
+
+--- a1_q1042 ---
+Q: How is the ratio M/L1 measured experimentally?
+A: V2/V1 open sec
+B: Short
+C: DC
+D: Turns
+Ans: A
+
+--- a1_q1043 ---
+Q: What is the complete formula for the energy stored in two magnetically coupled coils?
+A: 1/2
+B: 1/2 L i ┬▓
+C: No mutual
+D: Power
+Ans: A
+
+--- a1_q1044 ---
+Q: How are cascaded coupled coils analyzed using equivalent circuits?
+A: Matrix mult like 2-port
+B: Series L
+C: Parallel
+D: No
+Ans: A
+
+--- a1_q1045 ---
+Q: What are the practical PEng applications of transformers?
+A: Power, isolation
+B: DC only
+C: Capacitive
+D: Resistive
+Ans: A
+
+--- a1_q1046 ---
+Q: What reference direction do the polarity dots indicate in coupled coils?
+A: Same ref dir
+B: Opp
+C: Arbitrary
+D: None
+Ans: A
+
+--- a1_q1047 ---
+Q: How is the coupling coefficient k calculated from the mutual and self inductances?
+A: M/sqrt
+B: L1/L2
+C: V ratio
+D: All
+Ans: A
+
+--- a1_q1048 ---
+Q: What is the power relationship for an ideal transformer?
+A: Pin = Pout
+B: Loss
+C: Infinite
+D: Zero
+Ans: A
+
+--- a1_q1049 ---
+Q: What circuit analysis methods is the pi-equivalent model suitable for?
+A: Node analysis
+B: Mesh
+C: Both
+D: None
+Ans: C
+
+--- a1_q1050 ---
+Q: What does Appendix C provide regarding coupled coils?
+A: Detailed equiv ckt
+B: Basic intro
+C: Fourier
+D: Laplace
+Ans: A
+

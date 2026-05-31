@@ -7,6 +7,7 @@ import { getBookmarks, toggleBookmark } from '@/lib/storage'
 import { loadQuestions } from '@/lib/questions'
 import { saveSession } from '@/lib/storage'
 import { createSession } from '@/lib/quiz-engine'
+import { MathText } from '@/components/MathText'
 import type { Question } from '@/lib/types'
 
 export default function BookmarksPage() {
@@ -136,7 +137,7 @@ export default function BookmarksPage() {
                   </div>
 
                   <p className="text-sm font-medium mb-2" style={{ color: 'var(--fg)' }}>
-                    {q.question}
+                    <MathText text={q.question} />
                   </p>
 
                   {expandedIds.has(q.id) && (
@@ -150,7 +151,7 @@ export default function BookmarksPage() {
                               border: `1px solid ${opt === q.answer ? 'var(--success)' : 'var(--border)'}`,
                             }}>
                             <span className="font-bold min-w-5">{opt}.</span>
-                            <span>{q.options[opt]}</span>
+                            <span><MathText text={q.options[opt]} /></span>
                             {opt === q.answer && <span className="ml-auto font-bold">✓</span>}
                           </div>
                         ))}
@@ -158,7 +159,7 @@ export default function BookmarksPage() {
                       {q.explanation && (
                         <div className="p-3 rounded-lg text-xs leading-relaxed"
                           style={{ background: 'var(--accent-light)', color: 'var(--fg)' }}>
-                          <span className="font-semibold">💡 </span>{q.explanation}
+                          <span className="font-semibold">💡 </span><MathText text={q.explanation} />
                         </div>
                       )}
                     </div>

@@ -4,6 +4,7 @@ import { useRouter, useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import { Navbar } from '@/components/Navbar'
 import { getSessions, toggleBookmark, isBookmarked } from '@/lib/storage'
+import { MathText } from '@/components/MathText'
 import type { QuizSession } from '@/lib/types'
 
 type Filter = 'all' | 'correct' | 'incorrect' | 'skipped' | 'flagged' | 'bookmarked'
@@ -151,7 +152,7 @@ function ReviewPage() {
                 </div>
 
                 <p className="text-sm font-medium mb-3" style={{ color: 'var(--fg)' }}>
-                  {q.question}
+                  <MathText text={q.question} />
                 </p>
 
                 {/* Answer summary */}
@@ -163,7 +164,7 @@ function ReviewPage() {
                         color: a.isCorrect ? '#065f46' : '#991b1b',
                       }}>
                       <span className="font-semibold">Your answer:</span>{' '}
-                      ({a.selected}) {q.options[a.selected as keyof typeof q.options]}
+                      ({a.selected}) <MathText text={q.options[a.selected as keyof typeof q.options]} />
                     </div>
                   )}
                   {!a.selected && (
@@ -176,7 +177,7 @@ function ReviewPage() {
                     <div className="text-xs p-2 rounded-lg"
                       style={{ background: '#ecfdf5', color: '#065f46' }}>
                       <span className="font-semibold">Correct answer:</span>{' '}
-                      ({q.answer}) {q.options[q.answer as keyof typeof q.options]}
+                      ({q.answer}) <MathText text={q.options[q.answer as keyof typeof q.options]} />
                     </div>
                   )}
                 </div>
@@ -197,7 +198,7 @@ function ReviewPage() {
                               border: `1px solid ${isCorrect ? 'var(--success)' : isSelected ? 'var(--danger)' : 'var(--border)'}`,
                             }}>
                             <span className="font-bold min-w-5">{opt}.</span>
-                            <span>{q.options[opt]}</span>
+                            <span><MathText text={q.options[opt]} /></span>
                             {isCorrect && <span className="ml-auto">✓</span>}
                             {isSelected && !isCorrect && <span className="ml-auto">✗</span>}
                           </div>
@@ -209,7 +210,7 @@ function ReviewPage() {
                       <div className="p-3 rounded-lg text-xs leading-relaxed"
                         style={{ background: 'var(--accent-light)', color: 'var(--fg)' }}>
                         <span className="font-semibold">💡 Explanation: </span>
-                        {q.explanation}
+                        <MathText text={q.explanation} />
                       </div>
                     )}
 

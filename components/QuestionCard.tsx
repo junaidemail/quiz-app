@@ -3,6 +3,7 @@ import type { Question, UserAnswer } from '@/lib/types'
 import { getChapterLabel } from '@/lib/questions'
 import { isBookmarked, toggleBookmark } from '@/lib/storage'
 import { useState, useEffect } from 'react'
+import { MathText } from './MathText'
 
 interface Props {
   question: Question
@@ -131,7 +132,7 @@ export function QuestionCard({
       {/* Question */}
       <div className="card p-5 mb-4">
         <p className="text-base leading-relaxed font-medium" style={{ color: 'var(--fg)' }}>
-          {question.question}
+          <MathText text={question.question} />
         </p>
       </div>
 
@@ -156,7 +157,7 @@ export function QuestionCard({
                   }}>
                   {opt}
                 </span>
-                <span>{question.options[optKey]}</span>
+                <span><MathText text={question.options[optKey]} /></span>
               </span>
             </button>
           )
@@ -174,7 +175,7 @@ export function QuestionCard({
           {showExplanation && (
             <div className="card p-4 animate-fade" style={{ borderColor: 'var(--success)' }}>
               <p className="text-sm leading-relaxed" style={{ color: 'var(--fg-muted)' }}>
-                {question.explanation}
+                <MathText text={question.explanation} />
               </p>
             </div>
           )}

@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import type { Question } from '@/lib/types'
 import { isBookmarked, toggleBookmark } from '@/lib/storage'
 import { getChapterLabel } from '@/lib/questions'
+import { MathText } from './MathText'
 
 interface Props {
   question: Question
@@ -79,7 +80,7 @@ export function FlashCard({ question, questionIndex, totalQuestions, onNext, onP
                 👆 Tap to reveal answer
               </p>
               <p className="text-base font-semibold leading-relaxed" style={{ color: 'var(--fg)' }}>
-                {question.question}
+                <MathText text={question.question} />
               </p>
             </div>
           </div>
@@ -99,7 +100,7 @@ export function FlashCard({ question, questionIndex, totalQuestions, onNext, onP
                     color: opt === question.answer ? '#065f46' : 'var(--fg-muted)',
                   }}>
                   <span className="font-bold min-w-5">{opt}.</span>
-                  <span>{question.options[opt]}</span>
+                  <span><MathText text={question.options[opt]} /></span>
                   {opt === question.answer && <span className="ml-auto font-bold">✓</span>}
                 </div>
               ))}
@@ -107,7 +108,7 @@ export function FlashCard({ question, questionIndex, totalQuestions, onNext, onP
             {question.explanation && (
               <div className="mt-3 p-3 rounded-xl text-xs leading-relaxed"
                 style={{ background: 'var(--accent-light)', color: 'var(--fg)' }}>
-                <span className="font-semibold">💡 </span>{question.explanation.substring(0, 200)}
+                <span className="font-semibold">💡 </span><MathText text={question.explanation.substring(0, 200)} />
                 {question.explanation.length > 200 ? '...' : ''}
               </div>
             )}
