@@ -2214,7 +2214,7 @@
       "A": "In parallel",
       "B": "In series",
       "C": "In delta",
-      "D": "None ✅ That completes the Unicode-formatted “Questions” block for Chapter 2 ("
+      "D": "None of the above"
     },
     "answer": "B",
     "explanation": "Same current flows only through series-connected elements. Quick Reference (Unicode Formulas) • Ohm’s Law → v = i R; i = v ⁄ R; p = v i = i² R = v² ⁄ R • Series/Parallel → R_s = R₁ + R₂ + …; R_p = (R₁R₂)/(R₁ + R₂) • KCL → Σ i = 0 (charge conservation) • KVL → Σ v = 0 (energy conservation) • Ideal Sources → Voltage source R_in = 0; Current source R_in = ∞ • Source Transform → (V ₛ , R ₛ ) ⇔ (I ₛ = V ₛ ⁄ R ₛ , R ₛ ∥ load) • Δ- Y conversion (equal Δ → Y each = R ⁄ 3)",
@@ -3254,7 +3254,7 @@
       "A": "\\(R ₁ : R₂\\)",
       "B": "\\(R ₂ : R₁\\)",
       "C": "\\(R₁ ² : R₂²\\)",
-      "D": "\\(R₁ / R₂² Perfect ✅ -- I’ll now produce Block 2: Answers + Explanations for Chapter 3 (Simple Resistive Circuits) in the same Unicode-math style . Formulas will be fully expanded and readable (for example “R ₁ = 10 Ω , I = V⁄R = 12⁄6 = 2 A”), all units in Unicode, and every explanation self-contained. Because it’s quite long (70 items), I’ll split it into several consecutive messages: Part 1:\\)"
+      "D": "None of the above"
     },
     "answer": "A",
     "explanation": "Series → I same; P = I²R ⇒ P ₁ : P ₂ = R ₁ : R ₂ . ⚡ Quick Reference Formulas (Unicode Ready) • Ohm’s Law → v = iR ; i = v⁄R ; p = v i = i²R = v²⁄R • Series → R_s = R ₁ + R ₂ + … • Parallel → 1⁄R_p = 1⁄R ₁ + 1⁄R ₂ + … or R_p = (R ₁ R ₂ )/(R ₁ + R ₂ ) (for two branches) • Voltage Divider → V ₁ = V_total × R ₁ ⁄(R ₁ + R ₂ ) • Current Divider → I ₁ = I_total × R ₂ ⁄(R ₁ + R ₂ ) • KCL → Σ i = 0 (charge conservation) • KVL → Σ v = 0 (energy conservation) • Power → p = v i = i²R = v²⁄R • Δ -Y Conversion → R_Y(each) = (R ₁ R ₂ )/(R ₁ + R ₂ + R ₃ ) • Units → 1 A = 1 C/s; 1 V = 1 J/C; 1 W = 1 J/s",
@@ -4737,7 +4737,7 @@
   },
   {
     "id": "a1_q297",
-    "question": "Ex. 8.6: overdamped step i_L final",
+    "question": "In a parallel RLC step-response circuit with constant current source I_s = 24 mA, what is the final (steady-state) inductor current i_L(∞)?",
     "options": {
       "A": "\\(I_s = 24 mA\\)",
       "B": "0",
@@ -4897,7 +4897,7 @@
   },
   {
     "id": "a1_q307",
-    "question": "Ex. 8.2: branch i_R (0) =",
+    "question": "In a parallel RLC circuit with initial capacitor voltage V_0, what is the initial resistor branch current i_R(0)?",
     "options": {
       "A": "V_0 / R",
       "B": "I_L0",
@@ -4913,7 +4913,7 @@
   },
   {
     "id": "a1_q308",
-    "question": "Ex. 8.4: underdamped plot shows",
+    "question": "In an underdamped second-order circuit, what shape bounds the decaying oscillation in the time-domain plot?",
     "options": {
       "A": "Exponential decay envelope",
       "B": "Constant amp.",
@@ -4961,7 +4961,7 @@
   },
   {
     "id": "a1_q311",
-    "question": "Ex. 8.9: fastest to 90%",
+    "question": "Which type of damping reaches 90% of the final step-response value in the shortest time?",
     "options": {
       "A": "Underdamped",
       "B": "Overdamped",
@@ -4977,7 +4977,7 @@
   },
   {
     "id": "a1_q312",
-    "question": "Ex. 8.10: initial stored energy affects",
+    "question": "In a second-order RLC step response, initial stored energy (non-zero initial conditions) affects which parameters?",
     "options": {
       "A": "Coefficients A,B only",
       "B": "Roots",
@@ -4993,7 +4993,7 @@
   },
   {
     "id": "a1_q313",
-    "question": "Cascade Ex. 8.13: v_o ∝",
+    "question": "In a cascade of two op-amp integrators driven by a step input, the output v_o is proportional to what function of time?",
     "options": {
       "A": "\\(t ² for step input\\)",
       "B": "t",
@@ -5057,7 +5057,7 @@
   },
   {
     "id": "a1_q317",
-    "question": "Ex. 8.1: v(0 ⁻ )=",
+    "question": "For a circuit in DC steady state just before switching at t = 0, the initial voltage v(0⁻) equals what?",
     "options": {
       "A": "DC steady-state",
       "B": "0 always",
@@ -5153,7 +5153,7 @@
   },
   {
     "id": "a1_q323",
-    "question": "Ex. 8.11: series underdamped i (t) initial",
+    "question": "In a series RLC circuit with a switch that closes at t = 0 and no prior current, what is the initial inductor current i(0+)?",
     "options": {
       "A": "0 A",
       "B": "V_0 / R",
@@ -5169,7 +5169,7 @@
   },
   {
     "id": "a1_q324",
-    "question": "Ex. 8.12: di/dt(0 ⁺ )=",
+    "question": "For a series RLC circuit with source voltage V_s and zero initial conditions, what is di/dt at t = 0+?",
     "options": {
       "A": "V_s / L",
       "B": "0",
@@ -5201,7 +5201,7 @@
   },
   {
     "id": "a1_q326",
-    "question": "Table 8.3: natural response summary",
+    "question": "What three forms does the natural response of a second-order RLC circuit take based on the damping condition?",
     "options": {
       "A": "Over/under/critical forms",
       "B": "Step only",
@@ -5217,7 +5217,7 @@
   },
   {
     "id": "a1_q327",
-    "question": "Ex. 8.2: i_C (0)=",
+    "question": "By KCL in a parallel RLC circuit, the initial capacitor current i_C(0) equals what in terms of i_R(0) and i_L(0)?",
     "options": {
       "A": "\\(-( i_R (0) + i_L (0))\\)",
       "B": "0",
@@ -5313,7 +5313,7 @@
   },
   {
     "id": "a1_q333",
-    "question": "Ex. 8.4: B1 from",
+    "question": "In the underdamped response v(t) = e^{-αt}(B₁cos ωdt + B₂sin ωdt), coefficient B₁ is determined from which initial condition?",
     "options": {
       "A": "v(0)",
       "B": "dv/dt(0)",
@@ -5345,7 +5345,7 @@
   },
   {
     "id": "a1_q335",
-    "question": "Ex. 8.9 plot: under fastest to 90%",
+    "question": "Does an underdamped step response reach 90% of its final value faster than overdamped, even though it overshoots?",
     "options": {
       "A": "Yes, overshoots",
       "B": "No, slowest",
@@ -5409,7 +5409,7 @@
   },
   {
     "id": "a1_q339",
-    "question": "Ex. 8.1: overdamped roots from",
+    "question": "What condition on the damping coefficient α and natural frequency ω₀ produces overdamped (real distinct) characteristic roots?",
     "options": {
       "A": "\\(α > ω_0\\)",
       "B": "\\(α < ω _0\\)",
@@ -5905,7 +5905,7 @@
   },
   {
     "id": "a1_q370",
-    "question": "Ex.9.8 Δ-Y: simplifies",
+    "question": "Δ-Y: simplifies",
     "options": {
       "A": "Branch currents",
       "B": "Nodes",
@@ -6033,7 +6033,7 @@
   },
   {
     "id": "a1_q378",
-    "question": "Ex.9.13: Z_r scaling",
+    "question": "Z_r scaling",
     "options": {
       "A": "\\(( ωM /Z22)^2\\)",
       "B": "1",
@@ -6337,7 +6337,7 @@
   },
   {
     "id": "a1_q397",
-    "question": "Ex.9.15: phase diagram shows",
+    "question": "phase diagram shows",
     "options": {
       "A": "Current lags voltage",
       "B": "Leads",
@@ -6513,7 +6513,7 @@
   },
   {
     "id": "a1_q408",
-    "question": "Instantaneous power p(t) = ? p.362",
+    "question": "Instantaneous power p(t) = ?",
     "options": {
       "A": "\\(v(t) × i (t) using passive sign convention\\)",
       "B": "\\(V_m I_m cos( θ_v - θ_i )\\)",
@@ -6529,7 +6529,7 @@
   },
   {
     "id": "a1_q409",
-    "question": "For v = V_m cos( ωt + θ_v ), i = I_m cos( ωt + θ_i ), p(t) frequency? Eq.10.6",
+    "question": "For v = V_m cos( ωt + θ_v ), i = I_m cos( ωt + θ_i ), p(t) frequency?",
     "options": {
       "A": "\\(ω (same as source)\\)",
       "B": "\\(2ω (double source frequency)\\)",
@@ -6545,7 +6545,7 @@
   },
   {
     "id": "a1_q410",
-    "question": "Max p(t) = ? Eq.10.9",
+    "question": "Max p(t) = ?",
     "options": {
       "A": "\\(√(P² + Q²)\\)",
       "B": "V_m I_m",
@@ -6593,7 +6593,7 @@
   },
   {
     "id": "a1_q413",
-    "question": "Identity: cosα cosβ = ? Eq.10.7",
+    "question": "Identity: cosα cosβ = ?",
     "options": {
       "A": "\\([cos(α+β) + cos(α-β)] / 2\\)",
       "B": "\\(sin(α+β)\\)",
@@ -6609,7 +6609,7 @@
   },
   {
     "id": "a1_q414",
-    "question": "p(t) = V_m I_m [ cosφ (1+cos2ωt) + sinφ sin2ωt], φ= θ_v-θ_i Eq.10.9",
+    "question": "p(t) = V_m I_m [ cosφ (1+cos2ωt) + sinφ sin2ωt], φ= θ_v-θ_i",
     "options": {
       "A": "True",
       "B": "\\(False ( cosφ only)\\)",
@@ -6662,7 +6662,7 @@
       "A": "100 Hz instants",
       "B": "50 Hz",
       "C": "\\(ωt =0\\)",
-      "D": "When i max Section 10.2: Average & Reactive Power ("
+      "D": "When i max"
     },
     "answer": "A",
     "explanation": "p(t) peaks when i,v both max (100Hz instants).",
@@ -6673,7 +6673,7 @@
   },
   {
     "id": "a1_q418",
-    "question": "Average power P_avg = ? p.364 Eq.10.22",
+    "question": "Average power P_avg = ?",
     "options": {
       "A": "\\((1/T) ∫p(t) dt over 1 cycle\\)",
       "B": "\\(V_m I_m cosφ\\)",
@@ -6689,7 +6689,7 @@
   },
   {
     "id": "a1_q419",
-    "question": "Reactive power Q = ? Eq.10.25",
+    "question": "Reactive power Q = ?",
     "options": {
       "A": "\\(V_eff I_eff sinφ\\)",
       "B": "\\(V_m I_m sinφ / √2\\)",
@@ -6705,7 +6705,7 @@
   },
   {
     "id": "a1_q420",
-    "question": "Power factor pf = ? p.365",
+    "question": "Power factor pf = ?",
     "options": {
       "A": "\\(cosφ (φ=phase diff)\\)",
       "B": "\\(P / S (S=apparent)\\)",
@@ -6737,7 +6737,7 @@
   },
   {
     "id": "a1_q422",
-    "question": "Ex.10.5: Line Z=1+j4Ω, Load=39+j26Ω, V_s =250V_rms p.375",
+    "question": "Line Z=1+j4Ω, Load=39+j26Ω, V_s =250V_rms",
     "options": {
       "A": "\\(P_load =975W, Q_load =650VAR\\)",
       "B": "\\(P_line =25W, Q_line =100VAR\\)",
@@ -6753,7 +6753,7 @@
   },
   {
     "id": "a1_q423",
-    "question": "Complex power S = ? Eq.10.29",
+    "question": "Complex power S = ?",
     "options": {
       "A": "\\(P + jQ = V_eff I_eff * ∠ φ\\)",
       "B": "\\(|S| = √(P²+Q²)\\)",
@@ -6817,12 +6817,12 @@
   },
   {
     "id": "a1_q427",
-    "question": "Ex.10.6: Load1=8kW 0.8 lead, Load2=20kVA 0.6 lag p.376",
+    "question": "Load1=8kW 0.8 lead, Load2=20kVA 0.6 lag",
     "options": {
       "A": "\\(Combined pf=0.894 lag\\)",
       "B": "\\(|I|=89.44A\\)",
       "C": "\\(Line loss=400W\\)",
-      "D": "All Section 10.3: RMS Value & Power Calculations ("
+      "D": "All"
     },
     "answer": "D",
     "explanation": "Ex.10.6: S1=8k ∠ -36.87kVA, S2=20k ∠ 53.13kVA → total 20k+j10kVA.",
@@ -6833,7 +6833,7 @@
   },
   {
     "id": "a1_q428",
-    "question": "V_rms = ? Eq.10.31",
+    "question": "V_rms = ?",
     "options": {
       "A": "\\(V_peak / √2\\)",
       "B": "\\(√[(1/T)∫v²(t)dt]\\)",
@@ -6881,7 +6881,7 @@
   },
   {
     "id": "a1_q431",
-    "question": "Ex.10.5 verification: Source S = ?",
+    "question": "verification: Source S = ?",
     "options": {
       "A": "\\(Line S + Load S\\)",
       "B": "\\(1000 + j750 VA\\)",
@@ -6913,7 +6913,7 @@
   },
   {
     "id": "a1_q433",
-    "question": "Ex.10.7: Check power balance? p.377",
+    "question": "Check power balance?",
     "options": {
       "A": "\\(Delivered = Absorbed (5850W)\\)",
       "B": "\\(Q_delivered = Q_absorbed (9290 VAR)\\)",
@@ -6982,7 +6982,7 @@
       "A": "P_avg",
       "B": "Apparent",
       "C": "Reactive",
-      "D": "Instantaneous Section 10.4-10.5: Power in Circuits ("
+      "D": "Instantaneous"
     },
     "answer": "A",
     "explanation": "Wattmeter measures P_avg =∫p dt /T.",
@@ -7041,7 +7041,7 @@
   },
   {
     "id": "a1_q441",
-    "question": "Ex.10.6 C=424.4μF @60Hz corrects to?",
+    "question": "C=424.4μF @60Hz corrects to?",
     "options": {
       "A": "\\(pf=1\\)",
       "B": "\\(Line loss from 400W→320W\\)",
@@ -7105,7 +7105,7 @@
   },
   {
     "id": "a1_q445",
-    "question": "Ex.10.7: Dependent source delivers?",
+    "question": "Dependent source delivers?",
     "options": {
       "A": "5850W avg",
       "B": "5070 VAR",
@@ -7142,7 +7142,7 @@
       "A": "Volt-amp reactive",
       "B": "For Q only",
       "C": "Magnetizing power",
-      "D": "All Section 10.6: Maximum Power Transfer ("
+      "D": "All"
     },
     "answer": "D",
     "explanation": "VAR=volt-amp-reactive for Q measurement.",
@@ -7153,7 +7153,7 @@
   },
   {
     "id": "a1_q448",
-    "question": "Max P_avg when Z_L = ? Eq.10.38",
+    "question": "Max P_avg when Z_L = ?",
     "options": {
       "A": "Z_Th * (conjugate match)",
       "B": "\\(|Z_L| = | Z_Th |\\)",
@@ -7169,7 +7169,7 @@
   },
   {
     "id": "a1_q449",
-    "question": "P_max = ? Eq.10.48",
+    "question": "P_max = ?",
     "options": {
       "A": "\\(|V_Th|² / (8 R_Th ) peak\\)",
       "B": "\\(|V_Th|² / (4 R_Th ) rms\\)",
@@ -7201,7 +7201,7 @@
   },
   {
     "id": "a1_q451",
-    "question": "Ex.10.8: Z_L for max power?",
+    "question": "Z_L for max power?",
     "options": {
       "A": "\\(5.76 + j1.68 Ω\\)",
       "B": "\\(P_max =8W\\)",
@@ -7217,7 +7217,7 @@
   },
   {
     "id": "a1_q452",
-    "question": "Ex.10.9: Restricted R_L≤4k, X_L≥-2k?",
+    "question": "Restricted R_L≤4k, X_L≥-2k?",
     "options": {
       "A": "\\(Z_L=3606 - j2000 Ω\\)",
       "B": "\\(P=7.57mW\\)",
@@ -7249,7 +7249,7 @@
   },
   {
     "id": "a1_q454",
-    "question": "Ideal transformer max power? Ex.10.11",
+    "question": "For maximum power transfer using an ideal transformer, which of the following conditions/results are correct?",
     "options": {
       "A": "\\(R_L = R_Th / a² (reflected)\\)",
       "B": "\\(a= N_p / N_s\\)",
@@ -7297,7 +7297,7 @@
   },
   {
     "id": "a1_q457",
-    "question": "Ex.10.9 unconstrained P_max ?",
+    "question": "unconstrained P_max ?",
     "options": {
       "A": "8.33mW",
       "B": "\\(Z_L=3000 - j4000\\)",
@@ -7361,7 +7361,7 @@
   },
   {
     "id": "a1_q461",
-    "question": "Ex.10.11: Polarity dot reverse?",
+    "question": "Polarity dot reverse?",
     "options": {
       "A": "R_L changes",
       "B": "P_max changes",
@@ -7457,7 +7457,7 @@
   },
   {
     "id": "a1_q467",
-    "question": "Ex.10.12: Op-amp power?",
+    "question": "Op-amp power?",
     "options": {
       "A": "Virtual ground",
       "B": "Z_in infinite",
@@ -7473,7 +7473,7 @@
   },
   {
     "id": "a1_q468",
-    "question": "Verify Ex.10.5: S_source = ?",
+    "question": "Using generator (passive sign) convention, how is the source complex power S_source expressed in terms of V and I?",
     "options": {
       "A": "-V I* (gen conv)",
       "B": "\\(1000+j750\\)",
@@ -7553,7 +7553,7 @@
   },
   {
     "id": "a1_q473",
-    "question": "Ex.10.7 balance: Impedances?",
+    "question": "balance: Impedances?",
     "options": {
       "A": "\\(1690W+3380VAR\\)",
       "B": "240W -320VAR (cap)",
@@ -7617,12 +7617,12 @@
   },
   {
     "id": "a1_q477",
-    "question": "Final: Ex.10.11 P_max = ?",
+    "question": "For max power transfer via an ideal transformer (turns ratio a, Thevenin resistance R_Th), what are the design equations?",
     "options": {
       "A": "\\(315W, R_L=35Ω\\)",
       "B": "\\(a=1:4, R_th =35Ω\\)",
       "C": "\\(V_th =-210 ∠ 0 °\\)",
-      "D": "\\(All correct Scoring 90-100% (63+): Chapter 10 Master (Proceed Ch11) 70-89% (49-62): Review Ex.10.5-10.11, power triangles <70% (<49): Re-read Sec.10.1-10.6, redo Ex.10.5 Next: Answer Key + Explanations? Or Proceed Chapter 11 (AC Power)? Reply to continue! 🚀 Chapter 10 Answer Key + Explanations Correct answers are BOLD with citations. Explanations: 1-2 sentences, Pakistan 50Hz context where relevant.\\)"
+      "D": "All of the above"
     },
     "answer": "D",
     "explanation": "Ex.10.11: R_L=35Ω reflected, 315W max. Summary Table: Key Formulas Concept Formula (RMS Phasors) Citation Instantaneous p(t)=v(t) i (t)  Eq.10.1 Average P Re( V I*) or V I cosφ  Eq.10.22 Reactive Q Im ( V I*) or V I sinφ  Eq.10.25 Complex S V I* = P + jQ  Eq.10.29 Max Power Z_L = Z_Th *, P_max = V_Th RMS Sinusoid V_peak / √2  Eq.10.31 Score Guide: 90-100%: Ch10 Master. 70-89%: Review power triangles/Ex.10.5. <70%: Re-read Sec.10.1-10.2.",
@@ -7633,7 +7633,7 @@
   },
   {
     "id": "a1_q478",
-    "question": "Balanced three-phase voltages have? p.400",
+    "question": "Balanced three-phase voltages have?",
     "options": {
       "A": "Identical amplitudes, frequencies, 120 ° phase shift",
       "B": "Same phase, different amplitudes",
@@ -7649,7 +7649,7 @@
   },
   {
     "id": "a1_q479",
-    "question": "Positive (abc) sequence: Vb lags Va by? Eq.11.1",
+    "question": "Positive (abc) sequence: Vb lags Va by?",
     "options": {
       "A": "120 °",
       "B": "240 °",
@@ -7665,7 +7665,7 @@
   },
   {
     "id": "a1_q480",
-    "question": "Sum of balanced phasor voltages Va + Vb + Vc = ? Eq.11.3",
+    "question": "Sum of balanced phasor voltages Va + Vb + Vc = ?",
     "options": {
       "A": "0",
       "B": "Va",
@@ -7681,7 +7681,7 @@
   },
   {
     "id": "a1_q481",
-    "question": "Instantaneous sum va(t) + vb(t) + vc(t) = ? Eq.11.4",
+    "question": "Instantaneous sum va(t) + vb(t) + vc(t) = ?",
     "options": {
       "A": "0",
       "B": "Constant",
@@ -7713,7 +7713,7 @@
   },
   {
     "id": "a1_q483",
-    "question": "Negative (acb) sequence reference Va, Vc leads Va by? Eq.11.2",
+    "question": "Negative (acb) sequence reference Va, Vc leads Va by?",
     "options": {
       "A": "120 °",
       "B": "-120 °",
@@ -7745,7 +7745,7 @@
   },
   {
     "id": "a1_q485",
-    "question": "Parallel operation requires same? p.400",
+    "question": "Parallel operation requires same?",
     "options": {
       "A": "Phase sequence",
       "B": "Amplitude only",
@@ -7761,7 +7761,7 @@
   },
   {
     "id": "a1_q486",
-    "question": "Shortcut: Know one voltage + sequence = ? p.400",
+    "question": "Shortcut: Know one voltage + sequence = ?",
     "options": {
       "A": "All three voltages",
       "B": "Power only",
@@ -7777,12 +7777,12 @@
   },
   {
     "id": "a1_q487",
-    "question": "Ontario residential: 600V line-line implies line-neutral? p.405",
+    "question": "Ontario residential: 600V line-line implies line-neutral?",
     "options": {
       "A": "347 V rms",
       "B": "600 V rms",
       "C": "120 V rms",
-      "D": "240 V rms Section 11.2: Three-Phase Voltage Sources ("
+      "D": "240 V rms"
     },
     "answer": "A",
     "explanation": "600V LL → 347V LN (p.405).",
@@ -7793,7 +7793,7 @@
   },
   {
     "id": "a1_q488",
-    "question": "Three-phase generator windings? p.401",
+    "question": "Three-phase generator windings?",
     "options": {
       "A": "120 ° displaced on stator",
       "B": "Single winding",
@@ -7857,7 +7857,7 @@
   },
   {
     "id": "a1_q492",
-    "question": "Basic configs (source-load): Y-Y, Y-Δ, Δ-Y, ? p.402",
+    "question": "Basic configs (source-load): Y-Y, Y-Δ, Δ-Y, ?",
     "options": {
       "A": "\\(Δ - Δ\\)",
       "B": "Single-phase",
@@ -7873,7 +7873,7 @@
   },
   {
     "id": "a1_q493",
-    "question": "Analysis starts with? p.402",
+    "question": "Analysis starts with?",
     "options": {
       "A": "Y-Y equivalent",
       "B": "\\(Δ - Δ only\\)",
@@ -7889,7 +7889,7 @@
   },
   {
     "id": "a1_q494",
-    "question": "Ontario hydro: typical frequency? p.401",
+    "question": "Ontario hydro: typical frequency?",
     "options": {
       "A": "60 Hz",
       "B": "50 Hz",
@@ -7905,7 +7905,7 @@
   },
   {
     "id": "a1_q495",
-    "question": "Rotor speed = ? p.401",
+    "question": "Rotor speed = ?",
     "options": {
       "A": "Synchronous",
       "B": "Asynchronous",
@@ -7921,7 +7921,7 @@
   },
   {
     "id": "a1_q496",
-    "question": "Winding impedance inductive because? p.402",
+    "question": "Winding impedance inductive because?",
     "options": {
       "A": "Generator design",
       "B": "Resistive load",
@@ -7937,12 +7937,12 @@
   },
   {
     "id": "a1_q497",
-    "question": "Neutral available externally? p.401",
+    "question": "Neutral available externally?",
     "options": {
       "A": "Sometimes in Y",
       "B": "\\(Always in Δ\\)",
       "C": "Never",
-      "D": "Only unbalanced Section 11.3: Analysis of the Wye-Wye Circuit ("
+      "D": "Only unbalanced"
     },
     "answer": "A",
     "explanation": "Y neutral sometimes external (p.401).",
@@ -7953,7 +7953,7 @@
   },
   {
     "id": "a1_q498",
-    "question": "Balanced Y-Y: VN (load-source neutral) = ? Eq.11.7",
+    "question": "Balanced Y-Y: VN (load-source neutral) = ?",
     "options": {
       "A": "0",
       "B": "Va",
@@ -7969,7 +7969,7 @@
   },
   {
     "id": "a1_q499",
-    "question": "Neutral current IN = ? Eq.11.11",
+    "question": "Neutral current IN = ?",
     "options": {
       "A": "0",
       "B": "IaA",
@@ -8001,7 +8001,7 @@
   },
   {
     "id": "a1_q501",
-    "question": "Line current magnitude vs phase (Y)? p.404",
+    "question": "Line current magnitude vs phase (Y)?",
     "options": {
       "A": "\\(Equal (IL=IP)\\)",
       "B": "\\(√ 3 IL\\)",
@@ -8017,7 +8017,7 @@
   },
   {
     "id": "a1_q502",
-    "question": "Line-line vs line-neutral magnitude? Eq.11.18",
+    "question": "Line-line vs line-neutral magnitude?",
     "options": {
       "A": "\\(√ 3 VLL\\)",
       "B": "\\(V φ\\)",
@@ -8033,7 +8033,7 @@
   },
   {
     "id": "a1_q503",
-    "question": "Positive sequence: VLL leads Vφ by? Eq.11.18",
+    "question": "Positive sequence: VLL leads Vφ by?",
     "options": {
       "A": "30 °",
       "B": "-30 °",
@@ -8049,7 +8049,7 @@
   },
   {
     "id": "a1_q504",
-    "question": "Ex.11.1: IaA = ? p.405",
+    "question": "IaA = ?",
     "options": {
       "A": "\\(2.4 ∠ -36.87 ° A\\)",
       "B": "120 A",
@@ -8065,7 +8065,7 @@
   },
   {
     "id": "a1_q505",
-    "question": "Ex.11.1 VAN load = ? p.405",
+    "question": "VAN load = ?",
     "options": {
       "A": "\\(115.22 ∠ -1.19 ° V\\)",
       "B": "120 V",
@@ -8097,12 +8097,12 @@
   },
   {
     "id": "a1_q507",
-    "question": "Terminology: Y-connection line current = ? p.405",
+    "question": "Terminology: Y-connection line current = ?",
     "options": {
       "A": "Phase current",
       "B": "\\(√ 3 phase\\)",
       "C": "\\(1/ √ 3 phase\\)",
-      "D": "Zero Section 11.4: Analysis of the Wye-Delta Circuit ("
+      "D": "Zero"
     },
     "answer": "A",
     "explanation": "Y: line=phase current (p.405).",
@@ -8113,7 +8113,7 @@
   },
   {
     "id": "a1_q508",
-    "question": "Positive sequence Δ: IL = ? Eq.11.25",
+    "question": "Positive sequence Δ: IL = ?",
     "options": {
       "A": "\\(√ 3 IP ∠ -30 °\\)",
       "B": "IP",
@@ -8145,7 +8145,7 @@
   },
   {
     "id": "a1_q510",
-    "question": "Negative sequence Δ lines lead phases by? p.408",
+    "question": "Negative sequence Δ lines lead phases by?",
     "options": {
       "A": "30 °",
       "B": "-30 °",
@@ -8161,7 +8161,7 @@
   },
   {
     "id": "a1_q511",
-    "question": "Convert Y-Δ to? p.407",
+    "question": "Convert Y-Δ to?",
     "options": {
       "A": "Y-Y equiv",
       "B": "\\(Δ - Δ\\)",
@@ -8193,7 +8193,7 @@
   },
   {
     "id": "a1_q513",
-    "question": "Ontario motor Δ-connected? p.408",
+    "question": "Ontario motor Δ-connected?",
     "options": {
       "A": "Common industrial",
       "B": "Residential only",
@@ -8209,12 +8209,12 @@
   },
   {
     "id": "a1_q514",
-    "question": "Line current magnitude Δ load? Eq.11.27",
+    "question": "Line current magnitude Δ load?",
     "options": {
       "A": "\\(√ 3 phase current\\)",
       "B": "Phase current",
       "C": "\\(1/ √ 3\\)",
-      "D": "Zero Section 11.5: Power Calculations ("
+      "D": "Zero"
     },
     "answer": "A",
     "explanation": "IL=√3 IP Δ (Eq.11.27).",
@@ -8225,7 +8225,7 @@
   },
   {
     "id": "a1_q515",
-    "question": "Per-phase avg power Y-load P = ? Eq.11.34",
+    "question": "Per-phase avg power Y-load P = ?",
     "options": {
       "A": "\\(V φ I φ cos θ\\)",
       "B": "\\(√ 3 VLL IL cos θ\\)",
@@ -8241,7 +8241,7 @@
   },
   {
     "id": "a1_q516",
-    "question": "Total PT balanced Y = ? Eq.11.35",
+    "question": "Total PT balanced Y = ?",
     "options": {
       "A": "\\(3 V φ I φ cos θ\\)",
       "B": "\\(√ 3 VLL IL cos θ\\)",
@@ -8257,7 +8257,7 @@
   },
   {
     "id": "a1_q517",
-    "question": "Ex.11.3 per-phase P_load = ? p.413",
+    "question": "per-phase P_load = ?",
     "options": {
       "A": "224.64 W",
       "B": "673.92 W",
@@ -8273,7 +8273,7 @@
   },
   {
     "id": "a1_q518",
-    "question": "Total reactive QT Y-load = ? Eq.11.38",
+    "question": "Total reactive QT Y-load = ?",
     "options": {
       "A": "\\(√ 3 VLL IL sin θ\\)",
       "B": "\\(3 V φ I φ sin θ\\)",
@@ -8289,7 +8289,7 @@
   },
   {
     "id": "a1_q519",
-    "question": "Complex S per-phase = ? Eq.11.40",
+    "question": "Complex S per-phase = ?",
     "options": {
       "A": "\\(V φ I φ *\\)",
       "B": "3 VLL IL*",
@@ -8305,7 +8305,7 @@
   },
   {
     "id": "a1_q520",
-    "question": "Ex.11.4% power to load? p.413",
+    "question": "In a balanced three-phase system with small line impedance relative to load, approximately what percentage of source power reaches the load?",
     "options": {
       "A": "99.25%",
       "B": "100%",
@@ -8321,7 +8321,7 @@
   },
   {
     "id": "a1_q521",
-    "question": "Instantaneous PT balanced 3φ constant = ? p.412",
+    "question": "Instantaneous PT balanced 3φ constant = ?",
     "options": {
       "A": "\\(1.5 Vm Im cos θ\\)",
       "B": "\\(3 Vm Im cos θ\\)",
@@ -8337,7 +8337,7 @@
   },
   {
     "id": "a1_q522",
-    "question": "Ex.11.5 IL = ? p.414",
+    "question": "IL = ?",
     "options": {
       "A": "577.35 A",
       "B": "480 A",
@@ -8353,7 +8353,7 @@
   },
   {
     "id": "a1_q523",
-    "question": "PF sending end Ex.11.5? p.414",
+    "question": "What is the power factor at the sending end of a three-phase transmission line supplying a lagging load?",
     "options": {
       "A": "0.783 lag",
       "B": "0.8 lag",
@@ -8385,7 +8385,7 @@
   },
   {
     "id": "a1_q525",
-    "question": "Magnetizing VARs positive for? p.411",
+    "question": "Magnetizing VARs positive for?",
     "options": {
       "A": "Inductive load",
       "B": "Capacitive",
@@ -8401,7 +8401,7 @@
   },
   {
     "id": "a1_q526",
-    "question": "S_total = ? Eq.11.41",
+    "question": "S_total = ?",
     "options": {
       "A": "\\(3 V φ I φ * or √ 3 VLL IL*\\)",
       "B": "\\(V φ I φ\\)",
@@ -8417,7 +8417,7 @@
   },
   {
     "id": "a1_q527",
-    "question": "Power triangle: Q = ? Eq.11.37",
+    "question": "Power triangle: Q = ?",
     "options": {
       "A": "\\(√ (S ² - P ² )\\)",
       "B": "\\(P tan θ\\)",
@@ -8433,7 +8433,7 @@
   },
   {
     "id": "a1_q528",
-    "question": "Ex.11.3 check: source S = ? p.413",
+    "question": "check: source S = ?",
     "options": {
       "A": "\\(-(691.2 + j518.4) VA\\)",
       "B": "Load S",
@@ -8449,7 +8449,7 @@
   },
   {
     "id": "a1_q529",
-    "question": "Parallel loads S_total = ? p.410",
+    "question": "Parallel loads S_total = ?",
     "options": {
       "A": "Sum S_k",
       "B": "\\(Arithmetic P+Q\\)",
@@ -8465,7 +8465,7 @@
   },
   {
     "id": "a1_q530",
-    "question": "Line loss P_line = ? p.413",
+    "question": "Line loss P_line = ?",
     "options": {
       "A": "\\(3 I_L ² R_line\\)",
       "B": "\\(I_phase ² R\\)",
@@ -8481,7 +8481,7 @@
   },
   {
     "id": "a1_q531",
-    "question": "Ontario industrial: kVAR penalty? p.418",
+    "question": "Ontario industrial: kVAR penalty?",
     "options": {
       "A": "Low PF",
       "B": "High PF",
@@ -8497,7 +8497,7 @@
   },
   {
     "id": "a1_q532",
-    "question": "Constant PT benefit? p.412",
+    "question": "Constant PT benefit?",
     "options": {
       "A": "Less vibration motors",
       "B": "Higher losses",
@@ -8513,12 +8513,12 @@
   },
   {
     "id": "a1_q533",
-    "question": "Ex.11.1 total P_load = ? p.413",
+    "question": "total P_load = ?",
     "options": {
       "A": "673.92 W",
       "B": "224.64 W",
       "C": "17.28 W",
-      "D": "691 W Section 11.6: Measuring Average Power ("
+      "D": "691 W"
     },
     "answer": "A",
     "explanation": "Total P_load=673.92W Ex.11.1 (p.413).",
@@ -8529,7 +8529,7 @@
   },
   {
     "id": "a1_q534",
-    "question": "Wattmeter: current coil? p.415",
+    "question": "Wattmeter: current coil?",
     "options": {
       "A": "Series with load",
       "B": "Parallel",
@@ -8545,7 +8545,7 @@
   },
   {
     "id": "a1_q535",
-    "question": "Potential coil? p.415",
+    "question": "Potential coil?",
     "options": {
       "A": "Parallel load voltage",
       "B": "Series current",
@@ -8561,7 +8561,7 @@
   },
   {
     "id": "a1_q536",
-    "question": "Balanced 3φ needs? p.416",
+    "question": "Balanced 3φ needs?",
     "options": {
       "A": "2 wattmeters",
       "B": "3 wattmeters",
@@ -8577,7 +8577,7 @@
   },
   {
     "id": "a1_q537",
-    "question": "Two-wattmeter: total P = ? p.416",
+    "question": "Two-wattmeter: total P = ?",
     "options": {
       "A": "\\(W1 + W2\\)",
       "B": "W1 - W2",
@@ -8593,7 +8593,7 @@
   },
   {
     "id": "a1_q538",
-    "question": "Reactive: √3 (W1 - W2) = ? p.416",
+    "question": "Reactive: √3 (W1 - W2) = ?",
     "options": {
       "A": "Total Q",
       "B": "Total P",
@@ -8609,7 +8609,7 @@
   },
   {
     "id": "a1_q539",
-    "question": "Ex.11.6 W1, W2 for θ=36.87°? p.417",
+    "question": "W1, W2 for θ=36.87°?",
     "options": {
       "A": "2476W, 980W",
       "B": "Equal",
@@ -8625,7 +8625,7 @@
   },
   {
     "id": "a1_q540",
-    "question": "4-wire unbalanced needs? p.416",
+    "question": "4-wire unbalanced needs?",
     "options": {
       "A": "3 wattmeters",
       "B": "2",
@@ -8641,12 +8641,12 @@
   },
   {
     "id": "a1_q541",
-    "question": "Verify Ex.11.6: √3(W1-W2)=? p.417",
+    "question": "In the two-wattmeter method for balanced three-phase power measurement, what quantity does √3(W1 − W2) equal?",
     "options": {
       "A": "Total Q matches",
       "B": "P",
       "C": "S",
-      "D": "\\(Zero Scoring 90-100% (63+): Chapter 11 Master (Proceed Ch12) 70-89% (49-62): Review Ex.11.1-11.6, phasor diagrams <70% (<49): Re-read Sec.11.1-11.5, redo Ex.11.1 Next: Answer Key + Explanations? Or Proceed Chapter 12 (Laplace)? Reply to continue! 🚀 Chapter 11 Answer Key + Explanations Correct answers are BOLD with citations. Explanations: 1-2 sentences, Ontario 60Hz context where relevant.\\)"
+      "D": "Zero"
     },
     "answer": "A",
     "explanation": "Q matches calc (p.417). Concept Formula (rms phasors) Citation Line-Neutral Vφ  p.400 Line-Line VLL=√3 Vφ ∠ ± 30 °  Eq.11.18 Line Current Y IL=IP  p.404 Line Current Δ IL=√3 IP ∠∓ 30 °  Eq.11.25 Total P √3 VLL IL cosθ  Eq.11.36 Total Q √3 VLL IL sinθ  Eq.11.38 Total S √3 VLL IL*  Eq.11.41 Neutral Current Balanced IN=0  Eq.11.7 Score Guide: 90-100%: Ch11 Master. 70-89%: Review Ex.11.1-11.6/Y-Δ. <70%: Re-read Sec.11.3-11.5.",
@@ -8657,7 +8657,7 @@
   },
   {
     "id": "a1_q542",
-    "question": "Laplace transform Fs = ? Eq.12.1",
+    "question": "Laplace transform Fs = ?",
     "options": {
       "A": "\\(∫ f(t) e^{- st } dt from 0^- to ∞\\)",
       "B": "Fourier only",
@@ -8673,7 +8673,7 @@
   },
   {
     "id": "a1_q543",
-    "question": "Unilateral Laplace lower limit? p.430",
+    "question": "Unilateral Laplace lower limit?",
     "options": {
       "A": "\\(t=0^-\\)",
       "B": "\\(t=- ∞\\)",
@@ -8689,7 +8689,7 @@
   },
   {
     "id": "a1_q544",
-    "question": "s dimension? p.430",
+    "question": "s dimension?",
     "options": {
       "A": "rad/s (frequency)",
       "B": "sec",
@@ -8705,7 +8705,7 @@
   },
   {
     "id": "a1_q545",
-    "question": "Ignores f(t) for? p.430",
+    "question": "Ignores f(t) for?",
     "options": {
       "A": "t<0",
       "B": "t>0",
@@ -8721,7 +8721,7 @@
   },
   {
     "id": "a1_q546",
-    "question": "Ontario PEng : Laplace for? p.428",
+    "question": "Ontario PEng : Laplace for?",
     "options": {
       "A": "Transients, multi- eqns",
       "B": "Steady-state only",
@@ -8737,7 +8737,7 @@
   },
   {
     "id": "a1_q547",
-    "question": "Discontinuity at origin: use? p.431",
+    "question": "Discontinuity at origin: use?",
     "options": {
       "A": "0^- lower limit",
       "B": "\\(0^+\\)",
@@ -8753,7 +8753,7 @@
   },
   {
     "id": "a1_q548",
-    "question": "Why Laplace? p.428",
+    "question": "Why Laplace?",
     "options": {
       "A": "\\(Diff eqns → algebra\\)",
       "B": "Time domain only",
@@ -8769,7 +8769,7 @@
   },
   {
     "id": "a1_q549",
-    "question": "Converges if? p.430",
+    "question": "Converges if?",
     "options": {
       "A": "\\(Engineering signals (no t^ ∞ )\\)",
       "B": "All f(t)",
@@ -8785,7 +8785,7 @@
   },
   {
     "id": "a1_q550",
-    "question": "Domain change: time → ? p.430",
+    "question": "Domain change: time → ?",
     "options": {
       "A": "Frequency (s)",
       "B": "\\(Phasor ( j ω )\\)",
@@ -8801,12 +8801,12 @@
   },
   {
     "id": "a1_q551",
-    "question": "Initial conditions? p.430",
+    "question": "Initial conditions?",
     "options": {
       "A": "In transform integral",
       "B": "Post-inverse",
       "C": "Ignored",
-      "D": "Final only Section 12.2: Step Function ("
+      "D": "Final only"
     },
     "answer": "A",
     "explanation": "Initials via deriv transforms (p.430).",
@@ -8817,7 +8817,7 @@
   },
   {
     "id": "a1_q552",
-    "question": "u(t) = ? Eq.12.3",
+    "question": "u(t) = ?",
     "options": {
       "A": "0 t<0, 1 t>0",
       "B": "Impulse",
@@ -8833,7 +8833,7 @@
   },
   {
     "id": "a1_q553",
-    "question": "K u(t-a) jumps at? Eq.12.5",
+    "question": "K u(t-a) jumps at?",
     "options": {
       "A": "\\(t=a\\)",
       "B": "\\(t=0\\)",
@@ -8849,7 +8849,7 @@
   },
   {
     "id": "a1_q554",
-    "question": "Transition t=0: assume? Eq.12.4",
+    "question": "Transition t=0: assume?",
     "options": {
       "A": "Linear 0.5K",
       "B": "Step instant",
@@ -8865,7 +8865,7 @@
   },
   {
     "id": "a1_q555",
-    "question": "Finite pulse 1<t<3: ? p.432",
+    "question": "Finite pulse 1<t<3: ?",
     "options": {
       "A": "K[u(t-1)-u(t-3)]",
       "B": "u(t) only",
@@ -8881,7 +8881,7 @@
   },
   {
     "id": "a1_q556",
-    "question": "Ex.12.1: turn on/off lines? p.432",
+    "question": "turn on/off lines?",
     "options": {
       "A": "Step functions",
       "B": "Derivatives",
@@ -8913,7 +8913,7 @@
   },
   {
     "id": "a1_q558",
-    "question": "Sequential switching uses? p.432",
+    "question": "Sequential switching uses?",
     "options": {
       "A": "Delayed steps",
       "B": "Impulses",
@@ -8929,7 +8929,7 @@
   },
   {
     "id": "a1_q559",
-    "question": "Ontario relay switch: model as? p.431",
+    "question": "Ontario relay switch: model as?",
     "options": {
       "A": "Step discontinuity",
       "B": "Smooth",
@@ -8945,7 +8945,7 @@
   },
   {
     "id": "a1_q560",
-    "question": "Window function: width 3 units? p.432",
+    "question": "Window function: width 3 units?",
     "options": {
       "A": "u(t)-u(t-3)",
       "B": "\\(δ (t)\\)",
@@ -8961,12 +8961,12 @@
   },
   {
     "id": "a1_q561",
-    "question": "K u_a (t): strength? Eq.12.6",
+    "question": "K u_a (t): strength?",
     "options": {
       "A": "K (jump height)",
       "B": "Area",
       "C": "Slope",
-      "D": "Zero Section 12.3: Impulse Function ("
+      "D": "Zero"
     },
     "answer": "A",
     "explanation": "K jump height (Eq.12.6).",
@@ -8977,7 +8977,7 @@
   },
   {
     "id": "a1_q562",
-    "question": "Unit impulse area=1, δ(t)=? Eq.12.14",
+    "question": "Unit impulse area=1, δ(t)=?",
     "options": {
       "A": "\\(Laplace=1\\)",
       "B": "s",
@@ -8993,7 +8993,7 @@
   },
   {
     "id": "a1_q563",
-    "question": "K δ(t-a) at? p.434",
+    "question": "K δ(t-a) at?",
     "options": {
       "A": "\\(t=a, strength K\\)",
       "B": "\\(t=0\\)",
@@ -9009,7 +9009,7 @@
   },
   {
     "id": "a1_q564",
-    "question": "Sifting: ∫ f(t) δ(t-a) dt = ? Eq.12.11",
+    "question": "Sifting: ∫ f(t) δ(t-a) dt = ?",
     "options": {
       "A": "f(a)",
       "B": "\\(∫ f(t)\\)",
@@ -9025,7 +9025,7 @@
   },
   {
     "id": "a1_q565",
-    "question": "Switching transient model? p.433",
+    "question": "Switching transient model?",
     "options": {
       "A": "Impulse voltages/currents",
       "B": "Step only",
@@ -9041,7 +9041,7 @@
   },
   {
     "id": "a1_q566",
-    "question": "Unit doublet= ? p.434",
+    "question": "Unit doublet= ?",
     "options": {
       "A": "\\(δ '(t)\\)",
       "B": "\\(δ (t)\\)",
@@ -9057,7 +9057,7 @@
   },
   {
     "id": "a1_q567",
-    "question": "nth derivative δ: Laplace? Eq.12.16",
+    "question": "nth derivative δ: Laplace?",
     "options": {
       "A": "s^n",
       "B": "s^{-n}",
@@ -9073,12 +9073,12 @@
   },
   {
     "id": "a1_q568",
-    "question": "Exponential pulse → δ as ε→0? Eq.12.8",
+    "question": "Exponential pulse → δ as ε→0?",
     "options": {
       "A": "Yes, area K",
       "B": "No",
       "C": "Step",
-      "D": "Ramp Section 12.4: Functional Transforms ("
+      "D": "Ramp"
     },
     "answer": "A",
     "explanation": "ε→0 pulse → δ area K (Eq.12.8).",
@@ -9089,7 +9089,7 @@
   },
   {
     "id": "a1_q569",
-    "question": "L{δ(t)} = ? Eq.12.14",
+    "question": "L{δ(t)} = ?",
     "options": {
       "A": "1",
       "B": "s",
@@ -9105,7 +9105,7 @@
   },
   {
     "id": "a1_q570",
-    "question": "L{u(t)} = ? Eq.12.18",
+    "question": "L{u(t)} = ?",
     "options": {
       "A": "1/s",
       "B": "1",
@@ -9121,7 +9121,7 @@
   },
   {
     "id": "a1_q571",
-    "question": "L{e^{-at}} = ? Eq.12.19",
+    "question": "L{e^{-at}} = ?",
     "options": {
       "A": "\\(1/( s+a )\\)",
       "B": "1/s",
@@ -9137,7 +9137,7 @@
   },
   {
     "id": "a1_q572",
-    "question": "L{ sin ωt } = ? Eq.12.20",
+    "question": "L{ sin ωt } = ?",
     "options": {
       "A": "\\(ω /(s^2 + ω ^2)\\)",
       "B": "\\(s/(s^2 + ω ^2)\\)",
@@ -9153,7 +9153,7 @@
   },
   {
     "id": "a1_q573",
-    "question": "Table 12.1: ramp t Laplace?",
+    "question": "What is the Laplace transform of the ramp function f(t) = t u(t)?",
     "options": {
       "A": "1/s^2",
       "B": "t/s",
@@ -9185,7 +9185,7 @@
   },
   {
     "id": "a1_q575",
-    "question": "Damped sin: e^{-at} sin ω t ? Table12.1",
+    "question": "Damped sin: e^{-at} sin ω t ?",
     "options": {
       "A": "\\(ω /( ( s+a )^2 + ω ^2 )\\)",
       "B": "\\(s/( ( s+a )^2 + ω ^2 )\\)",
@@ -9201,7 +9201,7 @@
   },
   {
     "id": "a1_q576",
-    "question": "Ontario scope pulse: model? p.436",
+    "question": "Ontario scope pulse: model?",
     "options": {
       "A": "Steps/ramps table",
       "B": "Phasor",
@@ -9217,7 +9217,7 @@
   },
   {
     "id": "a1_q577",
-    "question": "L{ cos ωt } from table? Table12.1",
+    "question": "L{ cos ωt } from table?",
     "options": {
       "A": "\\(s/(s^2 + ω ^2)\\)",
       "B": "\\(ω /(s^2 + ω ^2)\\)",
@@ -9233,12 +9233,12 @@
   },
   {
     "id": "a1_q578",
-    "question": "te ^{-at } ? Table12.1",
+    "question": "te ^{-at } ?",
     "options": {
       "A": "\\(1/( s+a )^2\\)",
       "B": "\\(a/( s+a )^2\\)",
       "C": "1/s^2",
-      "D": "\\(s/( s+a ) Section 12.5: Operational Transforms (\\)"
+      "D": "\\(s/(s+a)\\)"
     },
     "answer": "A",
     "explanation": "te ^{-at} → 1/( s+a )^2 (Table12.1).",
@@ -9249,7 +9249,7 @@
   },
   {
     "id": "a1_q579",
-    "question": "K f(t) → ? Eq.12.21",
+    "question": "K f(t) → ?",
     "options": {
       "A": "K Fs",
       "B": "f/K",
@@ -9265,7 +9265,7 @@
   },
   {
     "id": "a1_q580",
-    "question": "df /dt → ? Eq.12.23",
+    "question": "df /dt → ?",
     "options": {
       "A": "s Fs - f(0^-)",
       "B": "Fs / s",
@@ -9281,7 +9281,7 @@
   },
   {
     "id": "a1_q581",
-    "question": "f(t-a) u(t-a) → ? Eq.12.34",
+    "question": "f(t-a) u(t-a) → ?",
     "options": {
       "A": "e^{-a s} Fs",
       "B": "Fs e^{a s}",
@@ -9297,7 +9297,7 @@
   },
   {
     "id": "a1_q582",
-    "question": "f( a t) → ? Table12.2",
+    "question": "f( a t) → ?",
     "options": {
       "A": "(1/a) F(s/a)",
       "B": "a F(s a)",
@@ -9313,7 +9313,7 @@
   },
   {
     "id": "a1_q583",
-    "question": "2nd deriv → ? Eq.12.29",
+    "question": "2nd deriv → ?",
     "options": {
       "A": "s^2 Fs - s f(0) - f'(0)",
       "B": "s Fs",
@@ -9345,7 +9345,7 @@
   },
   {
     "id": "a1_q585",
-    "question": "nth deriv → ? Eq.12.30",
+    "question": "nth deriv → ?",
     "options": {
       "A": "s^n Fs - ... initials",
       "B": "Fs s^n",
@@ -9361,7 +9361,7 @@
   },
   {
     "id": "a1_q586",
-    "question": "Translation freq : e ^{ -a s} f(t) → ? Table12.2",
+    "question": "Translation freq : e ^{ -a s} f(t) → ?",
     "options": {
       "A": "\\(F( s+a )\\)",
       "B": "F(s-a)",
@@ -9377,12 +9377,12 @@
   },
   {
     "id": "a1_q587",
-    "question": "dFs /ds → ? Table12.2",
+    "question": "dFs /ds → ?",
     "options": {
       "A": "- t f(t)",
       "B": "t f(t)",
       "C": "df /dt",
-      "D": "Integral Section 12.6-12.9: Applications, Inverse, Theorems ("
+      "D": "Integral"
     },
     "answer": "A",
     "explanation": "dFs /ds → -t f(t) (Table12.2).",
@@ -9393,7 +9393,7 @@
   },
   {
     "id": "a1_q588",
-    "question": "Parallel RLC Laplace: v(s)? p.442",
+    "question": "Parallel RLC Laplace: v(s)?",
     "options": {
       "A": "\\(Idc / (s (Cs + 1/(Ls) + 1/R))\\)",
       "B": "Time domain",
@@ -9409,7 +9409,7 @@
   },
   {
     "id": "a1_q589",
-    "question": "Partial frac distinct real? Table12.3",
+    "question": "Partial frac distinct real?",
     "options": {
       "A": "\\(K_i / (s + p_i )\\)",
       "B": "Complex",
@@ -9425,7 +9425,7 @@
   },
   {
     "id": "a1_q590",
-    "question": "Repeated root: multiply by? p.446",
+    "question": "Repeated root: multiply by?",
     "options": {
       "A": "(s-p)^r",
       "B": "Diff r times",
@@ -9441,7 +9441,7 @@
   },
   {
     "id": "a1_q591",
-    "question": "Complex pair: 2 K e^{-αt} cos(βt + φ)? p.450",
+    "question": "Complex pair: 2 K e^{-αt} cos(βt + φ)?",
     "options": {
       "A": "Yes, conj coeffs",
       "B": "Real only",
@@ -9457,7 +9457,7 @@
   },
   {
     "id": "a1_q592",
-    "question": "Poles: roots of? p.454",
+    "question": "Poles: roots of?",
     "options": {
       "A": "Denominator",
       "B": "Numerator",
@@ -9473,7 +9473,7 @@
   },
   {
     "id": "a1_q593",
-    "question": "Initial thm : lim t→0 f(t) = ? Eq.12.93",
+    "question": "Initial thm : lim t→0 f(t) = ?",
     "options": {
       "A": "\\(lim s →∞ s Fs\\)",
       "B": "\\(lim s → 0 s Fs\\)",
@@ -9489,7 +9489,7 @@
   },
   {
     "id": "a1_q594",
-    "question": "Final thm valid if poles LHP except? Eq.12.94",
+    "question": "Final thm valid if poles LHP except?",
     "options": {
       "A": "\\(s=0 simple\\)",
       "B": "All RHP",
@@ -9505,7 +9505,7 @@
   },
   {
     "id": "a1_q595",
-    "question": "Improper: poly + proper → ? p.453",
+    "question": "Improper: poly + proper → ?",
     "options": {
       "A": "\\(Impulses + terms\\)",
       "B": "All proper",
@@ -9521,7 +9521,7 @@
   },
   {
     "id": "a1_q596",
-    "question": "Ex.12.1 step finite dur? p.432",
+    "question": "step finite dur?",
     "options": {
       "A": "Linear segments steps",
       "B": "Single step",
@@ -9537,7 +9537,7 @@
   },
   {
     "id": "a1_q597",
-    "question": "Check s-domain: initials/finals? p.457",
+    "question": "Check s-domain: initials/finals?",
     "options": {
       "A": "Theorems verify",
       "B": "Inverse first",
@@ -9553,7 +9553,7 @@
   },
   {
     "id": "a1_q598",
-    "question": "RLC transient Laplace? p.442",
+    "question": "RLC transient Laplace?",
     "options": {
       "A": "s-domain algebra",
       "B": "Time diff eqns",
@@ -9569,7 +9569,7 @@
   },
   {
     "id": "a1_q599",
-    "question": "Poles LHP → ? p.455",
+    "question": "Poles LHP → ?",
     "options": {
       "A": "Stable decay",
       "B": "Growing",
@@ -9585,7 +9585,7 @@
   },
   {
     "id": "a1_q600",
-    "question": "Inverse complex: |K| e^{-αt} cos? Eq.12.64",
+    "question": "Inverse complex: |K| e^{-αt} cos?",
     "options": {
       "A": "\\(Yes 2K cos( β t + φ )\\)",
       "B": "Sin only",
@@ -9601,7 +9601,7 @@
   },
   {
     "id": "a1_q601",
-    "question": "Ontario surge: impulse model? p.433",
+    "question": "Ontario surge: impulse model?",
     "options": {
       "A": "\\(δ (t) voltage\\)",
       "B": "Step",
@@ -9633,7 +9633,7 @@
   },
   {
     "id": "a1_q603",
-    "question": "Partial repeated complex? p.451",
+    "question": "Partial repeated complex?",
     "options": {
       "A": "Conj pairs, half calc",
       "B": "All real",
@@ -9649,7 +9649,7 @@
   },
   {
     "id": "a1_q604",
-    "question": "Transfer func preview? p.428",
+    "question": "Transfer func preview?",
     "options": {
       "A": "Ch13 s-domain",
       "B": "Time only",
@@ -9665,7 +9665,7 @@
   },
   {
     "id": "a1_q605",
-    "question": "Window fnctn PEng exam? p.432",
+    "question": "Window fnctn PEng exam?",
     "options": {
       "A": "Steps difference",
       "B": "Fourier",
@@ -9681,7 +9681,7 @@
   },
   {
     "id": "a1_q606",
-    "question": "Verify RLC Vs: v(0)=0, v∞=0? p.457",
+    "question": "Verify RLC Vs: v(0)=0, v∞=0?",
     "options": {
       "A": "Theorems confirm",
       "B": "Calc time",
@@ -9697,12 +9697,12 @@
   },
   {
     "id": "a1_q607",
-    "question": "Practical: inductor i (t) complete? p.458",
+    "question": "Practical: inductor i (t) complete?",
     "options": {
       "A": "\\(Transient + steady sin\\)",
       "B": "Steady only",
       "C": "DC",
-      "D": "\\(Phasor Scoring 90-100% (63+): Chapter 12 Master (Proceed Ch13) 70-89% (49-62): Review partial frac, theorems, Ex.12.1 <70% (<49): Re-read Sec.12.1-12.5, redo Ex.12.1 Chapter 12 Answer Key + Explanations Correct answers are BOLD with citations. Explanations: 1-2 sentences, Ontario PEng /transient context where relevant.\\)"
+      "D": "Phasor domain only"
     },
     "answer": "A",
     "explanation": "Complete: transient + sin steady (p.458). Concept Formula Citation Unit Step 1/s  Eq.12.18 Impulse 1  Eq.12.14 df /dt s F - f( 0)  Eq.12.23 Delay f(t-a) e^{-as} F(s)  Eq.12.34 Init Thm lim s∞ sF = f( 0+)  Eq.12.93 Final Thm lim s0 sF = f( ∞)  Eq.12.94 Score Guide: 90-100%: Ch12 Master. 70-89%: Review ops transforms/partial frac. <70%: Re-read Sec.12.4-12.7.",
@@ -9713,7 +9713,7 @@
   },
   {
     "id": "a1_q608",
-    "question": "Resistor s-domain? Eq.13.2",
+    "question": "Resistor s-domain?",
     "options": {
       "A": "R unchanged",
       "B": "sR",
@@ -9729,7 +9729,7 @@
   },
   {
     "id": "a1_q609",
-    "question": "Inductor series equiv ? Eq.13.4",
+    "question": "Inductor series equiv ?",
     "options": {
       "A": "\\(sL + L I_0\\)",
       "B": "sL parallel I_0/ sL",
@@ -9745,7 +9745,7 @@
   },
   {
     "id": "a1_q610",
-    "question": "Capacitor parallel equiv ? Eq.13.7",
+    "question": "Capacitor parallel equiv ?",
     "options": {
       "A": "1/ sC parallel C V_0",
       "B": "1/ sC series V_0/ sC",
@@ -9777,7 +9777,7 @@
   },
   {
     "id": "a1_q612",
-    "question": "s-domain Ohm: V = ? Eq.13.9",
+    "question": "s-domain Ohm: V = ?",
     "options": {
       "A": "Z(s) I",
       "B": "\\(Z( j ω )\\)",
@@ -9793,7 +9793,7 @@
   },
   {
     "id": "a1_q613",
-    "question": "Dimensions: V(s)? p.468",
+    "question": "Dimensions: V(s)?",
     "options": {
       "A": "Volt-sec",
       "B": "Volt",
@@ -9809,7 +9809,7 @@
   },
   {
     "id": "a1_q614",
-    "question": "KCL s-domain? Eq.13.10",
+    "question": "KCL s-domain?",
     "options": {
       "A": "\\(∑ currents =0\\)",
       "B": "Time only",
@@ -9841,7 +9841,7 @@
   },
   {
     "id": "a1_q616",
-    "question": "Impedance admittance recip ? p.470",
+    "question": "Impedance admittance recip ?",
     "options": {
       "A": "Yes Siemens",
       "B": "No",
@@ -9857,12 +9857,12 @@
   },
   {
     "id": "a1_q617",
-    "question": "Passive sign conv? p.468",
+    "question": "Passive sign conv?",
     "options": {
       "A": "All derivs",
       "B": "Active only",
       "C": "DC",
-      "D": "Ignore Section 13.2: s-Domain Analysis ("
+      "D": "Ignore"
     },
     "answer": "A",
     "explanation": "Passive sign all (p.468).",
@@ -9873,7 +9873,7 @@
   },
   {
     "id": "a1_q618",
-    "question": "Techniques apply? p.470",
+    "question": "Techniques apply?",
     "options": {
       "A": "Node/mesh/ Thev /Norton",
       "B": "Time diff eqns",
@@ -9889,7 +9889,7 @@
   },
   {
     "id": "a1_q619",
-    "question": "Initial energy: add? p.470",
+    "question": "Initial energy: add?",
     "options": {
       "A": "Indep sources series/parallel",
       "B": "Change Z",
@@ -9921,7 +9921,7 @@
   },
   {
     "id": "a1_q621",
-    "question": "Series-parallel s-domain? p.471",
+    "question": "Series-parallel s-domain?",
     "options": {
       "A": "Yes same rules",
       "B": "No",
@@ -9937,7 +9937,7 @@
   },
   {
     "id": "a1_q622",
-    "question": "Ex.13.3 RC natural i (t)=? p.472",
+    "question": "RC natural i (t)=?",
     "options": {
       "A": "(V0/R) e^{-t/RC}",
       "B": "Classical same",
@@ -9953,7 +9953,7 @@
   },
   {
     "id": "a1_q623",
-    "question": "Parallel RLC step: IL∞=? p.474",
+    "question": "Parallel RLC step: IL∞=?",
     "options": {
       "A": "Idc",
       "B": "0",
@@ -10022,7 +10022,7 @@
       "A": "Yes L-M etc",
       "B": "Ignore M",
       "C": "DC only",
-      "D": "No Laplace Section 13.3: Applications ("
+      "D": "No Laplace"
     },
     "answer": "A",
     "explanation": "T-model L-M etc ( ).",
@@ -10033,7 +10033,7 @@
   },
   {
     "id": "a1_q628",
-    "question": "Sin source RLC: transient from? p.476",
+    "question": "Sin source RLC: transient from?",
     "options": {
       "A": "Hs poles",
       "B": "Source poles",
@@ -10049,7 +10049,7 @@
   },
   {
     "id": "a1_q629",
-    "question": "Flux linkage cons? Eq.13.136",
+    "question": "Flux linkage cons?",
     "options": {
       "A": "\\(∑ Δλ =0\\)",
       "B": "Charge",
@@ -10081,7 +10081,7 @@
   },
   {
     "id": "a1_q631",
-    "question": "Superposition s: zero IC? p.482",
+    "question": "Superposition s: zero IC?",
     "options": {
       "A": "Sources alone",
       "B": "IC alone",
@@ -10097,7 +10097,7 @@
   },
   {
     "id": "a1_q632",
-    "question": "Ex.13.5 ic peak? p.480",
+    "question": "ic peak?",
     "options": {
       "A": "6A reverses",
       "B": "Constant",
@@ -10113,7 +10113,7 @@
   },
   {
     "id": "a1_q633",
-    "question": "Mutual switch: i2 peak? Eq.13.72",
+    "question": "Mutual switch: i2 peak?",
     "options": {
       "A": "481mA @549ms",
       "B": "0",
@@ -10129,7 +10129,7 @@
   },
   {
     "id": "a1_q634",
-    "question": "Capacitor impulse R=0? Eq.13.127",
+    "question": "Capacitor impulse R=0?",
     "options": {
       "A": "\\((C1/(C1+C2)) V0 δ (t)\\)",
       "B": "Step",
@@ -10145,7 +10145,7 @@
   },
   {
     "id": "a1_q635",
-    "question": "Series L impulse? Eq.13.140",
+    "question": "Series L impulse?",
     "options": {
       "A": "\\(V0/L δ (t) current\\)",
       "B": "Voltage",
@@ -10177,12 +10177,12 @@
   },
   {
     "id": "a1_q637",
-    "question": "Conservation flux? Eq.13.137",
+    "question": "Conservation flux?",
     "options": {
       "A": "\\(Series L ∑ λ const\\)",
       "B": "Parallel C",
       "C": "R",
-      "D": "No Section 13.4: Transfer Function ("
+      "D": "No"
     },
     "answer": "A",
     "explanation": "Series L flux cons ∑ Δλ =0 (Eq.13.137).",
@@ -10193,7 +10193,7 @@
   },
   {
     "id": "a1_q638",
-    "question": "Hs = ? Zero IC Eq.13.93",
+    "question": "The transfer function H(s) is defined as the ratio of output Y(s) to input X(s) under what condition?",
     "options": {
       "A": "Ys / Xs",
       "B": "With IC",
@@ -10209,7 +10209,7 @@
   },
   {
     "id": "a1_q639",
-    "question": "Ex.13.1 Hs num/den? p.485",
+    "question": "Hs num/den?",
     "options": {
       "A": "\\(1000s+5000 / s^2 +6000s +25e6\\)",
       "B": "Constant",
@@ -10225,7 +10225,7 @@
   },
   {
     "id": "a1_q640",
-    "question": "Poles Hs: ? p.485",
+    "question": "Poles Hs: ?",
     "options": {
       "A": "LHP stable",
       "B": "RHP",
@@ -10257,7 +10257,7 @@
   },
   {
     "id": "a1_q642",
-    "question": "Multiple src : ? p.484",
+    "question": "Multiple src : ?",
     "options": {
       "A": "Superpos TF each",
       "B": "Single TF",
@@ -10273,7 +10273,7 @@
   },
   {
     "id": "a1_q643",
-    "question": "Hs poles → ? p.484",
+    "question": "Hs poles → ?",
     "options": {
       "A": "Transient",
       "B": "Steady sin",
@@ -10289,7 +10289,7 @@
   },
   {
     "id": "a1_q644",
-    "question": "Ramp input: practical? p.486",
+    "question": "Ramp input: practical?",
     "options": {
       "A": "Finite duration approx",
       "B": "Infinite",
@@ -10305,7 +10305,7 @@
   },
   {
     "id": "a1_q645",
-    "question": "Delay input: output? Eq.13.98",
+    "question": "Delay input: output?",
     "options": {
       "A": "Same delay time-invar",
       "B": "Advance",
@@ -10321,7 +10321,7 @@
   },
   {
     "id": "a1_q646",
-    "question": "Unit impulse: h(t)=? Eq.13.100",
+    "question": "Unit impulse: h(t)=?",
     "options": {
       "A": "ℒ ^{-1}{Hs}",
       "B": "u(t)",
@@ -10337,12 +10337,12 @@
   },
   {
     "id": "a1_q647",
-    "question": "Ontario filter design: use Hs? p.484",
+    "question": "Ontario filter design: use Hs?",
     "options": {
       "A": "Freq response",
       "B": "Time only",
       "C": "DC",
-      "D": "Power Section 13.5-13.6: Partial Frac/Convolution ("
+      "D": "Power"
     },
     "answer": "A",
     "explanation": "Hs freq resp design (p.484).",
@@ -10353,7 +10353,7 @@
   },
   {
     "id": "a1_q648",
-    "question": "Hs Xs poles Hs → ? p.487",
+    "question": "Hs Xs poles Hs → ?",
     "options": {
       "A": "Transient",
       "B": "Source steady",
@@ -10369,7 +10369,7 @@
   },
   {
     "id": "a1_q649",
-    "question": "Ex.13.2 transient? p.487",
+    "question": "transient?",
     "options": {
       "A": "\\(10 √ 5 e^{-3000t} cos(4000t +79.7 ° )\\)",
       "B": "Ramp",
@@ -10401,7 +10401,7 @@
   },
   {
     "id": "a1_q651",
-    "question": "Conv memory: weighting? p.493",
+    "question": "Conv memory: weighting?",
     "options": {
       "A": "h(t) past weight",
       "B": "No memory",
@@ -10465,7 +10465,7 @@
   },
   {
     "id": "a1_q655",
-    "question": "yt = h * x ↔ ? p.491",
+    "question": "yt = h * x ↔ ?",
     "options": {
       "A": "\\(Y= H X\\)",
       "B": "Time only",
@@ -10481,7 +10481,7 @@
   },
   {
     "id": "a1_q656",
-    "question": "PEng num conv? p.492",
+    "question": "PEng num conv?",
     "options": {
       "A": "Data h(t) xt",
       "B": "Transform only",
@@ -10502,7 +10502,7 @@
       "A": "\\(|H( j ω )| A cos( ω t + φ )\\)",
       "B": "Transient",
       "C": "Ramp",
-      "D": "Impulse Section 13.7-13.8: Sinusoidal/Impulse ("
+      "D": "Impulse"
     },
     "answer": "A",
     "explanation": "|H( jω )| A cos( ωt + ∠ H) sin ss (Assess.13.11).",
@@ -10513,7 +10513,7 @@
   },
   {
     "id": "a1_q658",
-    "question": "Steady sin: |H( j ω )| ? Eq.13.120",
+    "question": "Steady sin: |H( j ω )| ?",
     "options": {
       "A": "Amp scale",
       "B": "Phase shift",
@@ -10529,7 +10529,7 @@
   },
   {
     "id": "a1_q659",
-    "question": "Ex.13.4 v0 ss=? p.497",
+    "question": "v0 ss=?",
     "options": {
       "A": "\\(20 √ 2 cos(5000t -15 ° )\\)",
       "B": "Ramp",
@@ -10545,7 +10545,7 @@
   },
   {
     "id": "a1_q660",
-    "question": "H( jω ) → Hs? p.497",
+    "question": "H( jω ) → Hs?",
     "options": {
       "A": "Exper possible",
       "B": "Time only",
@@ -10561,7 +10561,7 @@
   },
   {
     "id": "a1_q661",
-    "question": "Capac R→0: i =? Eq.13.127",
+    "question": "Capac R→0: i =?",
     "options": {
       "A": "\\([C1/(C1+C2)] V0 δ (t)\\)",
       "B": "Finite",
@@ -10577,7 +10577,7 @@
   },
   {
     "id": "a1_q662",
-    "question": "Series L impulse: Δi =? Eq.13.140",
+    "question": "Series L impulse: Δi =?",
     "options": {
       "A": "V0 / L",
       "B": "V0 L",
@@ -10593,7 +10593,7 @@
   },
   {
     "id": "a1_q663",
-    "question": "Switch L: flux cons? Eq.13.137",
+    "question": "Switch L: flux cons?",
     "options": {
       "A": "\\(∑ Δλ =0\\)",
       "B": "Charge",
@@ -10625,7 +10625,7 @@
   },
   {
     "id": "a1_q665",
-    "question": "Superpos IC src ? p.482",
+    "question": "Superpos IC src ?",
     "options": {
       "A": "Separate contrib",
       "B": "Total only",
@@ -10641,7 +10641,7 @@
   },
   {
     "id": "a1_q666",
-    "question": "Ex.13.6 Vth=? p.480",
+    "question": "Vth=?",
     "options": {
       "A": "480s / 1e4",
       "B": "Const",
@@ -10657,7 +10657,7 @@
   },
   {
     "id": "a1_q667",
-    "question": "Conv * = ? p.491",
+    "question": "Conv * = ?",
     "options": {
       "A": "Mult s-domain",
       "B": "Time add",
@@ -10689,7 +10689,7 @@
   },
   {
     "id": "a1_q669",
-    "question": "R=0 cap transfer? Eq.13.125",
+    "question": "R=0 cap transfer?",
     "options": {
       "A": "\\(C1/(C1+C2) V0 instant\\)",
       "B": "RC decay",
@@ -10705,7 +10705,7 @@
   },
   {
     "id": "a1_q670",
-    "question": "Ontario PEng : Laplace for? p.466",
+    "question": "Ontario PEng : Laplace for?",
     "options": {
       "A": "Surge suppressors",
       "B": "Steady sin",
@@ -10721,7 +10721,7 @@
   },
   {
     "id": "a1_q671",
-    "question": "Poles Hs conj ? p.484",
+    "question": "Poles Hs conj ?",
     "options": {
       "A": "Always LHP pairs",
       "B": "RHP",
@@ -10737,7 +10737,7 @@
   },
   {
     "id": "a1_q672",
-    "question": "Ramp Hs Xs : transient Hs poles p.486",
+    "question": "Ramp Hs Xs : transient Hs poles",
     "options": {
       "A": "Yes",
       "B": "Steady ramp",
@@ -10753,7 +10753,7 @@
   },
   {
     "id": "a1_q673",
-    "question": "Time-invar test? Eq.13.98",
+    "question": "Time-invar test?",
     "options": {
       "A": "\\(Delay input=output\\)",
       "B": "Change",
@@ -10769,7 +10769,7 @@
   },
   {
     "id": "a1_q674",
-    "question": "h(t)= ℒ ^{ -1} Hs : ? Eq.13.100",
+    "question": "h(t)= ℒ ^{ -1} Hs : ?",
     "options": {
       "A": "Natural resp",
       "B": "Forced",
@@ -10801,7 +10801,7 @@
   },
   {
     "id": "a1_q676",
-    "question": "Sin ss H( jω ): phase? Eq.13.120",
+    "question": "Sin ss H( jω ): phase?",
     "options": {
       "A": "\\(∠ H( j ω )\\)",
       "B": "\\(ω only\\)",
@@ -10817,12 +10817,12 @@
   },
   {
     "id": "a1_q677",
-    "question": "Impulse mutual: Δi =? Eq.13.149",
+    "question": "Impulse mutual: Δi =?",
     "options": {
       "A": "Flux / L",
       "B": "0",
       "C": "Steady",
-      "D": "\\(v=0 Scoring 90-100% (63+): Chapter 13 Master (Proceed Ch14) 70-89% (49-62): Review s-circuits, TF, impulse, Ex.13.1-13.6 <70% (<49): Re-read Sec.13.1-13.4, redo Ex.13.3 Chapter 13 Answer Key + Explanations Correct answers are BOLD with citations. Explanations: 1-2 sentences, Ontario PEng /surge context where relevant.\\)"
+      "D": "\\(v = 0\\)"
     },
     "answer": "A",
     "explanation": "Flux/L Δi mutual impulse (Eq.13.149). Concept Formula Citation R s-domain R  L IC sL + L I_0  C IC 1/ sC Hs Ys/ Xs (zero IC)  Eq.13.93 Conv ∫ h(τ) x(t-τ) dτ  Eq.13.109 Sin ss |H( j ω )| cos( ωt + ∠ H)  Eq.13.120 Score Guide: 90-100%: Ch13 Master. 70-89%: Review TF/conv/Ex.13.3. <70%: Re-read Sec.13.1-13.5.",
@@ -10849,7 +10849,7 @@
   },
   {
     "id": "a1_q679",
-    "question": "Passband? p.524",
+    "question": "Passband?",
     "options": {
       "A": "Frequencies passed",
       "B": "Attenuated",
@@ -10881,7 +10881,7 @@
   },
   {
     "id": "a1_q681",
-    "question": "Cutoff def? Eq.14.1",
+    "question": "Cutoff def?",
     "options": {
       "A": "\\(|H|=1/ √ 2 max\\)",
       "B": "0",
@@ -10897,7 +10897,7 @@
   },
   {
     "id": "a1_q682",
-    "question": "Half-power? Eq.14.6",
+    "question": "Half-power?",
     "options": {
       "A": "\\(P=1/2 P_max\\)",
       "B": "Full",
@@ -10929,7 +10929,7 @@
   },
   {
     "id": "a1_q684",
-    "question": "Passive filter gain? p.526",
+    "question": "Passive filter gain?",
     "options": {
       "A": "\\(≤ 1 (unity max)\\)",
       "B": "Amp",
@@ -10961,7 +10961,7 @@
   },
   {
     "id": "a1_q686",
-    "question": "Freq resp plot? p.524",
+    "question": "Freq resp plot?",
     "options": {
       "A": "\\(|H| & ∠ H vs ω\\)",
       "B": "Time",
@@ -10977,12 +10977,12 @@
   },
   {
     "id": "a1_q687",
-    "question": "Mag/phase indep ? p.525",
+    "question": "Mag/phase indep ?",
     "options": {
       "A": "No, linked",
       "B": "Yes",
       "C": "Mag only",
-      "D": "Phase only 14.2 Low-Pass Filters ("
+      "D": "Phase only"
     },
     "answer": "A",
     "explanation": "Mag/phase linked not indep (p.525).",
@@ -11009,7 +11009,7 @@
   },
   {
     "id": "a1_q689",
-    "question": "RL |H( jω )|=? Eq.14.9",
+    "question": "RL |H( jω )|=?",
     "options": {
       "A": "\\(R / √ (R ² + ω² L ² )\\)",
       "B": "\\(ω L /R\\)",
@@ -11025,7 +11025,7 @@
   },
   {
     "id": "a1_q690",
-    "question": "RL ω_c =? Eq.14.12",
+    "question": "RL ω_c =?",
     "options": {
       "A": "R/L",
       "B": "L/R",
@@ -11041,7 +11041,7 @@
   },
   {
     "id": "a1_q691",
-    "question": "Ex.14.1 ECG R=? L=100mH ω_c =10Hz",
+    "question": "ECG R=? L=100mH ω_c =10Hz",
     "options": {
       "A": "\\(6.28 Ω\\)",
       "B": "\\(628 Ω\\)",
@@ -11073,7 +11073,7 @@
   },
   {
     "id": "a1_q693",
-    "question": "RC |H|=? Eq.14.16",
+    "question": "RC |H|=?",
     "options": {
       "A": "\\(1/ √ (1+ ω² R ² C ² )\\)",
       "B": "\\(ω RC\\)",
@@ -11089,7 +11089,7 @@
   },
   {
     "id": "a1_q694",
-    "question": "RC ω_c =? Eq.14.19",
+    "question": "RC ω_c =?",
     "options": {
       "A": "1/(RC)",
       "B": "RC",
@@ -11121,7 +11121,7 @@
   },
   {
     "id": "a1_q696",
-    "question": "Lowpass gen form? Eq.14.13",
+    "question": "Lowpass gen form?",
     "options": {
       "A": "\\(ω _c / (s + ω _c )\\)",
       "B": "\\(s/( s+ ω _c )\\)",
@@ -11137,7 +11137,7 @@
   },
   {
     "id": "a1_q697",
-    "question": "Memory ↑ as ω_c ? p.531",
+    "question": "Memory ↑ as ω_c ?",
     "options": {
       "A": "↓ (more distort)",
       "B": "↑",
@@ -11153,7 +11153,7 @@
   },
   {
     "id": "a1_q698",
-    "question": "Ex.14.2 R=53k C=1nF ω_c =?",
+    "question": "R=53k C=1nF ω_c =?",
     "options": {
       "A": "3kHz",
       "B": "30kHz",
@@ -11174,7 +11174,7 @@
       "A": "1",
       "B": ">1 series RLC",
       "C": "Amp req active",
-      "D": "\\(∞ 14.3 High-Pass Filters (\\)"
+      "D": "Unbounded (∞)"
     },
     "answer": "A",
     "explanation": "Max gain 1 passive (p.526).",
@@ -11297,12 +11297,12 @@
   },
   {
     "id": "a1_q707",
-    "question": "Same circ low/high? p.532",
+    "question": "Same circ low/high?",
     "options": {
       "A": "Vo location",
       "B": "Elements",
       "C": "Source",
-      "D": "Load 14.4 Bandpass Filters ("
+      "D": "Load"
     },
     "answer": "A",
     "explanation": "Vo location determines low/high (p.532).",
@@ -11510,7 +11510,7 @@
       "A": "\\((s / ω _0 Q) / (s ² / ω _0 ² + s/ ω _0 Q +1)\\)",
       "B": "Lowpass",
       "C": "Highpass",
-      "D": "Reject 14.5 Bandreject Filters ("
+      "D": "Reject"
     },
     "answer": "A",
     "explanation": "Hs = (s/ω_0 Q)/(s²/ω_0² + s/ω_0 Q +1).",
@@ -11809,12 +11809,12 @@
   },
   {
     "id": "a1_q739",
-    "question": "Ch14 summary?",
+    "question": "Which statement correctly characterizes the Butterworth low-pass filter's frequency response?",
     "options": {
       "A": "Passive 1st/2nd order filters TF forms",
       "B": "Active",
       "C": "Digital",
-      "D": "\\(Nonlinear Scoring: 90-100% Ch14 Master (Ch15). 70-89% Review TF/cutoff/Ex.14.1. <70% Re-read 14.2-14.5. Next: Answer Key? Ch15 Active Filters? Reply! 🚀 Chapter 14 Answer Key + Explanations BOLD correct with citations. PEng Ontario filter design focus.\\)"
+      "D": "Nonlinear phase only"
     },
     "answer": "A",
     "explanation": "Passive 1st/2nd order TF forms. Filter ω_c Form Citation RL Low R/L ω_c /( s+ω_c )  Eq.14.12 RC Low 1/RC ω_c /( s+ω_c )  Eq.14.19 RL High R/L s/( s+ω_c )  RC High 1/RC s/( s+ω_c )  Bandpass 1/√LC (s/Qω_0)/(s²/ω_0² + ...)  Reject 1/√LC (s²+ω_0²)/(s² + ...)  90-100%: Master. 70-89%: TF/ ω_c /Q. <70%: Re-14.2-14.5.",
@@ -11841,7 +11841,7 @@
   },
   {
     "id": "a1_q741",
-    "question": "Prototype low-pass gain K=? Eq.15.2",
+    "question": "Prototype low-pass gain K=?",
     "options": {
       "A": "-R2/R1",
       "B": "R1/R2",
@@ -11857,7 +11857,7 @@
   },
   {
     "id": "a1_q742",
-    "question": "Low-pass |H( j ω )| form? Eq.15.1",
+    "question": "Low-pass |H( j ω )| form?",
     "options": {
       "A": "\\(K/(1+j ω RC)\\)",
       "B": "\\(K j ω RC /(1+j ω RC)\\)",
@@ -11889,7 +11889,7 @@
   },
   {
     "id": "a1_q744",
-    "question": "High-pass Hs=? Eq.15.4",
+    "question": "High-pass Hs=?",
     "options": {
       "A": "\\(K s/( s+ ω c )\\)",
       "B": "\\(K ω c /( s+ ω c )\\)",
@@ -11905,7 +11905,7 @@
   },
   {
     "id": "a1_q745",
-    "question": "Ex.15.1 prototype C=? R1=1Ω K=1 ωc =1",
+    "question": "prototype C=? R1=1Ω K=1 ωc =1",
     "options": {
       "A": "1 F",
       "B": "1 nF",
@@ -11921,7 +11921,7 @@
   },
   {
     "id": "a1_q746",
-    "question": "Active vs passive gain? p.560",
+    "question": "Active vs passive gain?",
     "options": {
       "A": ">1 possible",
       "B": "\\(≤ 1\\)",
@@ -11953,12 +11953,12 @@
   },
   {
     "id": "a1_q748",
-    "question": "Load effect active? p.562",
+    "question": "Load effect active?",
     "options": {
       "A": "None (ideal op)",
       "B": "\\(Shifts ω c\\)",
       "C": "↓ gain",
-      "D": "\\(∞ Q 15.2 Scaling (\\)"
+      "D": "Infinite Q"
     },
     "answer": "A",
     "explanation": "No load effect ideal op amp p.562 (passive shifts).",
@@ -11969,7 +11969,7 @@
   },
   {
     "id": "a1_q749",
-    "question": "Magnitude scaling R'? Eq.15.7",
+    "question": "Magnitude scaling R'?",
     "options": {
       "A": "km R",
       "B": "C/km",
@@ -11985,7 +11985,7 @@
   },
   {
     "id": "a1_q750",
-    "question": "Freq scaling C'? Eq.15.8",
+    "question": "Freq scaling C'?",
     "options": {
       "A": "C kf",
       "B": "L/ kf",
@@ -12001,7 +12001,7 @@
   },
   {
     "id": "a1_q751",
-    "question": "km for C=0.01μF proto 1F? Ex.15.4",
+    "question": "Magnitude scaling: to convert a prototype C=1F capacitor to C=0.01μF, what is the scaling factor km?",
     "options": {
       "A": "10^8",
       "B": "kf only",
@@ -12017,7 +12017,7 @@
   },
   {
     "id": "a1_q752",
-    "question": "kf for fc=1kHz proto 1rad/s? Ex.15.4",
+    "question": "Frequency scaling: to shift a prototype cutoff of 1 rad/s to fc = 1 kHz, what is the frequency scaling factor kf?",
     "options": {
       "A": "6283",
       "B": "1000",
@@ -12033,7 +12033,7 @@
   },
   {
     "id": "a1_q753",
-    "question": "Ex.15.3 Q after scaling?",
+    "question": "Q after scaling?",
     "options": {
       "A": "Same (1)",
       "B": "↑",
@@ -12065,7 +12065,7 @@
   },
   {
     "id": "a1_q755",
-    "question": "Scale both R L C? Eq.15.9",
+    "question": "Scale both R L C?",
     "options": {
       "A": "km R, kf L, C/(km kf )",
       "B": "kf all",
@@ -12097,7 +12097,7 @@
   },
   {
     "id": "a1_q757",
-    "question": "Why scale? p.564",
+    "question": "Why scale?",
     "options": {
       "A": "Realistic values",
       "B": "Proto simplify",
@@ -12113,12 +12113,12 @@
   },
   {
     "id": "a1_q758",
-    "question": "Ex.15.2 R1=? C=0.1μF ωc =500",
+    "question": "R1=? C=0.1μF ωc =500",
     "options": {
       "A": "\\(20k Ω\\)",
       "B": "\\(200k Ω\\)",
       "C": "\\(2k Ω\\)",
-      "D": "1/500 15.3 Bandpass/ Bandreject ("
+      "D": "1/500"
     },
     "answer": "A",
     "explanation": "R1=20kΩ C=0.1μF ωc =500 K=10 Ex.15.2 p.563.",
@@ -12129,7 +12129,7 @@
   },
   {
     "id": "a1_q759",
-    "question": "Broadband bandpass Q max discrete poles? Eq.15.53",
+    "question": "Broadband bandpass Q max discrete poles?",
     "options": {
       "A": "0.5",
       "B": "1/2",
@@ -12161,7 +12161,7 @@
   },
   {
     "id": "a1_q761",
-    "question": "Bandpass Hs form? Eq.15.10",
+    "question": "Bandpass Hs form?",
     "options": {
       "A": "\\(K ω c2 s / (s^2 + ω c1 ω c2 s + ω c1 ω c2)\\)",
       "B": "Low only",
@@ -12177,7 +12177,7 @@
   },
   {
     "id": "a1_q762",
-    "question": "Ex.15.5 R = ? K=2 100-10kHz C=0.2μF",
+    "question": "R = ? K=2 100-10kHz C=0.2μF",
     "options": {
       "A": "\\(3183 Ω\\)",
       "B": "\\(15.9k Ω\\)",
@@ -12209,7 +12209,7 @@
   },
   {
     "id": "a1_q764",
-    "question": "Notch= ? p.586",
+    "question": "Notch= ?",
     "options": {
       "A": "Narrow bandreject",
       "B": "Wide",
@@ -12225,7 +12225,7 @@
   },
   {
     "id": "a1_q765",
-    "question": "| H|min center reject? Eq.15.20",
+    "question": "| H|min center reject?",
     "options": {
       "A": "<<1 (Rf/Ri /2)",
       "B": "1",
@@ -12241,7 +12241,7 @@
   },
   {
     "id": "a1_q766",
-    "question": "Ex.15.6 pass gain=?",
+    "question": "pass gain=?",
     "options": {
       "A": "3",
       "B": "1",
@@ -12257,7 +12257,7 @@
   },
   {
     "id": "a1_q767",
-    "question": "RL for low CL=0.5μF ωc1=100? Ex.15.6",
+    "question": "For an active low-pass filter with CL = 0.5μF and cutoff ωc1 = 100 rad/s, what is the required resistance RL?",
     "options": {
       "A": "\\(20k Ω\\)",
       "B": "\\(1k Ω\\)",
@@ -12289,7 +12289,7 @@
   },
   {
     "id": "a1_q769",
-    "question": "Broadband def? p.566",
+    "question": "Broadband def?",
     "options": {
       "A": "\\(ω c2 >> ω c1\\)",
       "B": "Q low",
@@ -12321,7 +12321,7 @@
   },
   {
     "id": "a1_q771",
-    "question": "Passband gain bandpass center ? Eq.15.14",
+    "question": "Passband gain bandpass center ?",
     "options": {
       "A": "K",
       "B": "1",
@@ -12337,12 +12337,12 @@
   },
   {
     "id": "a1_q772",
-    "question": "Gain reject passbands? Eq.15.19",
+    "question": "Gain reject passbands?",
     "options": {
       "A": "-Rf/Ri",
       "B": "K center",
       "C": "\\(1/ √ 2\\)",
-      "D": "V2 15.4 Higher-Order ("
+      "D": "V2"
     },
     "answer": "A",
     "explanation": "-Rf/Ri passbands Eq.15.19 p.571.",
@@ -12353,7 +12353,7 @@
   },
   {
     "id": "a1_q773",
-    "question": "Butterworth low |H( j ω )| ? Eq.15.25",
+    "question": "Butterworth low |H( j ω )| ?",
     "options": {
       "A": "\\(1/ √ (1+( ω / ω c )^{2n})\\)",
       "B": "\\(( ω / ω c )^n / √ (1+( ω / ω c )^{2n})\\)",
@@ -12369,7 +12369,7 @@
   },
   {
     "id": "a1_q774",
-    "question": "Order n approx ? Eq.15.46",
+    "question": "Order n approx ?",
     "options": {
       "A": "\\(-0.05 log(10^{0.1 As}-1) log( ω s / ω p )\\)",
       "B": "log Q",
@@ -12385,7 +12385,7 @@
   },
   {
     "id": "a1_q775",
-    "question": "Ex.15.10 n for -50dB@6kHz fc=1kHz?",
+    "question": "n for -50dB@6kHz fc=1kHz?",
     "options": {
       "A": "4",
       "B": "3",
@@ -12417,7 +12417,7 @@
   },
   {
     "id": "a1_q777",
-    "question": "4th-order identical ωc4=? Eq.15.23",
+    "question": "4th-order identical ωc4=?",
     "options": {
       "A": "0.435 rad/s",
       "B": "1",
@@ -12433,7 +12433,7 @@
   },
   {
     "id": "a1_q778",
-    "question": "Butterworth poly n=2? Table15.1",
+    "question": "Butterworth poly n=2?",
     "options": {
       "A": "\\(s^2 + √ 2 s +1\\)",
       "B": "\\(s^2 + s +1\\)",
@@ -12449,7 +12449,7 @@
   },
   {
     "id": "a1_q779",
-    "question": "High-pass from low-pass? p.585",
+    "question": "High-pass from low-pass?",
     "options": {
       "A": "\\(R ↔ C, s → 1/s\\)",
       "B": "L add",
@@ -12465,7 +12465,7 @@
   },
   {
     "id": "a1_q780",
-    "question": "Ex.15.9 C1 C2 1st stage n=4 Butter?",
+    "question": "C1 C2 1st stage n=4 Butter?",
     "options": {
       "A": "2.61F 0.38F",
       "B": "1F 1F",
@@ -12497,7 +12497,7 @@
   },
   {
     "id": "a1_q782",
-    "question": "Ex.15.7 kf for 500Hz 4th identical?",
+    "question": "kf for 500Hz 4th identical?",
     "options": {
       "A": "7222",
       "B": "3142",
@@ -12529,7 +12529,7 @@
   },
   {
     "id": "a1_q784",
-    "question": "n=3 Butter low poly? Table15.1",
+    "question": "n=3 Butter low poly?",
     "options": {
       "A": "\\((s+1)(s^2 +s +1)\\)",
       "B": "\\(s^3 +2s^2 +2s +1\\)",
@@ -12545,7 +12545,7 @@
   },
   {
     "id": "a1_q785",
-    "question": "Butter high num? p.585",
+    "question": "Butter high num?",
     "options": {
       "A": "s^n",
       "B": "1",
@@ -12561,7 +12561,7 @@
   },
   {
     "id": "a1_q786",
-    "question": "Ex.15.8 roots assign?",
+    "question": "roots assign?",
     "options": {
       "A": "Left-half Hs",
       "B": "Right-half",
@@ -12577,7 +12577,7 @@
   },
   {
     "id": "a1_q787",
-    "question": "Transition narrow n↑? p.582",
+    "question": "Transition narrow n↑?",
     "options": {
       "A": "Yes sharper",
       "B": "Flat",
@@ -12609,7 +12609,7 @@
   },
   {
     "id": "a1_q789",
-    "question": "Ex.15.11 n = ? 10dB@500Hz 60dB@5kHz",
+    "question": "n = ? 10dB@500Hz 60dB@5kHz",
     "options": {
       "A": "3",
       "B": "4",
@@ -12646,7 +12646,7 @@
       "A": "\\(√ 2 ≈ 1.414\\)",
       "B": "1",
       "C": "2",
-      "D": "0.765 15.5 Narrowband ("
+      "D": "0.765"
     },
     "answer": "A",
     "explanation": "b1=√2≈1.414 2nd Butter p.580.",
@@ -12657,7 +12657,7 @@
   },
   {
     "id": "a1_q792",
-    "question": "Narrowband Q? p.586",
+    "question": "Narrowband Q?",
     "options": {
       "A": "High >10 complex poles",
       "B": "Low <0.5",
@@ -12785,7 +12785,7 @@
   },
   {
     "id": "a1_q800",
-    "question": "High Q design? p.586",
+    "question": "High Q design?",
     "options": {
       "A": "Complex poles",
       "B": "Real poles only",
@@ -12833,7 +12833,7 @@
   },
   {
     "id": "a1_q803",
-    "question": "Ex.15.12 high Q bandpass?",
+    "question": "high Q bandpass?",
     "options": {
       "A": "Multiple feedback",
       "B": "Sallen",
@@ -12897,7 +12897,7 @@
   },
   {
     "id": "a1_q807",
-    "question": "Fourier series represents periodic f(t)? Eq.16.2",
+    "question": "Fourier series represents periodic f(t)?",
     "options": {
       "A": "Sum harmonics cos/sin",
       "B": "Laplace only",
@@ -12913,7 +12913,7 @@
   },
   {
     "id": "a1_q808",
-    "question": "Periodic def? Eq.16.1",
+    "question": "Periodic def?",
     "options": {
       "A": "\\(f(t)=f( t+nT )\\)",
       "B": "Random",
@@ -12929,7 +12929,7 @@
   },
   {
     "id": "a1_q809",
-    "question": "Dirichlet cond ? p.607",
+    "question": "Dirichlet cond ?",
     "options": {
       "A": "Finite max/min, disc.",
       "B": "Infinite poles",
@@ -12945,7 +12945,7 @@
   },
   {
     "id": "a1_q810",
-    "question": "Steady-state resp? p.608",
+    "question": "Steady-state resp?",
     "options": {
       "A": "Superpos phasors",
       "B": "Time sim",
@@ -12961,7 +12961,7 @@
   },
   {
     "id": "a1_q811",
-    "question": "Ex.16.1 triangular av=? Vm peak",
+    "question": "triangular av=? Vm peak",
     "options": {
       "A": "0",
       "B": "Vm /2",
@@ -12977,7 +12977,7 @@
   },
   {
     "id": "a1_q812",
-    "question": "Harmonics nth? p.607",
+    "question": "Harmonics nth?",
     "options": {
       "A": "\\(n ω 0\\)",
       "B": "\\(ω 0/n\\)",
@@ -12993,7 +12993,7 @@
   },
   {
     "id": "a1_q813",
-    "question": "Line spectra? p.630",
+    "question": "Line spectra?",
     "options": {
       "A": "Discrete freq",
       "B": "Continuous",
@@ -13009,7 +13009,7 @@
   },
   {
     "id": "a1_q814",
-    "question": "Why Fourier? p.604",
+    "question": "Why Fourier?",
     "options": {
       "A": "Nonsin periodic",
       "B": "DC only",
@@ -13025,12 +13025,12 @@
   },
   {
     "id": "a1_q815",
-    "question": "Phys sources? p.606",
+    "question": "Phys sources?",
     "options": {
       "A": "Rectifiers osc",
       "B": "Pure sin only",
       "C": "DC steady",
-      "D": "Noise 16.2 Coefficients ("
+      "D": "Noise"
     },
     "answer": "A",
     "explanation": "Rectifiers osc phys sources p.606.",
@@ -13041,7 +13041,7 @@
   },
   {
     "id": "a1_q816",
-    "question": "av formula? Eq.16.3",
+    "question": "av formula?",
     "options": {
       "A": "\\((1/T) ∫ f dt\\)",
       "B": "\\(2/T ∫ f cos\\)",
@@ -13057,7 +13057,7 @@
   },
   {
     "id": "a1_q817",
-    "question": "ak formula? Eq.16.4",
+    "question": "ak formula?",
     "options": {
       "A": "\\((2/T) ∫ f cos k ω 0t\\)",
       "B": "\\((1/T) ∫ f sin\\)",
@@ -13073,7 +13073,7 @@
   },
   {
     "id": "a1_q818",
-    "question": "bk formula? Eq.16.5",
+    "question": "bk formula?",
     "options": {
       "A": "\\((2/T) ∫ f sin k ω 0t\\)",
       "B": "ak",
@@ -13089,7 +13089,7 @@
   },
   {
     "id": "a1_q819",
-    "question": "Ex.16.1 ak triangular?",
+    "question": "ak triangular?",
     "options": {
       "A": "0 all k",
       "B": "\\(8Vm/(k ²π² ) cos\\)",
@@ -13105,7 +13105,7 @@
   },
   {
     "id": "a1_q820",
-    "question": "Choose t0 integ ? p.609",
+    "question": "Choose t0 integ ?",
     "options": {
       "A": "Simplify",
       "B": "Always 0",
@@ -13121,7 +13121,7 @@
   },
   {
     "id": "a1_q821",
-    "question": "av=avg value? p.608",
+    "question": "av=avg value?",
     "options": {
       "A": "Yes",
       "B": "RMS",
@@ -13137,7 +13137,7 @@
   },
   {
     "id": "a1_q822",
-    "question": "ak =2 avg(f cos)? p.608",
+    "question": "ak =2 avg(f cos)?",
     "options": {
       "A": "Yes",
       "B": "1 avg",
@@ -13174,7 +13174,7 @@
       "A": "21.99 V",
       "B": "0",
       "C": "\\(9 π\\)",
-      "D": "28.27 16.3 Symmetry ("
+      "D": "28.27"
     },
     "answer": "A",
     "explanation": "av=21.99 V Vm =9π Assess16.1 p.609.",
@@ -13185,7 +13185,7 @@
   },
   {
     "id": "a1_q825",
-    "question": "Even f(- t)= ? Eq.16.13",
+    "question": "Even f(- t)= ?",
     "options": {
       "A": "f(t)",
       "B": "-f(t)",
@@ -13201,7 +13201,7 @@
   },
   {
     "id": "a1_q826",
-    "question": "Even bk=? Eq.16.16",
+    "question": "Even bk=?",
     "options": {
       "A": "0 all k",
       "B": "ak",
@@ -13217,7 +13217,7 @@
   },
   {
     "id": "a1_q827",
-    "question": "Even ak integ ? Eq.16.15",
+    "question": "Even ak integ ?",
     "options": {
       "A": "\\(2/T ∫ 0 to T/2 f cos\\)",
       "B": "Full T",
@@ -13233,7 +13233,7 @@
   },
   {
     "id": "a1_q828",
-    "question": "Odd f(-t)=? p.611",
+    "question": "Odd f(-t)=?",
     "options": {
       "A": "-f(t)",
       "B": "f(t)",
@@ -13249,7 +13249,7 @@
   },
   {
     "id": "a1_q829",
-    "question": "Odd an=? p.611",
+    "question": "Odd an=?",
     "options": {
       "A": "0 all n",
       "B": "bk",
@@ -13265,7 +13265,7 @@
   },
   {
     "id": "a1_q830",
-    "question": "Half-wave sym ? p.611",
+    "question": "Half-wave sym ?",
     "options": {
       "A": "\\(f( t+T /2)=-f(t)\\)",
       "B": "Even",
@@ -13281,7 +13281,7 @@
   },
   {
     "id": "a1_q831",
-    "question": "Half-wave even n? p.611",
+    "question": "Half-wave even n?",
     "options": {
       "A": "0",
       "B": "Double",
@@ -13297,7 +13297,7 @@
   },
   {
     "id": "a1_q832",
-    "question": "Quarter-wave? p.611",
+    "question": "Quarter-wave?",
     "options": {
       "A": "\\(Even+half\\)",
       "B": "\\(Odd+half\\)",
@@ -13313,7 +13313,7 @@
   },
   {
     "id": "a1_q833",
-    "question": "Ex.16.2 odd sym ? p.616",
+    "question": "odd sym ?",
     "options": {
       "A": "\\(An=0\\)",
       "B": "Bk only",
@@ -13329,12 +13329,12 @@
   },
   {
     "id": "a1_q834",
-    "question": "Symmetry simplify? p.611",
+    "question": "Symmetry simplify?",
     "options": {
       "A": "Yes integ",
       "B": "No change",
       "C": "Complex",
-      "D": "RMS 16.4 Trig Form ("
+      "D": "RMS"
     },
     "answer": "A",
     "explanation": "Simplify integ symmetry p.611.",
@@ -13345,7 +13345,7 @@
   },
   {
     "id": "a1_q835",
-    "question": "Alt trig form? Eq.16.38",
+    "question": "Alt trig form?",
     "options": {
       "A": "\\(A cos( ω t+ φ )\\)",
       "B": "Sin only",
@@ -13361,7 +13361,7 @@
   },
   {
     "id": "a1_q836",
-    "question": "A_k =? p.617",
+    "question": "A_k =?",
     "options": {
       "A": "\\(√ (ak ² +bk ² )\\)",
       "B": "ak",
@@ -13377,7 +13377,7 @@
   },
   {
     "id": "a1_q837",
-    "question": "Ex.16.3 square A1=? Vm =60",
+    "question": "square A1=? Vm =60",
     "options": {
       "A": "27.01 V",
       "B": "15 V",
@@ -13393,7 +13393,7 @@
   },
   {
     "id": "a1_q838",
-    "question": "Prob16.4 verify? p.618",
+    "question": "Prob16.4 verify?",
     "options": {
       "A": "Symmetry shift",
       "B": "Direct integ",
@@ -13409,7 +13409,7 @@
   },
   {
     "id": "a1_q839",
-    "question": "Even quarter ak ? Eq.16.36",
+    "question": "Even quarter ak ?",
     "options": {
       "A": "\\(4/T ∫ 0-T/4\\)",
       "B": "Full",
@@ -13425,7 +13425,7 @@
   },
   {
     "id": "a1_q840",
-    "question": "Odd quarter bk? Eq.16.37",
+    "question": "Odd quarter bk?",
     "options": {
       "A": "\\(4/T ∫ 0-T/4 f sin\\)",
       "B": "Cos",
@@ -13462,7 +13462,7 @@
       "A": "\\(21.99 -5.2cos50t+...\\)",
       "B": "Sin only",
       "C": "Exp",
-      "D": "DC only 16.5 Application ("
+      "D": "DC only"
     },
     "answer": "A",
     "explanation": "21.99-5.2cos50t+... up 5th Assess16.2 p.609.",
@@ -13473,7 +13473,7 @@
   },
   {
     "id": "a1_q843",
-    "question": "Steady resp proc? p.619",
+    "question": "Steady resp proc?",
     "options": {
       "A": "Phasor each harm",
       "B": "Time integ",
@@ -13489,7 +13489,7 @@
   },
   {
     "id": "a1_q844",
-    "question": "Waveform est? p.608",
+    "question": "Waveform est?",
     "options": {
       "A": "Sum terms",
       "B": "Single harm",
@@ -13505,7 +13505,7 @@
   },
   {
     "id": "a1_q845",
-    "question": "High Q filter sq wave? p.632",
+    "question": "High Q filter sq wave?",
     "options": {
       "A": "Sin out",
       "B": "Sq out",
@@ -13521,7 +13521,7 @@
   },
   {
     "id": "a1_q846",
-    "question": "Superpos power? p.623",
+    "question": "Superpos power?",
     "options": {
       "A": "Same freq only",
       "B": "All harm",
@@ -13537,7 +13537,7 @@
   },
   {
     "id": "a1_q847",
-    "question": "Ex.16.4 Pdc =? 15Ω",
+    "question": "Pdc =? 15Ω",
     "options": {
       "A": "15 W",
       "B": "60 W",
@@ -13553,7 +13553,7 @@
   },
   {
     "id": "a1_q848",
-    "question": "Vrms est Eq.16.81?",
+    "question": "How is the RMS value of a periodic signal estimated from its Fourier harmonic components?",
     "options": {
       "A": "\\(√ (sum rms_harm ² + dc ² )\\)",
       "B": "Avg",
@@ -13569,7 +13569,7 @@
   },
   {
     "id": "a1_q849",
-    "question": "Ex.16.5 rms est 5 terms?",
+    "question": "rms est 5 terms?",
     "options": {
       "A": "28.76 V",
       "B": "30 V",
@@ -13585,7 +13585,7 @@
   },
   {
     "id": "a1_q850",
-    "question": "Filter test Q? p.605",
+    "question": "Filter test Q?",
     "options": {
       "A": "Sq to sin high Q",
       "B": "No change",
@@ -13606,7 +13606,7 @@
       "A": "60.75 W",
       "B": "0",
       "C": "296 W",
-      "D": "RMS 16.6 Power Calc ("
+      "D": "RMS"
     },
     "answer": "A",
     "explanation": "60.75 W Pavg est trap Assess16.7 p.625.",
@@ -13617,7 +13617,7 @@
   },
   {
     "id": "a1_q852",
-    "question": "RMS formula? Eq.16.81",
+    "question": "RMS formula?",
     "options": {
       "A": "\\(√ (av ² + Σ (An/ √ 2) ² )\\)",
       "B": "Avg",
@@ -13633,7 +13633,7 @@
   },
   {
     "id": "a1_q853",
-    "question": "Est error? p.627",
+    "question": "Est error?",
     "options": {
       "A": "Fewer terms more err",
       "B": "Exact infinite",
@@ -13649,7 +13649,7 @@
   },
   {
     "id": "a1_q854",
-    "question": "Ex.16.5 true rms sq wave?",
+    "question": "true rms sq wave?",
     "options": {
       "A": "30 V",
       "B": "28.76 V",
@@ -13670,7 +13670,7 @@
       "A": "5 terms err %",
       "B": "Exact",
       "C": "DC",
-      "D": "Peak 16.8 Exp Form ("
+      "D": "Peak"
     },
     "answer": "A",
     "explanation": "5 terms err % sq vs tri Prob16.39 p.627.",
@@ -13681,7 +13681,7 @@
   },
   {
     "id": "a1_q856",
-    "question": "Exp form? Eq.16.82",
+    "question": "Exp form?",
     "options": {
       "A": "\\(Σ Cn e^{jn ω 0 t}\\)",
       "B": "Trig",
@@ -13697,7 +13697,7 @@
   },
   {
     "id": "a1_q857",
-    "question": "Cn=? Eq.16.83",
+    "question": "Cn=?",
     "options": {
       "A": "\\((1/T) ∫ f e^{-jn ω 0 t} dt\\)",
       "B": "av",
@@ -13713,7 +13713,7 @@
   },
   {
     "id": "a1_q858",
-    "question": "C0=? p.627",
+    "question": "C0=?",
     "options": {
       "A": "av",
       "B": "a1",
@@ -13729,7 +13729,7 @@
   },
   {
     "id": "a1_q859",
-    "question": "RMS |Cn|? Eq.16.97",
+    "question": "RMS |Cn|?",
     "options": {
       "A": "\\((1/T) Σ |Cn| ²\\)",
       "B": "Trig",
@@ -13745,7 +13745,7 @@
   },
   {
     "id": "a1_q860",
-    "question": "Ex.16.6 Cn pulse? Eq.16.98",
+    "question": "What is the exponential Fourier coefficient Cₙ for a periodic rectangular pulse of amplitude Vm and pulse width τ within period T?",
     "options": {
       "A": "\\(Vm T/2 sin(n π τ /T)/(n π )\\)",
       "B": "Const",
@@ -13761,7 +13761,7 @@
   },
   {
     "id": "a1_q861",
-    "question": "Shift time effect? p.630",
+    "question": "Shift time effect?",
     "options": {
       "A": "Phase only",
       "B": "Amp too",
@@ -13782,7 +13782,7 @@
       "A": "\\(-1/3 cos(n π /4), n odd\\)",
       "B": "0",
       "C": "1/n",
-      "D": "Sin 16.9 Spectra ("
+      "D": "Sin"
     },
     "answer": "A",
     "explanation": "Cn=-1/3 cos(n π/4) n odd Assess16.8 p.629.",
@@ -13793,7 +13793,7 @@
   },
   {
     "id": "a1_q863",
-    "question": "Amp spec? p.630",
+    "question": "Amp spec?",
     "options": {
       "A": "\\(|Cn| vs n ω 0\\)",
       "B": "Time",
@@ -13809,7 +13809,7 @@
   },
   {
     "id": "a1_q864",
-    "question": "Phase spec φn ? p.630",
+    "question": "Phase spec φn ?",
     "options": {
       "A": "arg (Cn)",
       "B": "|Cn|",
@@ -14193,7 +14193,7 @@
   },
   {
     "id": "a1_q888",
-    "question": "What is the Fourier transform of cos(ω0t) from Table 17.1?",
+    "question": "What is the Fourier transform of cos(ω₀t)?",
     "options": {
       "A": "\\(π [δ(ω-ω0) + δ(ω+ω0)]\\)",
       "B": "Sine transform",
@@ -14497,7 +14497,7 @@
   },
   {
     "id": "a1_q907",
-    "question": "What types of functions are listed in Table 17.1 for Fourier transform pairs?",
+    "question": "Which category of functions makes up the standard Fourier transform pairs used in circuit analysis?",
     "options": {
       "A": "Elementary functions",
       "B": "Custom functions",
@@ -14641,7 +14641,7 @@
   },
   {
     "id": "a1_q916",
-    "question": "What types of operations are listed in Table 17.2 for the Fourier transform?",
+    "question": "Which domain do the operational transform properties of the Fourier transform primarily operate in?",
     "options": {
       "A": "Frequency domain operations",
       "B": "Time only",
@@ -15201,7 +15201,7 @@
   },
   {
     "id": "a1_q951",
-    "question": "What conversions are provided in Table 18.1 for two-port parameters?",
+    "question": "What types of conversions does the standard two-port parameter conversion table provide?",
     "options": {
       "A": "z ↔ y, a, b, h, g conversions",
       "B": "None",
@@ -15409,7 +15409,7 @@
   },
   {
     "id": "a1_q964",
-    "question": "What terminated two-port equations are summarized in Table 18.2?",
+    "question": "What key equations are available for a terminated two-port network in terms of its z-parameters?",
     "options": {
       "A": "Z_in, V_th, Z_th, A_i, A_v for terminated networks",
       "B": "Parameters only",
@@ -15841,7 +15841,7 @@
   },
   {
     "id": "a1_q991",
-    "question": "What is Table 18.1 used for in two-port network analysis?",
+    "question": "In two-port network analysis, what is the purpose of a parameter conversion table?",
     "options": {
       "A": "Convert between different two-port parameter sets",
       "B": "Measurement",
