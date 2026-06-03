@@ -276,7 +276,7 @@ export default function ManageQuestionsPage() {
   return (
     <>
       <Navbar />
-      <main className="max-w-6xl mx-auto px-4 py-8">
+      <main className="max-w-5xl mx-auto px-4 py-8">
         {/* Notification Banner */}
         {notification && (
           <div

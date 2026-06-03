@@ -62,7 +62,7 @@ export default function BookmarksPage() {
   return (
     <>
       <Navbar />
-      <main className="max-w-3xl mx-auto px-4 py-8 animate-fade">
+      <main className="max-w-5xl mx-auto px-4 py-8 animate-fade">
         <div className="flex items-center justify-between mb-6">
           <div>
             <h1 className="text-2xl font-bold flex items-center gap-2" style={{ color: 'var(--fg)' }}>

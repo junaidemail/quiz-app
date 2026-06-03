@@ -124,7 +124,7 @@ function QuizSetup() {
   return (
     <>
       <Navbar />
-      <main className="max-w-3xl mx-auto px-4 py-8">
+      <main className="max-w-5xl mx-auto px-4 py-8">
         <h1 className="text-2xl font-bold mb-1" style={{ color: 'var(--fg)' }}>Configure Quiz</h1>
         <p className="text-sm mb-6" style={{ color: 'var(--fg-muted)' }}>
           {availablePool.length} questions available with current settings

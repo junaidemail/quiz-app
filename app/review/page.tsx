@@ -85,7 +85,7 @@ function ReviewPage() {
   return (
     <>
       <Navbar />
-      <main className="max-w-3xl mx-auto px-4 py-8 animate-fade">
+      <main className="max-w-5xl mx-auto px-4 py-8 animate-fade">
         <div className="flex items-center justify-between mb-6">
           <h1 className="text-2xl font-bold" style={{ color: 'var(--fg)' }}>Review Answers</h1>
           <Link href={`/results?id=${session.id}`}

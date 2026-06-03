@@ -66,7 +66,7 @@ function ResultsPage() {
   return (
     <>
       <Navbar />
-      <main className="max-w-3xl mx-auto px-4 py-8 animate-fade">
+      <main className="max-w-5xl mx-auto px-4 py-8 animate-fade">
         {/* Score header */}
         <div className="card p-8 text-center mb-6">
           <div className="flex items-center justify-center mb-4">

@@ -35,7 +35,7 @@ export default function StatsPage() {
   return (
     <>
       <Navbar />
-      <main className="max-w-3xl mx-auto px-4 py-8 animate-fade">
+      <main className="max-w-5xl mx-auto px-4 py-8 animate-fade">
         <div className="flex items-center justify-between mb-6">
           <h1 className="text-2xl font-bold" style={{ color: 'var(--fg)' }}>Statistics</h1>
           <Link href="/" className="text-xs hover:underline" style={{ color: 'var(--accent)' }}>← Home</Link>
