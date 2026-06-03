@@ -106,7 +106,7 @@ export default function Home() {
                         style={{ color: 'var(--fg-muted)' }}>
                         {group.name}
                       </h3>
-                      <div className="grid md:grid-cols-2 gap-3">
+                      <div className="grid md:grid-cols-2 gap-3 [&>*]:min-w-0">
                         {group.courses.map(course => (
                           <CourseCard key={course.id} course={course} />
                         ))}
@@ -120,7 +120,7 @@ export default function Home() {
             {/* Quiz Modes */}
             <section className="animate-fade">
               <h2 className="text-xl font-bold mb-4" style={{ color: 'var(--fg)' }}>Quiz Modes</h2>
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 [&>*]:min-w-0">
                 <ModeCard
                   icon={Target} title="Practice Mode"
                   desc="Get instant feedback after each answer with detailed explanations"
