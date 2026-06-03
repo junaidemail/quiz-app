@@ -130,7 +130,7 @@ export default function BookmarksPage() {
                       </button>
                       <button onClick={() => handleRemove(q.id)}
                         className="text-xs px-2 py-1 rounded"
-                        style={{ background: '#fef2f2', color: '#ef4444' }}>
+                        style={{ background: 'var(--danger-bg)', color: 'var(--danger-fg)' }}>
                         Remove
                       </button>
                     </div>
@@ -146,8 +146,8 @@ export default function BookmarksPage() {
                         {(['A', 'B', 'C', 'D'] as const).map(opt => (
                           <div key={opt} className="text-sm p-2 rounded-lg flex items-start gap-2"
                             style={{
-                              background: opt === q.answer ? '#ecfdf5' : 'var(--bg)',
-                              color: opt === q.answer ? '#065f46' : 'var(--fg-muted)',
+                              background: opt === q.answer ? 'var(--success-bg)' : 'var(--bg)',
+                              color: opt === q.answer ? 'var(--success-fg)' : 'var(--fg-muted)',
                               border: `1px solid ${opt === q.answer ? 'var(--success)' : 'var(--border)'}`,
                             }}>
                             <span className="font-bold min-w-5">{opt}.</span>

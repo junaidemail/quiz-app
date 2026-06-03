@@ -97,7 +97,7 @@ function ResultsPage() {
           <ResultStat icon="✅" label="Correct" value={correct} color="#10b981" />
           <ResultStat icon="❌" label="Incorrect" value={incorrect} color="#ef4444" />
           <ResultStat icon="⏭" label="Skipped" value={skipped} color="#f59e0b" />
-          <ResultStat icon="⏱" label="Avg Time" value={avgTime} color="#6366f1" />
+          <ResultStat icon="⏱" label="Avg Time" value={avgTime} color="var(--accent)" />
         </div>
 
         {/* Chapter breakdown */}

@@ -66,7 +66,7 @@ export function QuestionCard({
   const progress = ((questionIndex + 1) / totalQuestions) * 100
   const timerPct = (timeLeft !== undefined && totalTime)
     ? (timeLeft / totalTime) * 100 : 100
-  const timerColor = timerPct > 50 ? '#10b981' : timerPct > 25 ? '#f59e0b' : '#ef4444'
+  const timerColor = timerPct > 50 ? 'var(--success)' : timerPct > 25 ? 'var(--warning)' : 'var(--danger)'
 
   return (
     <div className="animate-fade" style={{ maxWidth: 720, margin: '0 auto' }}>

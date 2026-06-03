@@ -133,7 +133,15 @@ export default function StatsPage() {
                       </div>
                       {s.completedAt && s.score !== null && (
                         <div className="flex items-center gap-2">
-                          <span className="text-lg font-bold" style={{ color: grade?.color.replace('text-', '#').replace('-500', '') ?? '#888' }}>
+                          <span className="text-lg font-bold" style={{
+                            color: grade ? (
+                              grade.color === 'text-green-500' ? 'var(--success)' :
+                              grade.color === 'text-blue-500' ? 'var(--accent)' :
+                              grade.color === 'text-yellow-500' ? 'var(--warning)' :
+                              grade.color === 'text-red-500' ? 'var(--danger)' :
+                              '#f97316' // Orange fallback
+                            ) : 'var(--fg-muted)'
+                          }}>
                             {s.score}%
                           </span>
                           <Link href={`/results?id=${s.id}`}

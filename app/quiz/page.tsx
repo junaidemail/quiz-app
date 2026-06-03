@@ -208,7 +208,7 @@ function QuizSetup() {
                           style={{ background: sel ? 'var(--accent-light)' : 'transparent' }}>
                           <input type="checkbox" checked={sel}
                             onChange={() => toggleChapter(c)}
-                            className="w-4 h-4 accent-indigo-500" />
+                            className="w-4 h-4 accent-[var(--accent)]" />
                           <span className="flex-1 text-sm" style={{ color: 'var(--fg)' }}>
                             {c.chapter ? `Ch ${c.chapter}: ` : ''}{c.chapterTitle}
                           </span>
@@ -246,7 +246,7 @@ function QuizSetup() {
             </div>
             <input type="range" min={1} max={Math.min(availablePool.length, 100)}
               value={count} onChange={e => setCount(+e.target.value)}
-              className="w-full mt-2 accent-indigo-500" />
+              className="w-full mt-2 accent-[var(--accent)]" />
             <p className="text-xs mt-1 text-center" style={{ color: 'var(--fg-muted)' }}>
               {count} questions selected
             </p>

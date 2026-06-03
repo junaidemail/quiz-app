@@ -19,9 +19,9 @@ export function Navbar() {
     <nav style={{ background: 'var(--bg-card)', borderBottom: '1px solid var(--border)' }}
       className="sticky top-0 z-50">
       <div className="max-w-5xl mx-auto px-4 h-14 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2 font-bold text-lg"
-          style={{ color: 'var(--accent)' }}>
-          ⚡ PowerQuiz
+        <Link href="/" className="flex items-center gap-1 text-lg font-bold tracking-wider">
+          <span style={{ color: 'var(--fg)' }}>POWER</span>
+          <span style={{ color: 'var(--accent)', fontWeight: 300 }}>QUIZ</span>
         </Link>
 
         {/* Desktop nav */}

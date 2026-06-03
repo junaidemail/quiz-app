@@ -1,39 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap');
 @import "tailwindcss";
 @import "katex/dist/katex.min.css";
 
+@theme {
+  --font-sans: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+  
+  /* Map standard tailwind rounded utility classes to our custom variable so everything is sharp */
+  --radius-sm: var(--radius);
+  --radius-md: var(--radius);
+  --radius-lg: var(--radius);
+  --radius-xl: var(--radius);
+  --radius-2xl: var(--radius);
+  
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-light: var(--accent-light);
+  --color-success: var(--success);
+  --color-danger: var(--danger);
+  --color-warning: var(--warning);
+}
+
 :root {
-  --bg: #f8fafc;
-  --bg-card: #ffffff;
-  --fg: #0f172a;
-  --fg-muted: #64748b;
-  --border: #e2e8f0;
-  --accent: #6366f1;
-  --accent-hover: #4f46e5;
-  --accent-light: #eef2ff;
-  --success: #10b981;
-  --danger: #ef4444;
-  --warning: #f59e0b;
-  --radius: 0.75rem;
+  /* IBM Carbon g10 / White Theme */
+  --bg: #f4f4f4;          /* Carbon Gray 10 */
+  --bg-card: #ffffff;     /* Carbon White */
+  --fg: #161616;          /* Carbon Gray 100 */
+  --fg-muted: #525252;    /* Carbon Gray 60 */
+  --border: #e0e0e0;      /* Carbon Gray 20 */
+  
+  --accent: #0f62fe;      /* IBM Blue 60 */
+  --accent-hover: #0043ce;/* IBM Blue 70 */
+  --accent-light: #edf5ff;/* IBM Blue 10 */
+  
+  --btn-bg: #0f62fe;
+  --btn-bg-hover: #0043ce;
+  
+  --success: #24a148;     /* IBM Green 50 */
+  --success-bg: #def8e9;   /* IBM Green 10 */
+  --success-fg: #0f6224;   /* IBM Green 80 */
+  
+  --danger: #da1e28;      /* IBM Red 60 */
+  --danger-bg: #fff1f1;    /* IBM Red 10 */
+  --danger-fg: #750e13;    /* IBM Red 80 */
+  
+  --warning: #f1c21b;     /* IBM Yellow 30 */
+  --radius: 0px;          /* Sharp IBM Carbon corners */
 }
 
 .dark {
-  --bg: #0f172a;
-  --bg-card: #1e293b;
-  --fg: #f1f5f9;
-  --fg-muted: #94a3b8;
-  --border: #334155;
-  --accent: #818cf8;
-  --accent-hover: #a5b4fc;
-  --accent-light: #1e1b4b;
-  --success: #34d399;
-  --danger: #f87171;
-  --warning: #fbbf24;
+  /* IBM Carbon g100 / Gray 100 Dark Theme */
+  --bg: #161616;          /* Carbon Gray 100 */
+  --bg-card: #262626;     /* Carbon Gray 90 */
+  --fg: #f4f4f4;          /* Carbon Gray 10 */
+  --fg-muted: #a8a8a8;    /* Carbon Gray 40 */
+  --border: #393939;      /* Carbon Gray 80 */
+  
+  --accent: #4589ff;      /* IBM Blue 50 for text links & icons on dark background */
+  --accent-hover: #78a9ff;/* IBM Blue 40 */
+  --accent-light: #163273;/* IBM Blue 80/90 for selected backgrounds */
+  
+  --btn-bg: #0f62fe;       /* IBM Blue 60 for primary buttons (has high contrast on white text) */
+  --btn-bg-hover: #0353e9; /* IBM Blue 65 */
+  
+  --success: #42be65;     /* IBM Green 40 */
+  --success-bg: #073516;   /* IBM Green 90/100 equivalent */
+  --success-fg: #def8e9;   /* IBM Green 10 */
+  
+  --danger: #fa4d56;      /* IBM Red 50 */
+  --danger-bg: #470c10;    /* IBM Red 90/100 equivalent */
+  --danger-fg: #fff1f1;    /* IBM Red 10 */
+  
+  --warning: #f1c21b;     /* IBM Yellow 30 */
+  --radius: 0px;          /* Sharp IBM Carbon corners */
 }
 
 body {
   background: var(--bg);
   color: var(--fg);
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: var(--font-sans);
   transition: background 0.2s, color 0.2s;
 }
 
@@ -46,37 +91,50 @@ body {
 }
 
 .btn-primary {
-  background: var(--accent);
+  background: var(--btn-bg);
   color: white;
-  border: none;
+  border: 1px solid transparent;
   padding: 0.625rem 1.25rem;
-  border-radius: calc(var(--radius) / 1.5);
-  font-weight: 600;
+  border-radius: var(--radius);
+  font-weight: 500;
+  font-family: var(--font-sans);
   cursor: pointer;
-  transition: background 0.15s, transform 0.1s;
+  transition: background-color 0.15s, border-color 0.15s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
-.btn-primary:hover { background: var(--accent-hover); }
-.btn-primary:active { transform: scale(0.98); }
-.btn-primary:disabled { opacity: 0.5; cursor: not-allowed; }
+.btn-primary:hover { background: var(--btn-bg-hover); }
+.btn-primary:active { opacity: 0.9; }
+.btn-primary:disabled { opacity: 0.4; cursor: not-allowed; }
 
 .btn-secondary {
   background: transparent;
   color: var(--fg);
   border: 1px solid var(--border);
   padding: 0.625rem 1.25rem;
-  border-radius: calc(var(--radius) / 1.5);
+  border-radius: var(--radius);
   font-weight: 500;
+  font-family: var(--font-sans);
   cursor: pointer;
-  transition: background 0.15s;
+  transition: background-color 0.15s, border-color 0.15s, color 0.15s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
-.btn-secondary:hover { background: var(--accent-light); }
+.btn-secondary:hover:not(:disabled) {
+  background: var(--accent-light);
+  border-color: var(--accent);
+  color: var(--fg);
+}
+.btn-secondary:disabled { opacity: 0.4; cursor: not-allowed; }
 
 /* Option button styles */
 .option-btn {
   width: 100%;
   text-align: left;
   padding: 1rem 1.25rem;
-  border: 2px solid var(--border);
+  border: 1px solid var(--border);
   border-radius: var(--radius);
   background: var(--bg-card);
   color: var(--fg);
@@ -84,35 +142,33 @@ body {
   transition: all 0.15s;
   font-size: 0.95rem;
   line-height: 1.5;
+  font-family: var(--font-sans);
 }
 .option-btn:hover:not(:disabled) { border-color: var(--accent); background: var(--accent-light); }
 .option-btn.selected { border-color: var(--accent); background: var(--accent-light); }
-.option-btn.correct { border-color: var(--success); background: #ecfdf5; color: #065f46; }
-.dark .option-btn.correct { background: #064e3b; color: #a7f3d0; }
-.option-btn.incorrect { border-color: var(--danger); background: #fef2f2; color: #991b1b; }
-.dark .option-btn.incorrect { background: #450a0a; color: #fca5a5; }
-.option-btn.reveal { border-color: var(--success); background: #ecfdf5; }
-.dark .option-btn.reveal { background: #064e3b; }
+.option-btn.correct { border-color: var(--success); background: var(--success-bg); color: var(--success-fg); }
+.option-btn.incorrect { border-color: var(--danger); background: var(--danger-bg); color: var(--danger-fg); }
+.option-btn.reveal { border-color: var(--success); background: var(--success-bg); }
 .option-btn:disabled { cursor: not-allowed; }
 
 /* Progress bar */
 .progress-bar {
-  height: 6px;
+  height: 4px;
   background: var(--border);
-  border-radius: 99px;
+  border-radius: var(--radius);
   overflow: hidden;
 }
 .progress-fill {
   height: 100%;
   background: var(--accent);
-  border-radius: 99px;
+  border-radius: var(--radius);
   transition: width 0.3s ease;
 }
 
 /* Scrollbar */
 ::-webkit-scrollbar { width: 6px; height: 6px; }
 ::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb { background: var(--border); border-radius: 99px; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: var(--radius); }
 
 /* Animations */
 @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
@@ -122,7 +178,7 @@ body {
 
 .animate-fade { animation: fadeIn 0.3s ease; }
 .animate-slide { animation: slideIn 0.25s ease; }
-.animate-scale { animation: scaleIn 0.2s ease; }
+.animate-scale { animation: scaleIn 0.25s cubic-bezier(0.16, 1, 0.3, 1); }
 
 /* Timer ring */
 @keyframes countdown { from { stroke-dashoffset: 0; } to { stroke-dashoffset: 283; } }

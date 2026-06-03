@@ -160,8 +160,8 @@ function ReviewPage() {
                   {a.selected && (
                     <div className="text-xs p-2 rounded-lg"
                       style={{
-                        background: a.isCorrect ? '#ecfdf5' : '#fef2f2',
-                        color: a.isCorrect ? '#065f46' : '#991b1b',
+                        background: a.isCorrect ? 'var(--success-bg)' : 'var(--danger-bg)',
+                        color: a.isCorrect ? 'var(--success-fg)' : 'var(--danger-fg)',
                       }}>
                       <span className="font-semibold">Your answer:</span>{' '}
                       ({a.selected}) <MathText text={q.options[a.selected as keyof typeof q.options]} />
@@ -175,7 +175,7 @@ function ReviewPage() {
                   )}
                   {q.answer && (
                     <div className="text-xs p-2 rounded-lg"
-                      style={{ background: '#ecfdf5', color: '#065f46' }}>
+                      style={{ background: 'var(--success-bg)', color: 'var(--success-fg)' }}>
                       <span className="font-semibold">Correct answer:</span>{' '}
                       ({q.answer}) <MathText text={q.options[q.answer as keyof typeof q.options]} />
                     </div>
@@ -193,8 +193,8 @@ function ReviewPage() {
                         return (
                           <div key={opt} className="text-sm p-2 rounded-lg flex items-start gap-2"
                             style={{
-                              background: isCorrect ? '#ecfdf5' : isSelected && !isCorrect ? '#fef2f2' : 'var(--bg)',
-                              color: isCorrect ? '#065f46' : isSelected && !isCorrect ? '#991b1b' : 'var(--fg-muted)',
+                              background: isCorrect ? 'var(--success-bg)' : isSelected && !isCorrect ? 'var(--danger-bg)' : 'var(--bg)',
+                              color: isCorrect ? 'var(--success-fg)' : isSelected && !isCorrect ? 'var(--danger-fg)' : 'var(--fg-muted)',
                               border: `1px solid ${isCorrect ? 'var(--success)' : isSelected ? 'var(--danger)' : 'var(--border)'}`,
                             }}>
                             <span className="font-bold min-w-5">{opt}.</span>

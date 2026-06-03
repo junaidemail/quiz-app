@@ -451,13 +451,13 @@ export default function ManageQuestionsPage() {
                   <div className="flex items-center gap-2">
                     <button
                       onClick={() => openEditModal(q)}
-                      className="text-xs px-2.5 py-1 rounded bg-indigo-50 text-indigo-600 hover:bg-indigo-100 dark:bg-indigo-950 dark:text-indigo-400 dark:hover:bg-indigo-900 transition-colors"
+                      className="text-xs px-2.5 py-1 rounded bg-[var(--accent-light)] text-[var(--accent)] hover:opacity-90 transition-opacity"
                     >
                       ✏️ Edit
                     </button>
                     <button
                       onClick={() => handleDelete(q.id)}
-                      className="text-xs px-2.5 py-1 rounded bg-rose-50 text-rose-600 hover:bg-rose-100 dark:bg-rose-950 dark:text-rose-400 dark:hover:bg-rose-900 transition-colors"
+                      className="text-xs px-2.5 py-1 rounded bg-[var(--danger-bg)] text-[var(--danger-fg)] hover:opacity-90 transition-opacity"
                     >
                       🗑️ Delete
                     </button>
