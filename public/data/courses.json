@@ -29,7 +29,7 @@
           "code": "16-Elec-B8",
           "name": "Power Electronics and Drives",
           "textbook": "Power Electronics",
-          "available": false
+          "available": true
         }
       ]
     },
