@@ -217,7 +217,7 @@ function CourseCard({ course }: { course: import('@/lib/questions').CourseInfo }
             </span>
           )}
         </div>
-        <h3 className="font-semibold text-sm" style={{ color: 'var(--fg)' }}>{course.name}</h3>
+        <h3 className="font-semibold text-sm truncate" style={{ color: 'var(--fg)' }}>{course.name}</h3>
         {course.textbook && (
           <p className="text-xs mt-0.5 truncate" style={{ color: 'var(--fg-muted)' }}>{course.textbook}</p>
         )}
