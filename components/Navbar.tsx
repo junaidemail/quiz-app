@@ -54,8 +54,13 @@ export function Navbar() {
 
         {/* Mobile */}
         <div className="flex md:hidden items-center gap-1">
-          <button onClick={toggle} className="p-2 flex items-center justify-center text-sm" style={{ color: 'var(--fg-muted)' }} aria-label="Toggle theme">
-            {theme === 'dark' ? <Sun className="w-4.5 h-4.5" /> : <Moon className="w-4.5 h-4.5" />}
+          <button onClick={toggle}
+            className="p-2 rounded-none transition-colors flex items-center justify-center"
+            style={{ color: 'var(--fg-muted)' }}
+            onMouseEnter={e => (e.currentTarget.style.background = 'var(--accent-light)')}
+            onMouseLeave={e => (e.currentTarget.style.background = 'transparent')}
+            aria-label="Toggle theme">
+            {theme === 'dark' ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
           </button>
           <button onClick={() => setOpen(o => !o)} className="p-2 flex items-center justify-center text-sm" style={{ color: 'var(--fg)' }} aria-label="Menu">
             {open ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}

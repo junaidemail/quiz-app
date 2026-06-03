@@ -9,12 +9,11 @@ const Ctx = createContext<ThemeCtx>({ theme: 'light', toggle: () => {} })
 export const useTheme = () => useContext(Ctx)
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [theme, setTheme] = useState<Theme>('light')
+  const [theme, setTheme] = useState<Theme>('dark')
 
   useEffect(() => {
     const settings = getSettings()
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
-    const isDark = settings.darkMode ?? prefersDark
+    const isDark = settings.darkMode !== false
     setTheme(isDark ? 'dark' : 'light')
     document.documentElement.classList.toggle('dark', isDark)
   }, [])
