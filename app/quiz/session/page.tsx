@@ -7,6 +7,7 @@ import { FlashCard } from '@/components/FlashCard'
 import { getSessions, saveSession, updateStatsFromSession } from '@/lib/storage'
 import { answerQuestion, toggleFlag, completeSession, getSessionProgress } from '@/lib/quiz-engine'
 import type { QuizSession } from '@/lib/types'
+import { ArrowLeft, Flag, ListTodo, CheckCircle2, Loader2 } from 'lucide-react'
 
 function SessionPage() {
   const router = useRouter()
@@ -122,10 +123,10 @@ function SessionPage() {
 
   if (!session) {
     return (
-      <div className="flex items-center justify-center h-screen">
+      <div className="flex items-center justify-center h-screen" style={{ background: 'var(--bg)' }}>
         <div className="text-center">
-          <div className="text-4xl mb-3 animate-pulse">⚡</div>
-          <p style={{ color: 'var(--fg-muted)' }}>Loading quiz...</p>
+          <Loader2 className="w-8 h-8 mx-auto mb-3 animate-spin" style={{ color: 'var(--accent)' }} />
+          <p className="text-sm font-medium" style={{ color: 'var(--fg-muted)' }}>Loading session...</p>
         </div>
       </div>
     )
@@ -141,15 +142,19 @@ function SessionPage() {
       <div className="sticky top-0 z-40 px-4 py-2 flex items-center justify-between gap-4"
         style={{ background: 'var(--bg-card)', borderBottom: '1px solid var(--border)' }}>
         <button onClick={() => router.push('/')}
-          className="text-sm font-medium flex items-center gap-1"
+          className="text-xs font-medium flex items-center gap-1 cursor-pointer"
           style={{ color: 'var(--fg-muted)' }}>
-          ← Exit
+          <ArrowLeft className="w-3.5 h-3.5" /> Exit
         </button>
 
-        <div className="flex items-center gap-3 text-xs" style={{ color: 'var(--fg-muted)' }}>
-          <span>{progress.answered}/{progress.total} answered</span>
-          {progress.flagged > 0 && <span className="text-red-400">🚩 {progress.flagged}</span>}
-          <span className="px-2 py-0.5 rounded-full text-xs font-medium capitalize"
+        <div className="flex items-center gap-3 text-[10px] sm:text-xs" style={{ color: 'var(--fg-muted)' }}>
+          <span className="font-mono">{progress.answered}/{progress.total} answered</span>
+          {progress.flagged > 0 && (
+            <span className="text-[var(--danger)] flex items-center gap-0.5">
+              <Flag className="w-3 h-3 fill-[var(--danger)]" /> {progress.flagged}
+            </span>
+          )}
+          <span className="px-2 py-0.5 text-[10px] font-medium uppercase tracking-wider"
             style={{ background: 'var(--accent-light)', color: 'var(--accent)' }}>
             {session.config.mode}
           </span>
@@ -157,14 +162,18 @@ function SessionPage() {
 
         <div className="flex items-center gap-2">
           <button onClick={() => setShowNav(n => !n)}
-            className="text-sm px-3 py-1 rounded-lg"
-            style={{ background: showNav ? 'var(--accent)' : 'var(--accent-light)', color: showNav ? 'white' : 'var(--accent)' }}>
-            Nav
+            className="text-xs px-2.5 py-1 flex items-center gap-1 cursor-pointer transition-colors"
+            style={{
+              background: showNav ? 'var(--accent)' : 'var(--accent-light)',
+              color: showNav ? 'white' : 'var(--accent)',
+              border: `1px solid ${showNav ? 'transparent' : 'var(--accent)'}`
+            }}>
+            <ListTodo className="w-3 h-3" /> Nav
           </button>
           <button onClick={handleFinish}
-            className="text-sm px-3 py-1 rounded-lg font-medium"
-            style={{ background: 'var(--success)', color: 'white' }}>
-            Finish
+            className="text-xs px-2.5 py-1 font-medium flex items-center gap-1 cursor-pointer transition-opacity hover:opacity-90"
+            style={{ background: 'var(--btn-bg)', color: 'white' }}>
+            <CheckCircle2 className="w-3 h-3" /> Finish
           </button>
         </div>
       </div>

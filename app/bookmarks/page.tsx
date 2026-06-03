@@ -9,6 +9,7 @@ import { saveSession } from '@/lib/storage'
 import { createSession } from '@/lib/quiz-engine'
 import { MathText } from '@/components/MathText'
 import type { Question } from '@/lib/types'
+import { Star, Play, Check, BookOpen, Loader2, Trash2 } from 'lucide-react'
 
 export default function BookmarksPage() {
   const router = useRouter()
@@ -64,34 +65,36 @@ export default function BookmarksPage() {
       <main className="max-w-3xl mx-auto px-4 py-8 animate-fade">
         <div className="flex items-center justify-between mb-6">
           <div>
-            <h1 className="text-2xl font-bold" style={{ color: 'var(--fg)' }}>
-              ⭐ Bookmarks
+            <h1 className="text-2xl font-bold flex items-center gap-2" style={{ color: 'var(--fg)' }}>
+              <Star className="w-6 h-6 fill-[var(--warning)] text-[var(--warning)]" /> Bookmarks
             </h1>
-            <p className="text-sm" style={{ color: 'var(--fg-muted)' }}>
+            <p className="text-xs" style={{ color: 'var(--fg-muted)' }}>
               {bookmarkedQs.length} saved question{bookmarkedQs.length !== 1 ? 's' : ''}
             </p>
           </div>
           {bookmarkedQs.length > 0 && (
-            <button onClick={handleQuizBookmarks} className="btn-primary">
-              Quiz Bookmarks →
+            <button onClick={handleQuizBookmarks} className="btn-primary text-xs py-2 px-4 gap-1.5 cursor-pointer">
+              <Play className="w-3.5 h-3.5" /> Quiz Bookmarks
             </button>
           )}
         </div>
 
         {loading ? (
           <div className="flex items-center justify-center h-32">
-            <div className="text-4xl animate-pulse">⭐</div>
+            <Loader2 className="w-8 h-8 animate-spin" style={{ color: 'var(--accent)' }} />
           </div>
         ) : bookmarkedQs.length === 0 ? (
-          <div className="card p-12 text-center">
-            <div className="text-5xl mb-4">⭐</div>
-            <p className="text-lg font-semibold mb-2" style={{ color: 'var(--fg)' }}>
+          <div className="card p-12 text-center flex flex-col items-center">
+            <Star className="w-10 h-10 mb-4 text-[var(--fg-muted)]" />
+            <h3 className="text-base font-semibold mb-2" style={{ color: 'var(--fg)' }}>
               No bookmarks yet
+            </h3>
+            <p className="text-xs mb-5" style={{ color: 'var(--fg-muted)' }}>
+              Star questions during a quiz session to save them here.
             </p>
-            <p className="text-sm mb-4" style={{ color: 'var(--fg-muted)' }}>
-              Star questions during a quiz to save them here
-            </p>
-            <Link href="/quiz" className="btn-primary">Start a Quiz →</Link>
+            <Link href="/quiz" className="btn-primary text-xs px-4 py-2 gap-1">
+              <Play className="w-3 h-3" /> Start a Quiz
+            </Link>
           </div>
         ) : (
           <>
@@ -102,7 +105,7 @@ export default function BookmarksPage() {
                 placeholder="Search bookmarks..."
                 value={searchTerm}
                 onChange={e => setSearchTerm(e.target.value)}
-                className="w-full px-4 py-2.5 rounded-xl text-sm"
+                className="w-full px-4 py-2.5 text-sm"
                 style={{
                   background: 'var(--bg-card)',
                   border: '1px solid var(--border)',
@@ -117,21 +120,20 @@ export default function BookmarksPage() {
                 <div key={q.id} className="card p-4 animate-fade">
                   <div className="flex items-start justify-between gap-3 mb-2">
                     <div className="flex gap-2">
-                      <span className="px-2 py-0.5 rounded-full text-xs"
+                      <span className="px-2 py-0.5 text-[10px] font-medium"
                         style={{ background: 'var(--accent-light)', color: 'var(--accent)' }}>
                         {q.subject}
                       </span>
                     </div>
-                    <div className="flex gap-2">
+                    <div className="flex gap-2 items-center">
                       <button onClick={() => toggleExpand(q.id)}
-                        className="text-xs px-2 py-1 rounded"
-                        style={{ background: 'var(--accent-light)', color: 'var(--accent)' }}>
-                        {expandedIds.has(q.id) ? 'Less' : 'More'}
+                        className="text-[10px] px-2 py-1 bg-[var(--accent-light)] text-[var(--accent)] hover:opacity-90 transition-opacity cursor-pointer">
+                        {expandedIds.has(q.id) ? 'Collapse' : 'Details'}
                       </button>
                       <button onClick={() => handleRemove(q.id)}
-                        className="text-xs px-2 py-1 rounded"
+                        className="text-[10px] px-2 py-1 flex items-center gap-1 cursor-pointer"
                         style={{ background: 'var(--danger-bg)', color: 'var(--danger-fg)' }}>
-                        Remove
+                        <Trash2 className="w-3 h-3" /> Remove
                       </button>
                     </div>
                   </div>
@@ -144,22 +146,26 @@ export default function BookmarksPage() {
                     <div className="mt-3 animate-fade" style={{ borderTop: '1px solid var(--border)', paddingTop: '0.75rem' }}>
                       <div className="flex flex-col gap-1.5 mb-3">
                         {(['A', 'B', 'C', 'D'] as const).map(opt => (
-                          <div key={opt} className="text-sm p-2 rounded-lg flex items-start gap-2"
+                          <div key={opt} className="text-sm p-2 flex items-start gap-2 border"
                             style={{
                               background: opt === q.answer ? 'var(--success-bg)' : 'var(--bg)',
                               color: opt === q.answer ? 'var(--success-fg)' : 'var(--fg-muted)',
-                              border: `1px solid ${opt === q.answer ? 'var(--success)' : 'var(--border)'}`,
+                              borderColor: opt === q.answer ? 'var(--success)' : 'var(--border)',
                             }}>
                             <span className="font-bold min-w-5">{opt}.</span>
                             <span><MathText text={q.options[opt]} /></span>
-                            {opt === q.answer && <span className="ml-auto font-bold">✓</span>}
+                            {opt === q.answer && <Check className="ml-auto w-4 h-4 text-[var(--success-fg)]" />}
                           </div>
                         ))}
                       </div>
                       {q.explanation && (
-                        <div className="p-3 rounded-lg text-xs leading-relaxed"
-                          style={{ background: 'var(--accent-light)', color: 'var(--fg)' }}>
-                          <span className="font-semibold">💡 </span><MathText text={q.explanation} />
+                        <div className="p-3 text-xs leading-relaxed flex gap-2 border"
+                          style={{ background: 'var(--accent-light)', borderColor: 'var(--border)', color: 'var(--fg)' }}>
+                          <BookOpen className="w-4 h-4 text-[var(--accent)] shrink-0" />
+                          <div>
+                            <span className="font-semibold">Explanation: </span>
+                            <MathText text={q.explanation} />
+                          </div>
                         </div>
                       )}
                     </div>

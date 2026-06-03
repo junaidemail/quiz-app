@@ -6,6 +6,7 @@ import { Navbar } from '@/components/Navbar'
 import { getSessions, toggleBookmark, isBookmarked } from '@/lib/storage'
 import { MathText } from '@/components/MathText'
 import type { QuizSession } from '@/lib/types'
+import { CheckCircle2, XCircle, SkipForward, Flag, Star, ArrowLeft, Loader2, BookOpen, Check, X } from 'lucide-react'
 
 type Filter = 'all' | 'correct' | 'incorrect' | 'skipped' | 'flagged' | 'bookmarked'
 
@@ -27,8 +28,11 @@ function ReviewPage() {
   }, [sessionId, router])
 
   if (!session) return (
-    <div className="flex items-center justify-center h-screen">
-      <div className="text-4xl animate-pulse">⚡</div>
+    <div className="flex items-center justify-center h-screen" style={{ background: 'var(--bg)' }}>
+      <div className="text-center">
+        <Loader2 className="w-8 h-8 mx-auto mb-3 animate-spin" style={{ color: 'var(--accent)' }} />
+        <p className="text-sm font-medium" style={{ color: 'var(--fg-muted)' }}>Loading review...</p>
+      </div>
     </div>
   )
 
@@ -71,22 +75,22 @@ function ReviewPage() {
 
   const filterLabels: Record<Filter, string> = {
     all: `All (${filterCounts.all})`,
-    correct: `✅ Correct (${filterCounts.correct})`,
-    incorrect: `❌ Wrong (${filterCounts.incorrect})`,
-    skipped: `⏭ Skipped (${filterCounts.skipped})`,
-    flagged: `🚩 Flagged (${filterCounts.flagged})`,
-    bookmarked: '⭐ Bookmarked',
+    correct: `Correct (${filterCounts.correct})`,
+    incorrect: `Wrong (${filterCounts.incorrect})`,
+    skipped: `Skipped (${filterCounts.skipped})`,
+    flagged: `Flagged (${filterCounts.flagged})`,
+    bookmarked: 'Bookmarked',
   }
 
   return (
     <>
       <Navbar />
       <main className="max-w-3xl mx-auto px-4 py-8 animate-fade">
-        <div className="flex items-center justify-between mb-4">
+        <div className="flex items-center justify-between mb-6">
           <h1 className="text-2xl font-bold" style={{ color: 'var(--fg)' }}>Review Answers</h1>
           <Link href={`/results?id=${session.id}`}
-            className="text-sm" style={{ color: 'var(--accent)' }}>
-            ← Results
+            className="text-xs hover:underline flex items-center gap-1" style={{ color: 'var(--accent)' }}>
+            <ArrowLeft className="w-3.5 h-3.5" /> Back to Results
           </Link>
         </div>
 
@@ -94,7 +98,7 @@ function ReviewPage() {
         <div className="flex flex-wrap gap-2 mb-6">
           {(Object.keys(filterLabels) as Filter[]).map(f => (
             <button key={f} onClick={() => setFilter(f)}
-              className="px-3 py-1.5 rounded-full text-xs font-medium border transition-all"
+              className="px-3.5 py-1.5 text-xs font-semibold border cursor-pointer transition-colors"
               style={{
                 borderColor: filter === f ? 'var(--accent)' : 'var(--border)',
                 background: filter === f ? 'var(--accent)' : 'transparent',
@@ -108,8 +112,8 @@ function ReviewPage() {
         {/* Questions */}
         <div className="flex flex-col gap-4">
           {filteredIndexes.length === 0 && (
-            <div className="card p-8 text-center" style={{ color: 'var(--fg-muted)' }}>
-              No questions in this filter
+            <div className="card p-8 text-center text-xs" style={{ color: 'var(--fg-muted)' }}>
+              No questions found in this filter category
             </div>
           )}
 
@@ -121,7 +125,7 @@ function ReviewPage() {
 
             const borderColor = a.isCorrect === true ? 'var(--success)' :
               a.isCorrect === false ? 'var(--danger)' :
-                a.flagged ? '#f59e0b' : 'var(--border)'
+                a.flagged ? 'var(--warning)' : 'var(--border)'
 
             return (
               <div key={i} className="card p-4 animate-fade"
@@ -129,23 +133,23 @@ function ReviewPage() {
                 {/* Question header */}
                 <div className="flex items-start justify-between gap-3 mb-3">
                   <div className="flex items-center gap-2">
-                    <span className="text-xs font-bold px-2 py-0.5 rounded-full"
+                    <span className="text-[10px] font-bold px-2 py-0.5"
                       style={{ background: 'var(--accent-light)', color: 'var(--accent)' }}>
                       Q{i + 1}
                     </span>
-                    {a.isCorrect === true && <span className="text-sm">✅</span>}
-                    {a.isCorrect === false && <span className="text-sm">❌</span>}
-                    {a.selected === null && <span className="text-sm">⏭</span>}
-                    {a.flagged && <span className="text-sm">🚩</span>}
+                    {a.isCorrect === true && <CheckCircle2 className="w-4 h-4 text-[var(--success)]" />}
+                    {a.isCorrect === false && <XCircle className="w-4 h-4 text-[var(--danger)]" />}
+                    {a.selected === null && <SkipForward className="w-4 h-4 text-[var(--warning)]" />}
+                    {a.flagged && <Flag className="w-4 h-4 text-[var(--danger)] fill-[var(--danger)]" />}
                   </div>
                   <div className="flex items-center gap-2">
                     <button onClick={() => handleBookmark(q.id)}
-                      style={{ color: bk ? '#f59e0b' : 'var(--fg-muted)', fontSize: 18 }}>
-                      {bk ? '⭐' : '☆'}
+                      className="p-1 cursor-pointer flex items-center justify-center"
+                      title={bk ? 'Remove bookmark' : 'Bookmark'}>
+                      <Star className={`w-4 h-4 ${bk ? 'fill-[var(--warning)] text-[var(--warning)]' : 'text-[var(--fg-muted)]'}`} />
                     </button>
                     <button onClick={() => toggleExpand(i)}
-                      className="text-xs px-2 py-1 rounded"
-                      style={{ background: 'var(--accent-light)', color: 'var(--accent)' }}>
+                      className="text-[10px] px-2.5 py-1 bg-[var(--accent-light)] text-[var(--accent)] hover:opacity-90 transition-opacity cursor-pointer">
                       {isExpanded ? 'Collapse' : 'Details'}
                     </button>
                   </div>
@@ -158,24 +162,25 @@ function ReviewPage() {
                 {/* Answer summary */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                   {a.selected && (
-                    <div className="text-xs p-2 rounded-lg"
+                    <div className="text-xs p-2.5 border"
                       style={{
                         background: a.isCorrect ? 'var(--success-bg)' : 'var(--danger-bg)',
                         color: a.isCorrect ? 'var(--success-fg)' : 'var(--danger-fg)',
+                        borderColor: a.isCorrect ? 'var(--success)' : 'var(--danger)',
                       }}>
                       <span className="font-semibold">Your answer:</span>{' '}
                       ({a.selected}) <MathText text={q.options[a.selected as keyof typeof q.options]} />
                     </div>
                   )}
                   {!a.selected && (
-                    <div className="text-xs p-2 rounded-lg"
-                      style={{ background: 'var(--accent-light)', color: 'var(--fg-muted)' }}>
+                    <div className="text-xs p-2.5 border"
+                      style={{ background: 'var(--accent-light)', borderColor: 'var(--border)', color: 'var(--fg-muted)' }}>
                       <span className="font-semibold">Not answered</span>
                     </div>
                   )}
                   {q.answer && (
-                    <div className="text-xs p-2 rounded-lg"
-                      style={{ background: 'var(--success-bg)', color: 'var(--success-fg)' }}>
+                    <div className="text-xs p-2.5 border"
+                      style={{ background: 'var(--success-bg)', borderColor: 'var(--success)', color: 'var(--success-fg)' }}>
                       <span className="font-semibold">Correct answer:</span>{' '}
                       ({q.answer}) <MathText text={q.options[q.answer as keyof typeof q.options]} />
                     </div>
@@ -191,31 +196,34 @@ function ReviewPage() {
                         const isCorrect = opt === q.answer
                         const isSelected = opt === a.selected
                         return (
-                          <div key={opt} className="text-sm p-2 rounded-lg flex items-start gap-2"
+                          <div key={opt} className="text-sm p-2 flex items-start gap-2 border"
                             style={{
                               background: isCorrect ? 'var(--success-bg)' : isSelected && !isCorrect ? 'var(--danger-bg)' : 'var(--bg)',
                               color: isCorrect ? 'var(--success-fg)' : isSelected && !isCorrect ? 'var(--danger-fg)' : 'var(--fg-muted)',
-                              border: `1px solid ${isCorrect ? 'var(--success)' : isSelected ? 'var(--danger)' : 'var(--border)'}`,
+                              borderColor: isCorrect ? 'var(--success)' : isSelected ? 'var(--danger)' : 'var(--border)',
                             }}>
                             <span className="font-bold min-w-5">{opt}.</span>
                             <span><MathText text={q.options[opt]} /></span>
-                            {isCorrect && <span className="ml-auto">✓</span>}
-                            {isSelected && !isCorrect && <span className="ml-auto">✗</span>}
+                            {isCorrect && <Check className="ml-auto w-4 h-4 text-[var(--success-fg)]" />}
+                            {isSelected && !isCorrect && <X className="ml-auto w-4 h-4 text-[var(--danger-fg)]" />}
                           </div>
                         )
                       })}
                     </div>
 
                     {q.explanation && (
-                      <div className="p-3 rounded-lg text-xs leading-relaxed"
-                        style={{ background: 'var(--accent-light)', color: 'var(--fg)' }}>
-                        <span className="font-semibold">💡 Explanation: </span>
-                        <MathText text={q.explanation} />
+                      <div className="p-3 text-xs leading-relaxed flex gap-2 border"
+                        style={{ background: 'var(--accent-light)', borderColor: 'var(--border)', color: 'var(--fg)' }}>
+                        <BookOpen className="w-4 h-4 text-[var(--accent)] shrink-0" />
+                        <div>
+                          <span className="font-semibold">Explanation: </span>
+                          <MathText text={q.explanation} />
+                        </div>
                       </div>
                     )}
 
-                    <p className="text-xs mt-2" style={{ color: 'var(--fg-muted)' }}>
-                      Time: {a.timeSpent}s · Subject: {q.subject}
+                    <p className="text-[10px] font-mono mt-2" style={{ color: 'var(--fg-muted)' }}>
+                      Time spent: {a.timeSpent}s · Subject: {q.subject}
                       {q.chapterTitle && q.chapterTitle.length < 60 && ` · ${q.chapterTitle}`}
                     </p>
                   </div>
@@ -231,7 +239,11 @@ function ReviewPage() {
 
 export default function ReviewPageWrapper() {
   return (
-    <Suspense fallback={<div className="flex items-center justify-center h-screen"><div className="text-4xl animate-pulse">⚡</div></div>}>
+    <Suspense fallback={
+      <div className="flex items-center justify-center h-screen" style={{ background: 'var(--bg)' }}>
+        <Loader2 className="w-8 h-8 animate-spin" style={{ color: 'var(--accent)' }} />
+      </div>
+    }>
       <ReviewPage />
     </Suspense>
   )

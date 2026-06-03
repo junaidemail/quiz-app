@@ -4,6 +4,7 @@ import { getChapterLabel } from '@/lib/questions'
 import { isBookmarked, toggleBookmark } from '@/lib/storage'
 import { useState, useEffect } from 'react'
 import { MathText } from './MathText'
+import { Star, Flag, ChevronLeft, ChevronRight, Check, ChevronDown, BookOpen } from 'lucide-react'
 
 interface Props {
   question: Question
@@ -72,7 +73,7 @@ export function QuestionCard({
     <div className="animate-fade" style={{ maxWidth: 720, margin: '0 auto' }}>
       {/* Header */}
       <div className="flex items-center justify-between mb-3 gap-3">
-        <span className="text-sm font-medium" style={{ color: 'var(--fg-muted)' }}>
+        <span className="text-sm font-mono font-medium" style={{ color: 'var(--fg-muted)' }}>
           {questionIndex + 1} / {totalQuestions}
         </span>
 
@@ -89,23 +90,21 @@ export function QuestionCard({
               <span style={{
                 position: 'absolute', inset: 0, display: 'flex', alignItems: 'center',
                 justifyContent: 'center', fontSize: 10, fontWeight: 700, color: timerColor,
-              }}>{timeLeft}</span>
+              }} className="font-mono">{timeLeft}</span>
             </div>
           </div>
         )}
 
         <div className="flex items-center gap-1">
           <button onClick={handleBookmark}
-            className="p-1.5 rounded-lg text-lg transition-colors"
-            style={{ color: bookmarked ? '#f59e0b' : 'var(--fg-muted)' }}
+            className="p-1.5 transition-colors flex items-center justify-center"
             title={bookmarked ? 'Remove bookmark' : 'Bookmark'}>
-            {bookmarked ? '⭐' : '☆'}
+            <Star className={`w-4 h-4 ${bookmarked ? 'fill-[var(--warning)] text-[var(--warning)]' : 'text-[var(--fg-muted)]'}`} />
           </button>
           <button onClick={onFlag}
-            className="p-1.5 rounded-lg text-lg transition-colors"
-            style={{ color: userAnswer.flagged ? '#ef4444' : 'var(--fg-muted)' }}
+            className="p-1.5 transition-colors flex items-center justify-center"
             title="Flag for review">
-            {userAnswer.flagged ? '🚩' : '⚑'}
+            <Flag className={`w-4 h-4 ${userAnswer.flagged ? 'fill-[var(--danger)] text-[var(--danger)]' : 'text-[var(--fg-muted)]'}`} />
           </button>
         </div>
       </div>
@@ -117,12 +116,12 @@ export function QuestionCard({
 
       {/* Subject / Chapter badge */}
       <div className="flex gap-2 mb-4 flex-wrap">
-        <span className="px-2 py-0.5 rounded-full text-xs font-medium"
+        <span className="px-2 py-0.5 text-xs font-medium"
           style={{ background: 'var(--accent-light)', color: 'var(--accent)' }}>
           {question.subject}
         </span>
         {question.chapterTitle && question.chapterTitle.length < 60 && (
-          <span className="px-2 py-0.5 rounded-full text-xs font-medium"
+          <span className="px-2 py-0.5 text-xs font-medium"
             style={{ background: 'var(--border)', color: 'var(--fg-muted)' }}>
             {getChapterLabel(question)}
           </span>
@@ -148,11 +147,12 @@ export function QuestionCard({
               disabled={isAnswered && mode !== 'practice'}
               onClick={() => !isAnswered && onAnswer(opt)}>
               <span className="inline-flex items-start gap-3">
-                <span className="inline-flex items-center justify-center min-w-7 h-7 rounded-full text-sm font-bold"
+                <span className="inline-flex items-center justify-center min-w-7 h-7 rounded-none text-sm font-bold border"
                   style={{
                     background: optClass === 'correct' ? 'var(--success)' :
                       optClass === 'incorrect' ? 'var(--danger)' :
-                        optClass === 'selected' ? 'var(--accent)' : 'var(--border)',
+                        optClass === 'selected' ? 'var(--accent)' : 'transparent',
+                    borderColor: ['correct', 'incorrect', 'selected'].includes(optClass) ? 'transparent' : 'var(--border)',
                     color: ['correct', 'incorrect', 'selected'].includes(optClass) ? 'white' : 'var(--fg-muted)',
                   }}>
                   {opt}
@@ -168,9 +168,10 @@ export function QuestionCard({
       {showFeedback && question.explanation && (
         <div className="mt-4 animate-fade">
           <button onClick={() => setShowExplanation(s => !s)}
-            className="text-sm font-medium mb-2 flex items-center gap-1"
+            className="text-sm font-medium mb-2 flex items-center gap-1.5 hover:underline"
             style={{ color: 'var(--accent)' }}>
-            {showExplanation ? '▼' : '▶'} Explanation
+            {showExplanation ? <ChevronDown className="w-4 h-4" /> : <ChevronRight className="w-4 h-4" />}
+            Explanation
           </button>
           {showExplanation && (
             <div className="card p-4 animate-fade" style={{ borderColor: 'var(--success)' }}>
@@ -184,19 +185,24 @@ export function QuestionCard({
 
       {/* No answer key notice */}
       {showFeedback && !question.answer && (
-        <div className="mt-3 p-3 rounded-lg text-sm" style={{ background: 'var(--accent-light)', color: 'var(--fg-muted)' }}>
-          📚 Study mode — no official answer key for this question.
+        <div className="mt-3 p-3 text-xs flex items-center gap-2 border" style={{ background: 'var(--accent-light)', borderColor: 'var(--border)', color: 'var(--fg-muted)' }}>
+          <BookOpen className="w-3.5 h-3.5 text-[var(--accent)] shrink-0" />
+          Study mode — no official answer key for this question.
         </div>
       )}
 
       {/* Navigation */}
       <div className="flex justify-between mt-6 gap-3">
         <button onClick={onPrev} disabled={questionIndex === 0}
-          className="btn-secondary flex items-center gap-2">
-          ← Prev
+          className="btn-secondary flex items-center gap-1.5 text-xs px-4 py-2">
+          <ChevronLeft className="w-4 h-4" /> Prev
         </button>
-        <button onClick={onNext} className="btn-primary flex items-center gap-2">
-          {questionIndex === totalQuestions - 1 ? 'Finish ✓' : 'Next →'}
+        <button onClick={onNext} className="btn-primary flex items-center gap-1.5 text-xs px-4 py-2">
+          {questionIndex === totalQuestions - 1 ? (
+            <>Finish <Check className="w-4 h-4" /></>
+          ) : (
+            <>Next <ChevronRight className="w-4 h-4" /></>
+          )}
         </button>
       </div>
     </div>

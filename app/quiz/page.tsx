@@ -7,6 +7,7 @@ import type { ChapterInfo } from '@/lib/questions'
 import { createSession } from '@/lib/quiz-engine'
 import { saveSession, getBookmarks } from '@/lib/storage'
 import type { Question, QuizConfig, QuizMode, SelectedChapter } from '@/lib/types'
+import { Target, Timer, Layers } from 'lucide-react'
 
 const QUESTION_COUNTS = [10, 20, 30, 50, 75, 100]
 const TIME_OPTIONS = [
@@ -135,13 +136,13 @@ function QuizSetup() {
             <div className="grid grid-cols-3 gap-2">
               {(['practice', 'exam', 'flashcard'] as QuizMode[]).map(m => (
                 <button key={m} onClick={() => setMode(m)}
-                  className="p-3 rounded-xl text-sm font-medium border-2 transition-all"
+                  className="p-3 text-sm font-medium border transition-all flex flex-col sm:flex-row items-center justify-center gap-2 cursor-pointer"
                   style={{
                     borderColor: mode === m ? 'var(--accent)' : 'var(--border)',
                     background:  mode === m ? 'var(--accent-light)' : 'var(--bg-card)',
                     color:       mode === m ? 'var(--accent)'       : 'var(--fg)',
                   }}>
-                  {m === 'practice' ? '🎯' : m === 'exam' ? '⏱' : '🃏'}{' '}
+                  {m === 'practice' ? <Target className="w-4 h-4" /> : m === 'exam' ? <Timer className="w-4 h-4" /> : <Layers className="w-4 h-4" />}
                   {m.charAt(0).toUpperCase() + m.slice(1)}
                 </button>
               ))}
@@ -288,8 +289,8 @@ function QuizSetup() {
 
         <div className="mt-8">
           <button onClick={handleStart} disabled={availablePool.length === 0}
-            className="btn-primary w-full py-3 text-base rounded-xl">
-            Start Quiz ({Math.min(count, availablePool.length)} questions) →
+            className="btn-primary w-full py-3 text-base flex items-center justify-center gap-2">
+            Start Quiz ({Math.min(count, availablePool.length)} questions)
           </button>
         </div>
       </main>

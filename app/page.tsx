@@ -7,6 +7,18 @@ import type { QuizStats, QuizSession } from '@/lib/types'
 import { formatTime } from '@/lib/quiz-engine'
 import { loadQuestions, loadCourses } from '@/lib/questions'
 import type { GroupInfo } from '@/lib/questions'
+import { 
+  Play, 
+  Timer, 
+  Layers, 
+  BarChart2, 
+  Percent, 
+  Award, 
+  Zap, 
+  Target, 
+  History,
+  BookOpen
+} from 'lucide-react'
 
 export default function Home() {
   const [stats, setStats] = useState<QuizStats | null>(null)
@@ -39,14 +51,14 @@ export default function Home() {
                 Prepare for the PENG &amp; Power Electronics exam with practice MCQs, timed examinations, and instant feedback. Developed based on classical textbooks.
               </p>
               <div className="flex flex-wrap gap-3">
-                <Link href="/quiz" className="btn-primary text-sm px-6 py-3">
-                  Start Practice →
+                <Link href="/quiz" className="btn-primary text-sm px-5 py-3 gap-2">
+                  <Play className="w-4 h-4" /> Start Practice
                 </Link>
-                <Link href="/quiz?mode=exam" className="btn-secondary text-sm px-6 py-3">
-                  Exam Mode ⏱
+                <Link href="/quiz?mode=exam" className="btn-secondary text-sm px-5 py-3 gap-2">
+                  <Timer className="w-4 h-4" /> Exam Mode
                 </Link>
-                <Link href="/quiz?mode=flashcard" className="btn-secondary text-sm px-6 py-3">
-                  Flashcards 🃏
+                <Link href="/quiz?mode=flashcard" className="btn-secondary text-sm px-5 py-3 gap-2">
+                  <Layers className="w-4 h-4" /> Flashcards
                 </Link>
               </div>
             </div>
@@ -110,15 +122,15 @@ export default function Home() {
               <h2 className="text-xl font-bold mb-4" style={{ color: 'var(--fg)' }}>Quiz Modes</h2>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                 <ModeCard
-                  icon="🎯" title="Practice Mode"
+                  icon={Target} title="Practice Mode"
                   desc="Get instant feedback after each answer with detailed explanations"
                   href="/quiz?mode=practice" />
                 <ModeCard
-                  icon="⏱" title="Exam Mode"
+                  icon={Timer} title="Exam Mode"
                   desc="Timed quiz with no feedback until the end — simulate the real exam"
                   href="/quiz?mode=exam" />
                 <ModeCard
-                  icon="🃏" title="Flashcard Mode"
+                  icon={Layers} title="Flashcard Mode"
                   desc="Flip through questions as study cards at your own pace"
                   href="/quiz?mode=flashcard" />
               </div>
@@ -134,10 +146,10 @@ export default function Home() {
                   Your Progress
                 </h2>
                 <div className="grid grid-cols-2 gap-3">
-                  <StatCard icon="📊" label="Total Quizzes" value={stats.totalQuizzes} />
-                  <StatCard icon="✅" label="Accuracy" value={`${stats.accuracy.toFixed(1)}%`} />
-                  <StatCard icon="🏆" label="Best Score" value={`${stats.bestScore}%`} />
-                  <StatCard icon="🔥" label="Study Streak" value={`${stats.streak} days`} />
+                  <StatCard icon={BarChart2} label="Total Quizzes" value={stats.totalQuizzes} />
+                  <StatCard icon={Percent} label="Accuracy" value={`${stats.accuracy.toFixed(1)}%`} />
+                  <StatCard icon={Award} label="Best Score" value={`${stats.bestScore}%`} />
+                  <StatCard icon={Zap} label="Study Streak" value={`${stats.streak} days`} />
                 </div>
               </section>
             ) : (
@@ -180,12 +192,12 @@ export default function Home() {
   )
 }
 
-function StatCard({ icon, label, value }: { icon: string; label: string; value: string | number }) {
+function StatCard({ icon: Icon, label, value }: { icon: React.ComponentType<{ className?: string; color?: string }>; label: string; value: string | number }) {
   return (
-    <div className="card p-4 text-center">
-      <div className="text-2xl mb-1">{icon}</div>
-      <div className="text-xl font-bold" style={{ color: 'var(--accent)' }}>{value}</div>
-      <div className="text-xs mt-0.5" style={{ color: 'var(--fg-muted)' }}>{label}</div>
+    <div className="card p-4 flex flex-col items-center justify-center text-center">
+      <Icon className="w-5 h-5 mb-1.5" color="var(--accent)" />
+      <div className="text-lg font-bold" style={{ color: 'var(--fg)' }}>{value}</div>
+      <div className="text-[10px] uppercase tracking-wider mt-0.5" style={{ color: 'var(--fg-muted)' }}>{label}</div>
     </div>
   )
 }
@@ -194,13 +206,13 @@ function CourseCard({ course }: { course: import('@/lib/questions').CourseInfo }
   const href = course.available ? `/quiz?subject=${encodeURIComponent(course.id)}` : '#'
   const color = course.available ? 'var(--accent)' : 'var(--fg-muted)'
   return (
-    <div className={`card p-4 flex items-start gap-3 ${course.available ? 'hover:shadow-md transition-shadow' : 'opacity-60'}`}
+    <div className={`card p-4 flex items-start gap-3 ${course.available ? 'hover:shadow-sm transition-all' : 'opacity-60'}`}
       style={{ borderLeft: `3px solid ${color}` }}>
       <div className="flex-1 min-w-0">
         <div className="flex items-center gap-2 mb-0.5">
           <span className="text-xs font-mono font-bold" style={{ color }}>{course.code}</span>
           {!course.available && (
-            <span className="text-xs px-1.5 py-0.5 rounded" style={{ background: 'var(--border)', color: 'var(--fg-muted)' }}>
+            <span className="text-[10px] px-1.5 py-0.5" style={{ background: 'var(--border)', color: 'var(--fg-muted)' }}>
               Coming Soon
             </span>
           )}
@@ -211,20 +223,24 @@ function CourseCard({ course }: { course: import('@/lib/questions').CourseInfo }
         )}
       </div>
       {course.available && (
-        <Link href={href} className="btn-primary text-xs px-3 py-1.5 shrink-0">
-          Study →
+        <Link href={href} className="btn-primary text-xs px-3 py-1.5 shrink-0 gap-1">
+          <Play className="w-3 h-3" /> Study
         </Link>
       )}
     </div>
   )
 }
 
-function ModeCard({ icon, title, desc, href }: { icon: string; title: string; desc: string; href: string }) {
+function ModeCard({ icon: Icon, title, desc, href }: { icon: React.ComponentType<{ className?: string }>; title: string; desc: string; href: string }) {
   return (
-    <Link href={href} className="card p-4 block text-center hover:shadow-md transition-shadow">
-      <div className="text-3xl mb-2">{icon}</div>
-      <h3 className="font-semibold mb-1" style={{ color: 'var(--fg)' }}>{title}</h3>
-      <p className="text-sm" style={{ color: 'var(--fg-muted)' }}>{desc}</p>
+    <Link href={href} className="card p-5 block hover:border-[var(--accent)] transition-all">
+      <div className="flex items-center gap-3 mb-3">
+        <div className="p-2 bg-[var(--accent-light)] text-[var(--accent)] flex items-center justify-center shrink-0">
+          <Icon className="w-4 h-4" />
+        </div>
+        <h3 className="font-semibold text-sm" style={{ color: 'var(--fg)' }}>{title}</h3>
+      </div>
+      <p className="text-xs leading-relaxed" style={{ color: 'var(--fg-muted)' }}>{desc}</p>
     </Link>
   )
 }
@@ -235,19 +251,24 @@ function RecentCard({ session }: { session: QuizSession }) {
     session.completedAt ? (session.completedAt - session.startedAt) / 1000 : 0
   ))
   const score = session.score ?? 0
-  const scoreColor = score >= 80 ? '#10b981' : score >= 60 ? '#f59e0b' : '#ef4444'
+  const scoreColor = score >= 80 ? 'var(--success)' : score >= 60 ? 'var(--warning)' : 'var(--danger)'
 
   return (
     <div className="card p-4 flex items-center justify-between gap-4">
-      <div>
-        <p className="font-medium text-sm" style={{ color: 'var(--fg)' }}>
-          {session.config.subject === 'all' ? 'All Subjects' : session.config.subject}
-          {' · '}{session.questions.length} questions
-        </p>
-        <p className="text-xs" style={{ color: 'var(--fg-muted)' }}>{date} · {time}</p>
+      <div className="flex items-center gap-3 min-w-0">
+        <div className="p-2 bg-[var(--border)] text-[var(--fg-muted)] flex items-center justify-center shrink-0">
+          <History className="w-4 h-4" />
+        </div>
+        <div className="min-w-0">
+          <p className="font-medium text-sm truncate" style={{ color: 'var(--fg)' }}>
+            {session.config.subject === 'all' ? 'All Subjects' : session.config.subject}
+            {' · '}{session.questions.length} Qs
+          </p>
+          <p className="text-xs" style={{ color: 'var(--fg-muted)' }}>{date} · {time}</p>
+        </div>
       </div>
       {session.completedAt && (
-        <div className="text-2xl font-bold" style={{ color: scoreColor }}>
+        <div className="text-lg font-bold shrink-0" style={{ color: scoreColor }}>
           {score}%
         </div>
       )}

@@ -4,6 +4,23 @@ import Link from 'next/link'
 import { Navbar } from '@/components/Navbar'
 import { MathText } from '@/components/MathText'
 import type { Question } from '@/lib/types'
+import { 
+  Plus, 
+  Upload, 
+  Download, 
+  Edit3, 
+  Trash2, 
+  Database, 
+  Check, 
+  BookOpen, 
+  X, 
+  Loader2, 
+  CheckCircle2, 
+  XCircle,
+  Layers,
+  HelpCircle,
+  AlertTriangle
+} from 'lucide-react'
 
 export default function ManageQuestionsPage() {
   const [questions, setQuestions] = useState<Question[]>([])
@@ -263,15 +280,19 @@ export default function ManageQuestionsPage() {
         {/* Notification Banner */}
         {notification && (
           <div
-            className={`fixed top-16 right-4 z-50 p-4 rounded-xl shadow-lg border animate-slide max-w-md transition-all ${
+            className={`fixed top-16 right-4 z-50 p-4 shadow-lg border animate-slide max-w-md transition-all ${
               notification.type === 'success'
                 ? 'bg-emerald-50 border-emerald-200 text-emerald-800 dark:bg-emerald-950 dark:border-emerald-900 dark:text-emerald-300'
                 : 'bg-rose-50 border-rose-200 text-rose-800 dark:bg-rose-950 dark:border-rose-900 dark:text-rose-300'
             }`}
           >
-            <div className="flex items-start gap-2.5">
-              <span>{notification.type === 'success' ? '✅' : '❌'}</span>
-              <p className="text-sm font-medium">{notification.message}</p>
+            <div className="flex items-center gap-2.5">
+              {notification.type === 'success' ? (
+                <CheckCircle2 className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
+              ) : (
+                <XCircle className="w-5 h-5 text-rose-600 dark:text-rose-400" />
+              )}
+              <p className="text-xs font-semibold font-mono">{notification.message}</p>
             </div>
           </div>
         )}
@@ -282,26 +303,26 @@ export default function ManageQuestionsPage() {
             <h1 className="text-3xl font-bold tracking-tight mb-2" style={{ color: 'var(--fg)' }}>
               Question Manager
             </h1>
-            <p className="text-sm" style={{ color: 'var(--fg-muted)' }}>
+            <p className="text-xs" style={{ color: 'var(--fg-muted)' }}>
               Add, edit, remove or import multiple choice questions for your Quiz App database.
             </p>
           </div>
-          <div className="flex flex-wrap gap-2.5">
-            <button onClick={openAddModal} className="btn-primary flex items-center gap-1.5 py-2.5">
-              <span>➕</span> Add Question
+          <div className="flex flex-wrap gap-2">
+            <button onClick={openAddModal} className="btn-primary flex items-center gap-1.5 py-2 px-4 text-xs cursor-pointer">
+              <Plus className="w-3.5 h-3.5" /> Add Question
             </button>
             <button
               onClick={() => setIsImportOpen(true)}
-              className="btn-secondary flex items-center gap-1.5 py-2.5"
+              className="btn-secondary flex items-center gap-1.5 py-2 px-4 text-xs cursor-pointer"
             >
-              <span>📥</span> Import / Export
+              <Upload className="w-3.5 h-3.5" /> Import / Export
             </button>
             {questions.length > 0 && (
               <button
                 onClick={handleDownloadBackup}
-                className="btn-secondary flex items-center gap-1.5 py-2.5"
+                className="btn-secondary flex items-center gap-1.5 py-2 px-4 text-xs cursor-pointer"
               >
-                <span>💾</span> Backup JSON
+                <Download className="w-3.5 h-3.5" /> Backup JSON
               </button>
             )}
           </div>
@@ -309,44 +330,16 @@ export default function ManageQuestionsPage() {
 
         {/* Info Stats Cards */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
-          <div className="card p-4 text-center">
-            <div className="text-2xl font-bold" style={{ color: 'var(--accent)' }}>
-              {questions.length}
-            </div>
-            <div className="text-xs" style={{ color: 'var(--fg-muted)' }}>
-              Total Questions
-            </div>
-          </div>
-          <div className="card p-4 text-center">
-            <div className="text-2xl font-bold" style={{ color: 'var(--success)' }}>
-              {subjects.length}
-            </div>
-            <div className="text-xs" style={{ color: 'var(--fg-muted)' }}>
-              Subjects Created
-            </div>
-          </div>
-          <div className="card p-4 text-center">
-            <div className="text-2xl font-bold" style={{ color: 'var(--warning)' }}>
-              {questions.filter((q) => q.chapter !== null).length}
-            </div>
-            <div className="text-xs" style={{ color: 'var(--fg-muted)' }}>
-              Categorized in Chapters
-            </div>
-          </div>
-          <div className="card p-4 text-center">
-            <div className="text-2xl font-bold" style={{ color: 'var(--accent)' }}>
-              {questions.filter((q) => !q.explanation).length}
-            </div>
-            <div className="text-xs" style={{ color: 'var(--fg-muted)' }}>
-              Missing Explanations
-            </div>
-          </div>
+          <StatCard icon={Database} label="Total Questions" value={questions.length} />
+          <StatCard icon={BookOpen} label="Subjects Created" value={subjects.length} color="var(--success)" />
+          <StatCard icon={Layers} label="Chapters Added" value={questions.filter((q) => q.chapter !== null).length} color="var(--warning)" />
+          <StatCard icon={HelpCircle} label="No Explanation" value={questions.filter((q) => !q.explanation).length} />
         </div>
 
         {/* Filters and Search Bar */}
         <div className="card p-4 mb-6 grid md:grid-cols-3 gap-3">
           <div>
-            <label className="block text-xs font-semibold uppercase mb-1.5" style={{ color: 'var(--fg-muted)' }}>
+            <label className="block text-[10px] font-bold uppercase tracking-wider mb-1.5" style={{ color: 'var(--fg-muted)' }}>
               Search Text
             </label>
             <input
@@ -354,12 +347,12 @@ export default function ManageQuestionsPage() {
               placeholder="Search question, options, or explanation..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full px-3 py-2 rounded-lg text-sm bg-transparent"
+              className="w-full px-3 py-2 text-sm bg-transparent"
               style={{ border: '1px solid var(--border)', color: 'var(--fg)', outline: 'none' }}
             />
           </div>
           <div>
-            <label className="block text-xs font-semibold uppercase mb-1.5" style={{ color: 'var(--fg-muted)' }}>
+            <label className="block text-[10px] font-bold uppercase tracking-wider mb-1.5" style={{ color: 'var(--fg-muted)' }}>
               Filter Subject
             </label>
             <select
@@ -368,7 +361,7 @@ export default function ManageQuestionsPage() {
                 setFilterSubject(e.target.value)
                 setFilterChapter('all')
               }}
-              className="w-full px-3 py-2 rounded-lg text-sm bg-transparent"
+              className="w-full px-3 py-2 text-sm bg-transparent"
               style={{ border: '1px solid var(--border)', color: 'var(--fg)', outline: 'none' }}
             >
               <option value="all">All Subjects</option>
@@ -380,13 +373,13 @@ export default function ManageQuestionsPage() {
             </select>
           </div>
           <div>
-            <label className="block text-xs font-semibold uppercase mb-1.5" style={{ color: 'var(--fg-muted)' }}>
+            <label className="block text-[10px] font-bold uppercase tracking-wider mb-1.5" style={{ color: 'var(--fg-muted)' }}>
               Filter Chapter
             </label>
             <select
               value={filterChapter}
               onChange={(e) => setFilterChapter(e.target.value)}
-              className="w-full px-3 py-2 rounded-lg text-sm bg-transparent"
+              className="w-full px-3 py-2 text-sm bg-transparent"
               style={{ border: '1px solid var(--border)', color: 'var(--fg)', outline: 'none' }}
             >
               <option value="all">All Chapters</option>
@@ -402,30 +395,30 @@ export default function ManageQuestionsPage() {
 
         {/* Questions Listing */}
         {loading ? (
-          <div className="card p-12 text-center">
-            <div className="text-4xl mb-3 animate-pulse">⚡</div>
-            <p style={{ color: 'var(--fg-muted)' }}>Loading database...</p>
+          <div className="card p-12 text-center flex flex-col items-center justify-center">
+            <Loader2 className="w-8 h-8 animate-spin mb-3" style={{ color: 'var(--accent)' }} />
+            <p className="text-xs" style={{ color: 'var(--fg-muted)' }}>Loading database...</p>
           </div>
         ) : filteredQuestions.length === 0 ? (
-          <div className="card p-12 text-center">
-            <div className="text-4xl mb-4">📭</div>
-            <p className="text-lg font-semibold mb-2" style={{ color: 'var(--fg)' }}>
+          <div className="card p-12 text-center flex flex-col items-center justify-center">
+            <Database className="w-10 h-10 mb-4 text-[var(--fg-muted)]" />
+            <h3 className="text-base font-semibold mb-2" style={{ color: 'var(--fg)' }}>
               No questions found
-            </p>
-            <p className="text-sm mb-6" style={{ color: 'var(--fg-muted)' }}>
+            </h3>
+            <p className="text-xs mb-5 max-w-sm" style={{ color: 'var(--fg-muted)' }}>
               {questions.length === 0
-                ? 'Your quiz database is currently empty. Click the "+ Add Question" button to start creating questions!'
+                ? 'Your quiz database is currently empty. Start creating questions now!'
                 : 'No questions matched your search criteria. Try modifying your filters.'}
             </p>
             {questions.length === 0 && (
-              <button onClick={openAddModal} className="btn-primary">
+              <button onClick={openAddModal} className="btn-primary text-xs py-2 px-4">
                 Add Your First Question
               </button>
             )}
           </div>
         ) : (
           <div className="flex flex-col gap-4">
-            <div className="flex items-center justify-between text-xs" style={{ color: 'var(--fg-muted)' }}>
+            <div className="flex items-center justify-between text-[10px] font-mono" style={{ color: 'var(--fg-muted)' }}>
               <span>Showing {filteredQuestions.length} of {questions.length} questions</span>
             </div>
             {filteredQuestions.map((q, idx) => (
@@ -433,14 +426,14 @@ export default function ManageQuestionsPage() {
                 <div className="flex flex-wrap items-start justify-between gap-3 mb-3">
                   <div className="flex flex-wrap gap-2">
                     <span
-                      className="px-2 py-0.5 rounded-full text-xs font-semibold"
+                      className="px-2 py-0.5 text-[10px] font-bold"
                       style={{ background: 'var(--accent-light)', color: 'var(--accent)' }}
                     >
                       {q.subject}
                     </span>
                     {q.chapter !== null && (
                       <span
-                        className="px-2 py-0.5 rounded-full text-xs font-medium"
+                        className="px-2 py-0.5 text-[10px] font-medium"
                         style={{ background: 'var(--border)', color: 'var(--fg-muted)' }}
                       >
                         Ch {q.chapter}
@@ -451,21 +444,23 @@ export default function ManageQuestionsPage() {
                   <div className="flex items-center gap-2">
                     <button
                       onClick={() => openEditModal(q)}
-                      className="text-xs px-2.5 py-1 rounded bg-[var(--accent-light)] text-[var(--accent)] hover:opacity-90 transition-opacity"
+                      className="text-[10px] px-2 py-1 flex items-center gap-1 cursor-pointer"
+                      style={{ background: 'var(--accent-light)', color: 'var(--accent)' }}
                     >
-                      ✏️ Edit
+                      <Edit3 className="w-3 h-3" /> Edit
                     </button>
                     <button
                       onClick={() => handleDelete(q.id)}
-                      className="text-xs px-2.5 py-1 rounded bg-[var(--danger-bg)] text-[var(--danger-fg)] hover:opacity-90 transition-opacity"
+                      className="text-[10px] px-2 py-1 flex items-center gap-1 cursor-pointer"
+                      style={{ background: 'var(--danger-bg)', color: 'var(--danger-fg)' }}
                     >
-                      🗑️ Delete
+                      <Trash2 className="w-3 h-3" /> Delete
                     </button>
                   </div>
                 </div>
 
                 <div className="text-base font-medium mb-4" style={{ color: 'var(--fg)' }}>
-                  <span className="text-xs font-bold mr-1.5 px-1.5 py-0.5 rounded bg-gray-100 text-gray-600 dark:bg-gray-800 dark:text-gray-400">
+                  <span className="text-xs font-mono font-bold mr-1.5 px-1.5 py-0.5 bg-[var(--border)] text-[var(--fg-muted)]">
                     #{idx + 1}
                   </span>
                   <MathText text={q.question} />
@@ -475,34 +470,37 @@ export default function ManageQuestionsPage() {
                   {(['A', 'B', 'C', 'D'] as const).map((opt) => (
                     <div
                       key={opt}
-                      className={`p-3 rounded-lg text-sm border flex items-start gap-2 ${
+                      className={`p-3 text-sm border flex items-start gap-2 ${
                         q.answer === opt
-                          ? 'border-emerald-500 bg-emerald-50/50 text-emerald-900 dark:bg-emerald-950/20 dark:text-emerald-200'
-                          : 'border-transparent bg-gray-50 dark:bg-gray-800/40 text-gray-700 dark:text-gray-300'
+                          ? 'border-[var(--success)] bg-[var(--success-bg)] text-[var(--success-fg)]'
+                          : 'bg-[var(--bg)] border-[var(--border)] text-[var(--fg-muted)]'
                       }`}
                     >
                       <span
-                        className={`font-bold shrink-0 inline-flex items-center justify-center w-5 h-5 rounded-full text-xs ${
+                        className={`font-bold shrink-0 inline-flex items-center justify-center w-5 h-5 rounded-none text-xs border ${
                           q.answer === opt
-                            ? 'bg-emerald-500 text-white'
-                            : 'bg-gray-200 text-gray-600 dark:bg-gray-700 dark:text-gray-400'
+                            ? 'bg-[var(--success)] text-white border-transparent'
+                            : 'border-[var(--border)] text-[var(--fg-muted)]'
                         }`}
                       >
                         {opt}
                       </span>
                       <span><MathText text={q.options[opt]} /></span>
-                      {q.answer === opt && <span className="ml-auto text-emerald-600">✔ Correct</span>}
+                      {q.answer === opt && <span className="ml-auto text-xs font-semibold flex items-center gap-0.5"><Check className="w-3.5 h-3.5" /> Correct</span>}
                     </div>
                   ))}
                 </div>
 
                 {q.explanation && (
                   <div
-                    className="p-3 rounded-lg text-xs leading-relaxed mt-2"
-                    style={{ background: 'var(--accent-light)', color: 'var(--fg)' }}
+                    className="p-3 text-xs leading-relaxed mt-2 flex gap-2 border"
+                    style={{ background: 'var(--accent-light)', borderColor: 'var(--border)', color: 'var(--fg)' }}
                   >
-                    <span className="font-semibold">💡 Explanation: </span>
-                    <MathText text={q.explanation} />
+                    <BookOpen className="w-3.5 h-3.5 text-[var(--accent)] shrink-0" />
+                    <div>
+                      <span className="font-semibold">Explanation: </span>
+                      <MathText text={q.explanation} />
+                    </div>
                   </div>
                 )}
               </div>
@@ -514,18 +512,18 @@ export default function ManageQuestionsPage() {
         {isFormOpen && (
           <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-xs flex items-center justify-center p-4">
             <div
-              className="w-full max-w-2xl max-h-[90vh] overflow-y-auto rounded-2xl shadow-xl flex flex-col p-6 animate-scale border"
+              className="w-full max-w-2xl max-h-[90vh] overflow-y-auto shadow-xl flex flex-col p-6 animate-scale border"
               style={{ background: 'var(--bg-card)', borderColor: 'var(--border)' }}
             >
               <div className="flex items-center justify-between border-b pb-3 mb-4" style={{ borderColor: 'var(--border)' }}>
-                <h2 className="text-xl font-bold" style={{ color: 'var(--fg)' }}>
-                  {editingQuestion ? '✏️ Edit Question' : '➕ Add Question'}
+                <h2 className="text-lg font-bold" style={{ color: 'var(--fg)' }}>
+                  {editingQuestion ? 'Edit Question' : 'Add Question'}
                 </h2>
                 <button
                   onClick={() => setIsFormOpen(false)}
-                  className="text-gray-400 hover:text-gray-600 text-lg"
+                  className="text-gray-400 hover:text-gray-600 cursor-pointer p-1"
                 >
-                  ✕
+                  <X className="w-4 h-4" />
                 </button>
               </div>
 
@@ -533,13 +531,13 @@ export default function ManageQuestionsPage() {
                 <div className="grid md:grid-cols-2 gap-4">
                   {/* Subject */}
                   <div>
-                    <label className="block text-sm font-medium mb-1" style={{ color: 'var(--fg)' }}>
+                    <label className="block text-xs font-semibold mb-1" style={{ color: 'var(--fg)' }}>
                       Subject <span className="text-rose-500">*</span>
                     </label>
                     <select
                       value={formSubject}
                       onChange={(e) => setFormSubject(e.target.value)}
-                      className="w-full px-3 py-2 rounded-lg text-sm bg-transparent"
+                      className="w-full px-3 py-2 text-sm bg-transparent"
                       style={{ border: '1px solid var(--border)', color: 'var(--fg)', outline: 'none' }}
                     >
                       {subjects.map((sub) => (
@@ -556,7 +554,7 @@ export default function ManageQuestionsPage() {
                         placeholder="Enter custom subject..."
                         value={customSubject}
                         onChange={(e) => setCustomSubject(e.target.value)}
-                        className="w-full px-3 py-2 rounded-lg text-sm bg-transparent mt-2"
+                        className="w-full px-3 py-2 text-sm bg-transparent mt-2"
                         style={{ border: '1px solid var(--border)', color: 'var(--fg)', outline: 'none' }}
                         required
                       />
@@ -565,7 +563,7 @@ export default function ManageQuestionsPage() {
 
                   {/* Chapter */}
                   <div>
-                    <label className="block text-sm font-medium mb-1" style={{ color: 'var(--fg)' }}>
+                    <label className="block text-xs font-semibold mb-1" style={{ color: 'var(--fg)' }}>
                       Chapter Number (Optional)
                     </label>
                     <input
@@ -573,7 +571,7 @@ export default function ManageQuestionsPage() {
                       placeholder="e.g. 1"
                       value={formChapter}
                       onChange={(e) => setFormChapter(e.target.value)}
-                      className="w-full px-3 py-2 rounded-lg text-sm bg-transparent"
+                      className="w-full px-3 py-2 text-sm bg-transparent"
                       style={{ border: '1px solid var(--border)', color: 'var(--fg)', outline: 'none' }}
                     />
                   </div>
@@ -581,7 +579,7 @@ export default function ManageQuestionsPage() {
 
                 {/* Chapter Title */}
                 <div>
-                  <label className="block text-sm font-medium mb-1" style={{ color: 'var(--fg)' }}>
+                  <label className="block text-xs font-semibold mb-1" style={{ color: 'var(--fg)' }}>
                     Chapter Title (Optional)
                   </label>
                   <input
@@ -589,21 +587,21 @@ export default function ManageQuestionsPage() {
                     placeholder="e.g. Transformers or Three-Phase Circuits"
                     value={formChapterTitle}
                     onChange={(e) => setFormChapterTitle(e.target.value)}
-                    className="w-full px-3 py-2 rounded-lg text-sm bg-transparent"
+                    className="w-full px-3 py-2 text-sm bg-transparent"
                     style={{ border: '1px solid var(--border)', color: 'var(--fg)', outline: 'none' }}
                   />
                 </div>
 
                 {/* Question */}
                 <div>
-                  <label className="block text-sm font-medium mb-1" style={{ color: 'var(--fg)' }}>
+                  <label className="block text-xs font-semibold mb-1" style={{ color: 'var(--fg)' }}>
                     Question Body <span className="text-rose-500">*</span>
                   </label>
                   <textarea
                     placeholder="Enter the question text..."
                     value={formQuestionText}
                     onChange={(e) => setFormQuestionText(e.target.value)}
-                    className="w-full px-3 py-2 rounded-lg text-sm bg-transparent min-h-20"
+                    className="w-full px-3 py-2 text-sm bg-transparent min-h-20"
                     style={{ border: '1px solid var(--border)', color: 'var(--fg)', outline: 'none' }}
                     required
                   />
@@ -612,7 +610,7 @@ export default function ManageQuestionsPage() {
                 {/* Options */}
                 <div className="grid md:grid-cols-2 gap-3">
                   <div>
-                    <label className="block text-xs font-semibold uppercase mb-1" style={{ color: 'var(--fg-muted)' }}>
+                    <label className="block text-[10px] font-bold uppercase tracking-wider mb-1" style={{ color: 'var(--fg-muted)' }}>
                       Option A <span className="text-rose-500">*</span>
                     </label>
                     <input
@@ -620,13 +618,13 @@ export default function ManageQuestionsPage() {
                       placeholder="Answer option A"
                       value={formOptA}
                       onChange={(e) => setFormOptA(e.target.value)}
-                      className="w-full px-3 py-2 rounded-lg text-sm bg-transparent"
+                      className="w-full px-3 py-2 text-sm bg-transparent"
                       style={{ border: '1px solid var(--border)', color: 'var(--fg)', outline: 'none' }}
                       required
                     />
                   </div>
                   <div>
-                    <label className="block text-xs font-semibold uppercase mb-1" style={{ color: 'var(--fg-muted)' }}>
+                    <label className="block text-[10px] font-bold uppercase tracking-wider mb-1" style={{ color: 'var(--fg-muted)' }}>
                       Option B <span className="text-rose-500">*</span>
                     </label>
                     <input
@@ -634,13 +632,13 @@ export default function ManageQuestionsPage() {
                       placeholder="Answer option B"
                       value={formOptB}
                       onChange={(e) => setFormOptB(e.target.value)}
-                      className="w-full px-3 py-2 rounded-lg text-sm bg-transparent"
+                      className="w-full px-3 py-2 text-sm bg-transparent"
                       style={{ border: '1px solid var(--border)', color: 'var(--fg)', outline: 'none' }}
                       required
                     />
                   </div>
                   <div>
-                    <label className="block text-xs font-semibold uppercase mb-1" style={{ color: 'var(--fg-muted)' }}>
+                    <label className="block text-[10px] font-bold uppercase tracking-wider mb-1" style={{ color: 'var(--fg-muted)' }}>
                       Option C <span className="text-rose-500">*</span>
                     </label>
                     <input
@@ -648,13 +646,13 @@ export default function ManageQuestionsPage() {
                       placeholder="Answer option C"
                       value={formOptC}
                       onChange={(e) => setFormOptC(e.target.value)}
-                      className="w-full px-3 py-2 rounded-lg text-sm bg-transparent"
+                      className="w-full px-3 py-2 text-sm bg-transparent"
                       style={{ border: '1px solid var(--border)', color: 'var(--fg)', outline: 'none' }}
                       required
                     />
                   </div>
                   <div>
-                    <label className="block text-xs font-semibold uppercase mb-1" style={{ color: 'var(--fg-muted)' }}>
+                    <label className="block text-[10px] font-bold uppercase tracking-wider mb-1" style={{ color: 'var(--fg-muted)' }}>
                       Option D <span className="text-rose-500">*</span>
                     </label>
                     <input
@@ -662,7 +660,7 @@ export default function ManageQuestionsPage() {
                       placeholder="Answer option D"
                       value={formOptD}
                       onChange={(e) => setFormOptD(e.target.value)}
-                      className="w-full px-3 py-2 rounded-lg text-sm bg-transparent"
+                      className="w-full px-3 py-2 text-sm bg-transparent"
                       style={{ border: '1px solid var(--border)', color: 'var(--fg)', outline: 'none' }}
                       required
                     />
@@ -672,13 +670,13 @@ export default function ManageQuestionsPage() {
                 <div className="grid md:grid-cols-2 gap-4">
                   {/* Correct Answer */}
                   <div>
-                    <label className="block text-sm font-medium mb-1" style={{ color: 'var(--fg)' }}>
+                    <label className="block text-xs font-semibold mb-1" style={{ color: 'var(--fg)' }}>
                       Correct Answer option <span className="text-rose-500">*</span>
                     </label>
                     <select
                       value={formAnswer}
                       onChange={(e) => setFormAnswer(e.target.value)}
-                      className="w-full px-3 py-2 rounded-lg text-sm bg-transparent"
+                      className="w-full px-3 py-2 text-sm bg-transparent"
                       style={{ border: '1px solid var(--border)', color: 'var(--fg)', outline: 'none' }}
                     >
                       <option value="A">A</option>
@@ -691,14 +689,14 @@ export default function ManageQuestionsPage() {
 
                 {/* Explanation */}
                 <div>
-                  <label className="block text-sm font-medium mb-1" style={{ color: 'var(--fg)' }}>
+                  <label className="block text-xs font-semibold mb-1" style={{ color: 'var(--fg)' }}>
                     Explanation (Optional)
                   </label>
                   <textarea
                     placeholder="Enter the explanation/hint text explaining why the answer is correct..."
                     value={formExplanation}
                     onChange={(e) => setFormExplanation(e.target.value)}
-                    className="w-full px-3 py-2 rounded-lg text-sm bg-transparent min-h-20"
+                    className="w-full px-3 py-2 text-sm bg-transparent min-h-20"
                     style={{ border: '1px solid var(--border)', color: 'var(--fg)', outline: 'none' }}
                   />
                 </div>
@@ -707,15 +705,16 @@ export default function ManageQuestionsPage() {
                   <button
                     type="button"
                     onClick={() => setIsFormOpen(false)}
-                    className="btn-secondary py-2"
+                    className="btn-secondary py-2 px-4 text-xs cursor-pointer"
                   >
                     Cancel
                   </button>
                   <button
                     type="submit"
                     disabled={saving}
-                    className="btn-primary py-2 flex items-center gap-1.5"
+                    className="btn-primary py-2 px-4 text-xs flex items-center gap-1.5 cursor-pointer"
                   >
+                    <Check className="w-3.5 h-3.5" />
                     {saving ? 'Saving...' : editingQuestion ? 'Update Question' : 'Add Question'}
                   </button>
                 </div>
@@ -728,26 +727,29 @@ export default function ManageQuestionsPage() {
         {isImportOpen && (
           <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-xs flex items-center justify-center p-4">
             <div
-              className="w-full max-w-xl rounded-2xl shadow-xl flex flex-col p-6 animate-scale border"
+              className="w-full max-w-xl shadow-xl flex flex-col p-6 animate-scale border"
               style={{ background: 'var(--bg-card)', borderColor: 'var(--border)' }}
             >
               <div className="flex items-center justify-between border-b pb-3 mb-4" style={{ borderColor: 'var(--border)' }}>
-                <h2 className="text-xl font-bold" style={{ color: 'var(--fg)' }}>
-                  📥 Import Questions from JSON
+                <h2 className="text-lg font-bold" style={{ color: 'var(--fg)' }}>
+                  Import Questions from JSON
                 </h2>
                 <button
                   onClick={() => setIsImportOpen(false)}
-                  className="text-gray-400 hover:text-gray-600 text-lg"
+                  className="text-gray-400 hover:text-gray-600 cursor-pointer p-1"
                 >
-                  ✕
+                  <X className="w-4 h-4" />
                 </button>
               </div>
 
               <div className="flex flex-col gap-4">
-                <p className="text-xs" style={{ color: 'var(--fg-muted)' }}>
-                  Paste a JSON array of questions matching the system format. Expected properties for each question item:
-                  <code className="block bg-gray-100 dark:bg-gray-800 p-2 rounded mt-1.5 select-all overflow-x-auto text-[10px]">
-                    {`[
+                <div className="text-xs p-3 border flex gap-2" style={{ background: 'var(--accent-light)', borderColor: 'var(--border)', color: 'var(--fg-muted)' }}>
+                  <BookOpen className="w-4 h-4 text-[var(--accent)] shrink-0" />
+                  <div>
+                    <span className="font-semibold block mb-1">Expected JSON Format:</span>
+                    Paste a JSON array of questions matching the database structure. E.g.:
+                    <code className="block bg-gray-100 dark:bg-gray-800 p-2 rounded mt-1.5 select-all overflow-x-auto text-[10px] font-mono text-[var(--fg)]">
+                      {`[
   {
     "subject": "Power Electronics",
     "chapter": 1,
@@ -763,22 +765,25 @@ export default function ManageQuestionsPage() {
     "explanation": "A rectifier converts alternating current (AC) to direct current (DC)."
   }
 ]`}
-                  </code>
-                </p>
+                    </code>
+                  </div>
+                </div>
 
                 <div>
-                  <label className="block text-sm font-medium mb-1" style={{ color: 'var(--fg)' }}>
+                  <label className="block text-xs font-semibold mb-1" style={{ color: 'var(--fg)' }}>
                     Paste JSON Content
                   </label>
                   <textarea
                     placeholder="Paste JSON array here..."
                     value={importText}
                     onChange={(e) => setImportText(e.target.value)}
-                    className="w-full px-3 py-2 rounded-lg text-xs bg-transparent min-h-48 font-mono"
-                    style={{ border: '1px solid var(--border)', color: 'var(--fg)', outline: 'none' }}
+                    className="w-full px-3 py-2 text-xs bg-transparent min-h-48 font-mono border"
+                    style={{ borderColor: 'var(--border)', color: 'var(--fg)', outline: 'none' }}
                   />
                   {importError && (
-                    <p className="text-rose-500 text-xs mt-1.5 font-medium">⚠️ {importError}</p>
+                    <p className="text-[var(--danger-fg)] text-[10px] mt-1.5 font-bold flex items-center gap-1">
+                      <AlertTriangle className="w-3.5 h-3.5 text-[var(--danger)]" /> {importError}
+                    </p>
                   )}
                 </div>
 
@@ -786,15 +791,16 @@ export default function ManageQuestionsPage() {
                   <button
                     type="button"
                     onClick={() => setIsImportOpen(false)}
-                    className="btn-secondary py-2"
+                    className="btn-secondary py-2 px-4 text-xs cursor-pointer"
                   >
                     Cancel
                   </button>
                   <button
                     onClick={handleImport}
                     disabled={saving || !importText.trim()}
-                    className="btn-primary py-2"
+                    className="btn-primary py-2 px-4 text-xs cursor-pointer flex items-center gap-1.5"
                   >
+                    <Check className="w-3.5 h-3.5" />
                     {saving ? 'Saving...' : 'Import Data'}
                   </button>
                 </div>
@@ -804,5 +810,17 @@ export default function ManageQuestionsPage() {
         )}
       </main>
     </>
+  )
+}
+
+function StatCard({ icon: Icon, label, value, color }: {
+  icon: React.ComponentType<{ className?: string; color?: string }>; label: string; value: string | number; color?: string
+}) {
+  return (
+    <div className="card p-4 flex flex-col items-center justify-center text-center">
+      <Icon className="w-5 h-5 mb-1.5" color={color ?? 'var(--accent)'} />
+      <div className="text-lg font-bold" style={{ color: 'var(--fg)' }}>{value}</div>
+      <div className="text-[10px] uppercase tracking-wider mt-0.5" style={{ color: 'var(--fg-muted)' }}>{label}</div>
+    </div>
   )
 }
